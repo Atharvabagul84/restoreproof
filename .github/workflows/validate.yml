@@ -29,7 +29,7 @@ jobs:
         run: python -m unittest discover -s tests -p test_chisel_integration.py -v
       - name: Retain sanitized application evidence
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: restoreproof-chisel-evidence
           path: |
@@ -84,7 +84,7 @@ jobs:
         run: python -m unittest discover -s tests -p 'test*integration.py' -v
       - name: Retain synthetic evidence even on failure
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: restoreproof-evidence
           path: |
@@ -127,7 +127,7 @@ jobs:
           fi
       - name: Retain curated daemon-drill evidence
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: restoreproof-daemon-evidence
           path: |
