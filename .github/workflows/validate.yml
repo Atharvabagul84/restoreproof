@@ -1,0 +1,138 @@
+name: Validate RestoreProof
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  chisel:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    needs: unit
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-lock.txt .
+      - name: Verify packaged Chisel source and build pinned services
+        run: python -m restoreproof prepare-app
+      - name: Exercise real Chisel recovery and four controlled failures
+        env:
+          RESTOREPROOF_APP_INTEGRATION: '1'
+        run: python -m unittest discover -s tests -p test_chisel_integration.py -v
+      - name: Retain sanitized application evidence
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: restoreproof-chisel-evidence
+          path: |
+            runs/chisel-ci/**/suite.json
+            runs/chisel-ci/**/report.json
+            runs/chisel-ci/**/junit.xml
+            runs/chisel-ci/**/expectation.json
+          if-no-files-found: warn
+          retention-days: 1
+
+  unit:
+    # Free-only policy: leave unset until account allowances and a hard spending
+    # stop are verified. All integration jobs depend on this job's success.
+    if: ${{ vars.RESTOREPROOF_FREE_CI_VERIFIED == 'true' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-lock.txt .
+      - run: python -m unittest discover -s tests -v
+
+  postgres:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    needs: unit
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-lock.txt .
+      - name: Pull the approved PostgreSQL image
+        run: docker pull postgres:17.11-bookworm
+      - name: Record environment
+        run: |
+          mkdir -p runs
+          python --version > runs/python-version.txt
+          docker version > runs/docker-version.txt
+          docker image inspect postgres:17.11-bookworm --format '{{json .RepoDigests}}' > runs/image-digests.json
+          git rev-parse HEAD > runs/source-revision.txt
+      - name: Verify real restore scenarios
+        env:
+          RESTOREPROOF_INTEGRATION: '1'
+          RESTOREPROOF_EVIDENCE_DIR: runs/integration
+        run: python -m unittest discover -s tests -p 'test*integration.py' -v
+      - name: Retain synthetic evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: restoreproof-evidence
+          path: |
+            runs/**/*.json
+            runs/**/*.xml
+            runs/**/*.log
+            runs/*.txt
+          if-no-files-found: warn
+          retention-days: 1
+
+  isolated-daemon:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    needs: unit
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-lock.txt .
+      - name: Pull image for the isolated daemon
+        run: docker pull postgres:17.11-bookworm
+      - name: Exercise a separate Docker daemon on this disposable runner
+        env:
+          RESTOREPROOF_DAEMON_INTEGRATION: '1'
+          RESTOREPROOF_EVIDENCE_DIR: runs/daemon
+          PYTHONPATH: ${{ github.workspace }}/src
+        run: |
+          sudo --preserve-env=RESTOREPROOF_DAEMON_INTEGRATION,RESTOREPROOF_EVIDENCE_DIR,PYTHONPATH \
+            "$(command -v python)" -m unittest discover -s tests -p test_daemon_drill.py -v
+      - name: Make curated root-owned journals readable to the artifact uploader
+        if: always()
+        run: |
+          evidence="$(realpath -m "$GITHUB_WORKSPACE/runs/daemon")"
+          test "$evidence" = "$GITHUB_WORKSPACE/runs/daemon"
+          if test -d "$evidence"; then
+            sudo chown -R --no-dereference "$(id -u):$(id -g)" -- "$evidence"
+          fi
+      - name: Retain curated daemon-drill evidence
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: restoreproof-daemon-evidence
+          path: |
+            runs/daemon/**/*.json
+            runs/daemon/**/*.xml
+            runs/daemon/**/*.log
+          if-no-files-found: warn
+          retention-days: 1

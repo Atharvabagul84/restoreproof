@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "run_id": "8f034f9208dd4020b249f31c4de585c5",
+  "started_at": "2026-10-07T05:36:29.839618+00:00",
+  "status": "FAIL",
+  "exit_code": 1,
+  "phase": "complete",
+  "report_path": "<workspace>\\work\\aws-live-validation\\drills\\8f034f9208dd4020b249f31c4de585c5\\report.json",
+  "checks": [
+    {
+      "name": "backup-retrieval",
+      "status": "FAIL",
+      "reason": "checksum-mismatch"
+    }
+  ],
+  "errors": [
+    "checksum-mismatch"
+  ],
+  "cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "application_allocated": false
+  },
+  "target": {},
+  "timings": {
+    "retrieve-backup_seconds": 1.297,
+    "total_seconds": 1.328
+  },
+  "measurement_boundary": "End-to-end attempt includes retrieval and application recovery; total includes cleanup and any image preparation. Not production RTO.",
+  "role": "s3-recovery",
+  "application": "chisel",
+  "implementation": {
+    "package_version": "0.4.0",
+    "source_sha256": "9bbed984f634dbc1dad26dd6e457037a345aa941d4412da2dabb89b8467792c8"
+  },
+  "storage_endpoint": "https://s3.ap-southeast-2.amazonaws.com",
+  "backup": {
+    "bucket": "restoreproof-123456789012-ap-southeast-2",
+    "key": "backups/chisel/live-fa976b9b1c044e29bd3f61b40d11753b/source.dump",
+    "version_id": "D8bX4tAGy_JUGkg2l1WNaSw726DOg1u2",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "expected_bucket_owner": "123456789012",
+    "captured_at": "2026-10-07T05:32:56.475736Z",
+    "max_age_seconds": 86400
+  },
+  "failure_code": "checksum-mismatch",
+  "download_cleanup": {
+    "status": "PASS",
+    "archive_retained": false
+  },
+  "completed_at": "2026-10-07T05:36:31.186053+00:00"
+}

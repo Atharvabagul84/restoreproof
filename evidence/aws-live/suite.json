@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "storage": "real AWS S3",
+  "application_runtime": "local Docker",
+  "github_oidc": false,
+  "scoped_recovery_role_tested": false,
+  "bucket": "restoreproof-123456789012-ap-southeast-2",
+  "region": "ap-southeast-2",
+  "source_run_id": "fa976b9b1c044e29bd3f61b40d11753b",
+  "source_cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "scenarios": [
+    {
+      "scenario": "healthy",
+      "status": "PASS",
+      "expected": "PASS",
+      "failure_code": null,
+      "matched_expected_cause": true,
+      "run_id": "82152e40e3fc4bbaa63c75c6a12875ba",
+      "report_path": "<workspace>\\work\\aws-live-validation\\drills\\82152e40e3fc4bbaa63c75c6a12875ba\\report.json",
+      "timings": {
+        "retrieve-backup_seconds": 1.313,
+        "application-recovery_seconds": 20.281,
+        "total_seconds": 21.656
+      }
+    },
+    {
+      "scenario": "missing-object",
+      "status": "INCOMPLETE",
+      "expected": "INCOMPLETE",
+      "failure_code": "missing-object",
+      "matched_expected_cause": true,
+      "run_id": "d9e24db04a1242caa9db212c812f6b14",
+      "report_path": "<workspace>\\work\\aws-live-validation\\drills\\d9e24db04a1242caa9db212c812f6b14\\report.json",
+      "timings": {
+        "retrieve-backup_seconds": 0.453,
+        "total_seconds": 0.469
+      }
+    },
+    {
+      "scenario": "access-denied",
+      "status": "INCOMPLETE",
+      "expected": "INCOMPLETE",
+      "failure_code": "access-denied",
+      "matched_expected_cause": true,
+      "run_id": "05b8c931a46b47b5ba5754c481679e15",
+      "report_path": "<workspace>\\work\\aws-live-validation\\drills\\05b8c931a46b47b5ba5754c481679e15\\report.json",
+      "timings": {
+        "retrieve-backup_seconds": 0.422,
+        "total_seconds": 0.438
+      },
+      "boundary": "Real S3 ExpectedBucketOwner rejection; does not test recovery-role IAM policy"
+    },
+    {
+      "scenario": "checksum-mismatch",
+      "status": "FAIL",
+      "expected": "FAIL",
+      "failure_code": "checksum-mismatch",
+      "matched_expected_cause": true,
+      "run_id": "8f034f9208dd4020b249f31c4de585c5",
+      "report_path": "<workspace>\\work\\aws-live-validation\\drills\\8f034f9208dd4020b249f31c4de585c5\\report.json",
+      "timings": {
+        "retrieve-backup_seconds": 1.297,
+        "total_seconds": 1.328
+      }
+    },
+    {
+      "scenario": "stale-backup",
+      "status": "FAIL",
+      "expected": "FAIL",
+      "failure_code": "stale-backup",
+      "matched_expected_cause": true,
+      "run_id": "eec2aff9f648428bb538c95f7b488b2f",
+      "report_path": "<workspace>\\work\\aws-live-validation\\drills\\eec2aff9f648428bb538c95f7b488b2f\\report.json",
+      "timings": {
+        "retrieve-backup_seconds": 0.0,
+        "total_seconds": 0.016
+      },
+      "boundary": "Rejected locally before S3 GET from intentionally stale capture timestamp"
+    },
+    {
+      "scenario": "download-interrupted",
+      "status": "INCOMPLETE",
+      "expected": "INCOMPLETE",
+      "failure_code": "download-interrupted",
+      "matched_expected_cause": true,
+      "run_id": "9536aaa326fe4687b522502f47ee0bc7",
+      "report_path": "<workspace>\\work\\aws-live-validation\\drills\\9536aaa326fe4687b522502f47ee0bc7\\report.json",
+      "timings": {
+        "retrieve-backup_seconds": 0.469,
+        "total_seconds": 0.484
+      },
+      "interruption": {
+        "delivered_bytes": 4096,
+        "real_response_closed": true,
+        "injection": "client closes actual AWS response after 4096 bytes",
+        "aws_http_status": 200,
+        "content_length": 139146,
+        "version_id": "D8bX4tAGy_JUGkg2l1WNaSw726DOg1u2"
+      }
+    }
+  ],
+  "cloud_resources_retained": true,
+  "last_success": "82152e40e3fc4bbaa63c75c6a12875ba",
+  "latest_attempt": "9536aaa326fe4687b522502f47ee0bc7",
+  "remote_evidence_verified": true,
+  "completed_at": "2026-10-07T05:36:47.785669+00:00"
+}

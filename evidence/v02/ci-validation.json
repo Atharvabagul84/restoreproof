@@ -1,0 +1,30 @@
+{
+  "recorded_at": "2026-10-06T18:53:46.7675843+00:00",
+  "status": "completed",
+  "conclusion": "success",
+  "v02_run": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37514412501",
+  "head_sha": "051a45cd029dde71f272b65adde3c793f7cd5352",
+  "repository_visibility": "PRIVATE",
+  "jobs": [
+    {
+      "name": "unit",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37514412501/job/112443525391"
+    },
+    {
+      "name": "postgres",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37514412501/job/112443659263"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 11436362478,
+      "name": "restoreproof-evidence",
+      "size_in_bytes": 64129,
+      "expired": false
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "pid": 136,
+  "command": "COPY FROM",
+  "type": "PIPE",
+  "tuples_processed": 1000,
+  "bytes_processed": 94020,
+  "state": "active",
+  "query": "COPY drill.restore_rows (id, payload, committed_at) FROM stdin;\n",
+  "wait_event": "PgSleep",
+  "application_name": "pg_restore"
+}

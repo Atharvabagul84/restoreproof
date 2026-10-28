@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="RestoreProof" tests="6" failures="1" errors="0">
+  <testcase name="snapshot-data" />
+  <testcase name="revision-snapshots" />
+  <testcase name="freshness" />
+  <testcase name="committed-write-ledger">
+    <failure type="FAIL">{"name": "committed-write-ledger", "status": "FAIL", "reason": "write_set_differs", "expected_count": 3, "recovered_count": 2, "matched_count": 2, "timestamp_bound_checked": true, "report_id_limit": 25, "ids_truncated": false, "missing_count": 1, "missing_write_ids": ["write-002"], "unexpected_count": 0, "unexpected_write_ids": [], "duplicate_id_count": 0, "duplicate_write_ids": [], "duplicate_sequence_count": 0, "duplicate_sequences": [], "payload_mismatch_count": 0, "payload_mismatch_write_ids": [], "sequence_mismatch_count": 0, "sequence_mismatch_write_ids": [], "acknowledged_at_mismatch_count": 0, "acknowledged_at_mismatch_write_ids": []}</failure>
+  </testcase>
+  <testcase name="recovery-duration" />
+  <testcase name="cleanup" />
+</testsuite>

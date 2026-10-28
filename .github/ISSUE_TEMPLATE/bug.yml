@@ -1,0 +1,23 @@
+name: Bug report
+description: Something doesn't work as documented
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Command, expected outcome (PASS/FAIL/INCOMPLETE/INVALID) and actual outcome.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: python -m restoreproof demo --scenario ... --output runs/...
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: OS, Python and Docker versions. Don't paste credentials, account IDs or non-synthetic data.

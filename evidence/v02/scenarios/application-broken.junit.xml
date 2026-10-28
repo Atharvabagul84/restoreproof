@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="RestoreProof" tests="13" failures="2" errors="0">
+  <testcase name="snapshot-data" />
+  <testcase name="revision-snapshots" />
+  <testcase name="freshness" />
+  <testcase name="application-database-role" />
+  <testcase name="application-read-existing-order">
+    <failure type="FAIL">{"name": "application-read-existing-order", "status": "FAIL", "expected_http_status": 200, "actual_http_status": 404, "response_matches": false}</failure>
+  </testcase>
+  <testcase name="application-read-second-tenant-order">
+    <failure type="FAIL">{"name": "application-read-second-tenant-order", "status": "FAIL", "expected_http_status": 200, "actual_http_status": 404, "response_matches": false}</failure>
+  </testcase>
+  <testcase name="application-create-order" />
+  <testcase name="application-read-persisted-order" />
+  <testcase name="application-cross-tenant-denied" />
+  <testcase name="application-missing-order" />
+  <testcase name="application-unauthenticated-denied" />
+  <testcase name="recovery-duration" />
+  <testcase name="cleanup" />
+</testsuite>

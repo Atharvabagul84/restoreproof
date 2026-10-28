@@ -1,0 +1,25 @@
+{
+  "checkpoint": {
+    "run_id": "f99777ee52fc47ee97509a9003e6f8f5",
+    "container_id": "d9199e1034bee7fdd1becc394bfc7f98144192a43bcd7c491bcaa8142fc37004",
+    "phase": "restore",
+    "pid": 25404
+  },
+  "child_returncode": 1,
+  "journal_status": "INCOMPLETE",
+  "recovered": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "repeated": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Container absence verified."
+  },
+  "unrelated_container_id": "f76598c7ae8a21ba08df3279ec62f0e19abd49dc9ae5edf01595c8716b33aa1d",
+  "unrelated_container_retained": true,
+  "active_query_observation": null,
+  "kill_elapsed_seconds": 5.657,
+  "boundary": "Hard kill at test-only pause after real operation, before phase returns."
+}

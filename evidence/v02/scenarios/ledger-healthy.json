@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "run_id": "52d369695d0742ff85be3a7f921577b6",
+  "started_at": "2026-10-06T18:46:28.534691+00:00",
+  "status": "PASS",
+  "exit_code": 0,
+  "phase": "finished",
+  "report_path": "evidence/v02/scenarios/ledger-healthy.json",
+  "checks": [
+    {
+      "name": "snapshot-data",
+      "status": "PASS",
+      "expected": {
+        "teams": [
+          {
+            "id": 1,
+            "name": "Flight systems"
+          },
+          {
+            "id": 2,
+            "name": "Ground operations"
+          }
+        ],
+        "features": [
+          {
+            "id": 101,
+            "team_id": 1,
+            "title": "Telemetry replay",
+            "revision": 2
+          },
+          {
+            "id": 102,
+            "team_id": 2,
+            "title": "Release checklist",
+            "revision": 1
+          }
+        ],
+        "snapshots": [
+          {
+            "feature_id": 101,
+            "revision": 1,
+            "body": "First revision"
+          },
+          {
+            "feature_id": 101,
+            "revision": 2,
+            "body": "Durable replay"
+          },
+          {
+            "feature_id": 102,
+            "revision": 1,
+            "body": "Verified release"
+          }
+        ],
+        "checkpoints": [
+          {
+            "id": 1,
+            "committed_at": "2026-01-01T00:00:00+00:00"
+          }
+        ]
+      },
+      "actual": {
+        "teams": [
+          {
+            "id": 1,
+            "name": "Flight systems"
+          },
+          {
+            "id": 2,
+            "name": "Ground operations"
+          }
+        ],
+        "features": [
+          {
+            "id": 101,
+            "team_id": 1,
+            "title": "Telemetry replay",
+            "revision": 2
+          },
+          {
+            "id": 102,
+            "team_id": 2,
+            "title": "Release checklist",
+            "revision": 1
+          }
+        ],
+        "snapshots": [
+          {
+            "feature_id": 101,
+            "revision": 1,
+            "body": "First revision"
+          },
+          {
+            "feature_id": 101,
+            "revision": 2,
+            "body": "Durable replay"
+          },
+          {
+            "feature_id": 102,
+            "revision": 1,
+            "body": "Verified release"
+          }
+        ],
+        "checkpoints": [
+          {
+            "id": 1,
+            "committed_at": "2026-01-01T00:00:00+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "name": "revision-snapshots",
+      "status": "PASS",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "freshness",
+      "status": "PASS",
+      "incident_at": "2026-01-01T00:00:30+00:00",
+      "recovered_at": "2026-01-01T00:00:00+00:00",
+      "age_seconds": 30.0,
+      "max_data_age_seconds": 60,
+      "reason": "within_policy"
+    },
+    {
+      "name": "committed-write-ledger",
+      "status": "PASS",
+      "reason": "all_known_writes_match",
+      "expected_count": 3,
+      "recovered_count": 3,
+      "matched_count": 3,
+      "timestamp_bound_checked": true,
+      "report_id_limit": 25,
+      "ids_truncated": false,
+      "missing_count": 0,
+      "missing_write_ids": [],
+      "unexpected_count": 0,
+      "unexpected_write_ids": [],
+      "duplicate_id_count": 0,
+      "duplicate_write_ids": [],
+      "duplicate_sequence_count": 0,
+      "duplicate_sequences": [],
+      "payload_mismatch_count": 0,
+      "payload_mismatch_write_ids": [],
+      "sequence_mismatch_count": 0,
+      "sequence_mismatch_write_ids": [],
+      "acknowledged_at_mismatch_count": 0,
+      "acknowledged_at_mismatch_write_ids": []
+    },
+    {
+      "name": "recovery-duration",
+      "status": "PASS",
+      "actual_seconds": 4.407,
+      "max_seconds": 300
+    }
+  ],
+  "errors": [],
+  "cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "target": {
+    "container_id": "6f7084266affc9fad001c79ce8fb83f0863dad4cf78f109f519bd650cdc405ef",
+    "image_id": "sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826"
+  },
+  "timings": {
+    "create_seconds": 2.265,
+    "restore_seconds": 0.844,
+    "checks_seconds": 0.937,
+    "ledger_seconds": 0.313,
+    "verification_attempt_seconds": 4.407,
+    "cleanup_seconds": 0.64,
+    "total_seconds": 5.047
+  },
+  "measurement_boundary": "Before contract preflight through application/checkpoint verification; cleanup recorded separately.",
+  "ledger_sha256": "333228ede93e976368f1ea5f9208f61a9ca13f916a6c4d4360cce7aadb5cd797",
+  "archive_sha256": "f57100f303dcbed517f922a080a450b5fcd5a36781acd32ab602da68f0c316a5",
+  "image_reference": "postgres:17.11-bookworm",
+  "finished_at": "2026-10-06T18:46:33.567753+00:00"
+}

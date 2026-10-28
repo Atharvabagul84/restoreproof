@@ -1,0 +1,42 @@
+[
+  {
+    "scenario": "healthy",
+    "original_report": "runs/verified-local/test_healthy_real_database_restore_passes/healthy/af6c4607d2d149f68a9806aefe193e49/report.json",
+    "original_sha256": "b172796906ba0223654689755917463ec42d9a7edd251443e47f5c1a4d2b877f",
+    "portable_report": "evidence/scenarios/healthy.json",
+    "portable_sha256": "45665a8d03b42b2d511a81938dbfe0f11a36951c2daa0007302a95b293f5773a",
+    "transformation": "Only report_path replaced with portable path.",
+    "junit": "evidence/scenarios/healthy.junit.xml",
+    "junit_sha256": "b8ee1c30f1f6d0ffa52915cd45f0d7d94a02dfc89ffc86331ab964b02c908558"
+  },
+  {
+    "scenario": "corrupt",
+    "original_report": "runs/verified-local/test_matching_checksum_does_not_make_truncated_archive_restorable/corrupt/fbc0b29b96744320a238815cd5642e19/report.json",
+    "original_sha256": "b1f5bddbb32b7256ecac8ddb2278358f310249161f47e6ab066be6a8323f7499",
+    "portable_report": "evidence/scenarios/corrupt.json",
+    "portable_sha256": "207ce09b4236d118a328c7a676c45d0280eabb56b385da3616f142cd26251a71",
+    "transformation": "Only report_path replaced with portable path.",
+    "junit": "evidence/scenarios/corrupt.junit.xml",
+    "junit_sha256": "f4c30dca0a16047975f33eeefc78377b129ab8bcdadf8230820c0455f3371699"
+  },
+  {
+    "scenario": "inconsistent",
+    "original_report": "runs/verified-local/test_semantically_invalid_database_starts_but_fails_application_check/inconsistent/6198dd8e81834bbe868f68d58df15724/report.json",
+    "original_sha256": "8c6556352a5127c3695c92cc47d6fe38212b25705c013f8e90a2d21f8ab2814e",
+    "portable_report": "evidence/scenarios/inconsistent.json",
+    "portable_sha256": "019a1541960a29cf6873b45fc6b9060712998dbc689d419d92c40db0d8813606",
+    "transformation": "Only report_path replaced with portable path.",
+    "junit": "evidence/scenarios/inconsistent.junit.xml",
+    "junit_sha256": "bae179f9ff46250b7c919166404caf1a91d00263771e27f74d85fdc0a5e4ba3b"
+  },
+  {
+    "scenario": "stale",
+    "original_report": "runs/verified-local/test_stale_real_backup_fails_recovery_policy/stale/568d0d74436c4e3b80e4d7bb81a0ab09/report.json",
+    "original_sha256": "b110d61e97b49be656639971984c6a86ba4363fd6e9d0217c28e8065387fe538",
+    "portable_report": "evidence/scenarios/stale.json",
+    "portable_sha256": "d46fe93423e1d9fd05d130b7c430a901b80eef29ed9af11369c639f1073f731c",
+    "transformation": "Only report_path replaced with portable path.",
+    "junit": "evidence/scenarios/stale.junit.xml",
+    "junit_sha256": "21f3fa944b7d1fddb94826041f52c7cb3cb6b9343bd837e4e8b81f67ea7e346a"
+  }
+]

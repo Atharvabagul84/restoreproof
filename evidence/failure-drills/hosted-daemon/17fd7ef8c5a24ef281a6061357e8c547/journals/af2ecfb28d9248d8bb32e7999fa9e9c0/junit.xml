@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="RestoreProof" tests="2" failures="0" errors="2">
+  <testcase name="cleanup">
+    <error type="INCOMPLETE">{"name": "cleanup", "status": "INCOMPLETE", "remaining": ["4934636b8d87a51f5a03a596217c6d4236de4b00657cb511ee8d0d08604cc15e"], "message": "Cleanup could not verify ownership, removal or daemon availability; inspect the recorded target."}</error>
+  </testcase>
+  <testcase name="verification-run">
+    <error type="INCOMPLETE">{"name": "verification-run", "status": "INCOMPLETE", "reason": [{"phase": "checks", "message": "Operation failed (ProcessError)."}]}</error>
+  </testcase>
+</testsuite>

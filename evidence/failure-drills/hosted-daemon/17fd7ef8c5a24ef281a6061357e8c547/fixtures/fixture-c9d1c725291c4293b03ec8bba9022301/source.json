@@ -1,0 +1,16 @@
+{
+  "source_run_id": "c9d1c725291c4293b03ec8bba9022301",
+  "scenario": "healthy",
+  "status": "PASS",
+  "phase": "finished",
+  "clock": "synthetic fixed logical time, not observed production data loss",
+  "target": {
+    "container_id": "3d03aa895d67f83e4d9ecb636fa5b9133fe7a95481c0d4a4e6074414e868aa30",
+    "image_id": "sha256:589f742565e4f6d22149176b032974f55f8201a8a37b71ed587ec5c6902e689f"
+  },
+  "cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  }
+}

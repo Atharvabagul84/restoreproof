@@ -1,0 +1,13 @@
+tests\security.tftest.hcl... in progress
+  run "cloud_disabled_by_default"... pass
+  run "private_versioned_encrypted_and_scoped"... pass
+  run "reject_wildcard_repository"... pass
+  run "reject_unbounded_retention"... pass
+tests\security.tftest.hcl... tearing down
+tests\security.tftest.hcl... pass
+tests\storage_only.tftest.hcl... in progress
+  run "storage_only_does_not_attempt_restricted_iam"... pass
+tests\storage_only.tftest.hcl... tearing down
+tests\storage_only.tftest.hcl... pass
+
+Success! 5 passed, 0 failed.

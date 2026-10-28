@@ -1,0 +1,31 @@
+{
+  "checkpoint": {
+    "run_id": "14b4b49870b74d3da714b3fd9ccf82a3",
+    "container_id": "7d6c70fd29af33daa8e55054e0564f0c84f4510693dc8ea1a9f7cb1c0e4dd6f7",
+    "phase": "checks",
+    "pid": 3108,
+    "query_tag": "restoreproof-resilience-14b4b49870b74d3da714b3fd9ccf82a3"
+  },
+  "child_returncode": 1,
+  "journal_status": "INCOMPLETE",
+  "recovered": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "repeated": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Container absence verified."
+  },
+  "unrelated_container_id": "6dc79524b5765bd6d8cdce9de033d402ab79a1696600720b967246035c60791c",
+  "unrelated_container_retained": true,
+  "active_query_observation": {
+    "pid": 122,
+    "state": "active",
+    "wait_event_type": "Timeout",
+    "wait_event": "PgSleep"
+  },
+  "kill_elapsed_seconds": 6.172,
+  "boundary": "Hard kill while tagged SQL query was observed in PgSleep."
+}

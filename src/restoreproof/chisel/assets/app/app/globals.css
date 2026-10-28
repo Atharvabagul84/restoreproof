@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --color-secondary: #71717a;
+  --color-surface-dim: #0c0c0f;
+  --color-on-background: #fafafa;
+  --color-on-tertiary: #001a12;
+  --color-secondary-container: #27272a;
+  --color-on-surface: #fafafa;
+  --color-primary-fixed: #ede9fe;
+  --color-on-error-container: #fca5a5;
+  --color-surface-tint: #a78bfa;
+  --color-outline: #52525b;
+  --color-surface-container-lowest: #09090b;
+  --color-error-container: #3b1111;
+  --color-on-tertiary-fixed: #003318;
+  --color-tertiary-fixed-dim: #6ee7b7;
+  --color-on-secondary-container: #a1a1aa;
+  --color-on-primary: #0a0012;
+  --color-on-secondary: #09090b;
+  --color-on-tertiary-fixed-variant: #047857;
+  --color-inverse-primary: #5b21b6;
+  --color-surface-container-high: #18181b;
+  --color-surface-variant: #18181b;
+  --color-tertiary-container: #065f46;
+  --color-inverse-on-surface: #09090b;
+  --color-tertiary: #34d399;
+  --color-surface-bright: #18181b;
+  --color-background: #09090b;
+  --color-primary-fixed-dim: #c4b5fd;
+  --color-tertiary-fixed: #bbf7d0;
+  --color-primary: #a78bfa;
+  --color-outline-variant: #27272a;
+  --color-on-secondary-fixed-variant: #3f3f46;
+  --color-surface: #0c0c0f;
+  --color-surface-container-low: #0f0f12;
+  --color-on-tertiary-container: #bbf7d0;
+  --color-inverse-surface: #fafafa;
+  --color-primary-container: #7c3aed;
+  --color-secondary-fixed: #a1a1aa;
+  --color-on-secondary-fixed: #18181b;
+  --color-error: #ef4444;
+  --color-on-primary-fixed-variant: #5b21b6;
+  --color-on-primary-container: #ede9fe;
+  --color-on-error: #1a0000;
+  --color-on-surface-variant: #a1a1aa;
+  --color-surface-container: #121215;
+  --color-surface-container-highest: #1e1e22;
+  --color-on-primary-fixed: #2e1065;
+  --color-secondary-fixed-dim: #71717a;
+
+  --font-headline: 'Geist', sans-serif;
+  --font-display: 'Geist', sans-serif;
+  --font-body: 'Geist', sans-serif;
+  --font-label: 'Geist', sans-serif;
+  --font-mono: 'Geist Mono', monospace;
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #09090b;
+    color: #fafafa;
+    font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  body {
+    overscroll-behavior: none;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}

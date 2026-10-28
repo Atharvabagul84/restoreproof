@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "application": "chisel",
+  "source_commit": "1845389ac02663f4fb0d67eac7e839fc32354c2a",
+  "backup": {
+    "bucket": "restoreproof-123456789012-ap-southeast-2",
+    "key": "backups/chisel/live-fa976b9b1c044e29bd3f61b40d11753b/source.dump",
+    "version_id": "D8bX4tAGy_JUGkg2l1WNaSw726DOg1u2",
+    "sha256": "d4453ac30e2764fe9c7421932245f9d3749294d7d005317ccc050a927eb79c43",
+    "expected_bucket_owner": "123456789012",
+    "captured_at": "2026-10-05T05:36:35.200956+00:00",
+    "max_age_seconds": 86400
+  },
+  "owner_id": "2d86836d-51a3-4920-91d0-baf26959623b",
+  "workspace_id": "a4f73d55-c45b-4f33-abf4-84ed7a5bcf3d",
+  "outsider_workspace_id": "eed371b8-1098-46e3-98e0-6a27133b622a",
+  "brief_id": "50248c37-f2fb-402f-b440-67e575aef239",
+  "brief_sha256": "c555d2fd34b3499ad5f24e5d874526dc7d1a053940edeb41dcd1697dbe10e613",
+  "max_recovery_seconds": 300
+}

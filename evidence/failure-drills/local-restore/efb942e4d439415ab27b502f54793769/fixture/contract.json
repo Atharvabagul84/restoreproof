@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "image": "postgres:17.11-bookworm",
+  "backup": {
+    "path": "backup.dump",
+    "sha256": "e2de0db621d7af02134aec67ff33777f5ed0d9d41ad7b6621934685a05c235af"
+  },
+  "checks": [
+    {
+      "name": "restored-rows",
+      "sql": "SELECT json_build_object(\n    'rows', count(*), 'min_id', min(id), 'max_id', max(id),\n    'bad_payloads', count(*) FILTER (WHERE payload <> md5(id::text)))\n    FROM drill.restore_rows",
+      "expected": {
+        "rows": 2048,
+        "min_id": 1,
+        "max_id": 2048,
+        "bad_payloads": 0
+      }
+    }
+  ],
+  "freshness": {
+    "sql": "SELECT to_json(to_char(max(committed_at) AT TIME ZONE 'UTC', 'YYYY-MM-DD\"T\"HH24:MI:SS\"Z\"')) FROM drill.restore_rows",
+    "incident_at": "2026-01-01T00:00:30Z",
+    "max_data_age_seconds": 60
+  },
+  "max_restore_seconds": 90
+}

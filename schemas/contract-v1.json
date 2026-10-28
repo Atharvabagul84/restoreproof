@@ -1,0 +1,186 @@
+{
+  "$defs": {
+    "Backup": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-fA-F]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "title": "Backup",
+      "type": "object"
+    },
+    "Check": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "description": "Unique identifier; lifecycle names, committed-write-ledger and the application- prefix are reserved.",
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "sql": {
+          "maxLength": 16384,
+          "minLength": 1,
+          "title": "Sql",
+          "type": "string"
+        },
+        "expected": {
+          "$ref": "#/$defs/JsonValue"
+        }
+      },
+      "required": [
+        "name",
+        "sql",
+        "expected"
+      ],
+      "title": "Check",
+      "type": "object"
+    },
+    "Freshness": {
+      "additionalProperties": false,
+      "properties": {
+        "sql": {
+          "maxLength": 16384,
+          "minLength": 1,
+          "title": "Sql",
+          "type": "string"
+        },
+        "incident_at": {
+          "format": "date-time",
+          "title": "Incident At",
+          "type": "string"
+        },
+        "max_data_age_seconds": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "ge": 0,
+          "le": 86400,
+          "title": "Max Data Age Seconds"
+        }
+      },
+      "required": [
+        "sql",
+        "incident_at",
+        "max_data_age_seconds"
+      ],
+      "title": "Freshness",
+      "type": "object"
+    },
+    "JsonValue": {},
+    "LedgerSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-fA-F]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "sql": {
+          "maxLength": 16384,
+          "minLength": 1,
+          "title": "Sql",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "sql"
+      ],
+      "title": "LedgerSpec",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "backup": {
+      "$ref": "#/$defs/Backup"
+    },
+    "image": {
+      "default": "postgres:17.11-bookworm",
+      "pattern": "^postgres:17\\.11-bookworm(?:@sha256:[0-9a-f]{64})?$",
+      "title": "Image",
+      "type": "string"
+    },
+    "checks": {
+      "items": {
+        "$ref": "#/$defs/Check"
+      },
+      "minItems": 1,
+      "title": "Checks",
+      "type": "array"
+    },
+    "freshness": {
+      "$ref": "#/$defs/Freshness"
+    },
+    "ledger": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/LedgerSpec"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "application_journey": {
+      "default": false,
+      "title": "Application Journey",
+      "type": "boolean"
+    },
+    "max_restore_seconds": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "number"
+        }
+      ],
+      "default": 300,
+      "gt": 0,
+      "le": 3600,
+      "title": "Max Restore Seconds"
+    }
+  },
+  "required": [
+    "version",
+    "backup",
+    "checks",
+    "freshness"
+  ],
+  "title": "Contract",
+  "type": "object"
+}

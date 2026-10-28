@@ -1,0 +1,210 @@
+name: Recover Chisel from S3
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Local S3 emulator or real AWS
+        type: choice
+        options: [local-lab, aws]
+        default: local-lab
+      contract_path:
+        description: Checked-in trusted contract on main (AWS mode)
+        type: string
+        default: contracts/s3-chisel.json
+  schedule:
+    - cron: '17 4 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  oidc-identity:
+    # Validate GitHub's actual subject without granting or using any AWS access.
+    if: >-
+      ${{ github.event_name == 'workflow_dispatch' && inputs.mode == 'local-lab' &&
+          github.repository_id == '1407771955' && github.ref == 'refs/heads/main' &&
+          vars.RESTOREPROOF_FREE_CI_VERIFIED == 'true' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    permissions:
+      id-token: write
+    steps:
+      - name: Verify issuer claims and retain only non-secret identity fields
+        run: |
+          python3 - <<'PY'
+          import base64, json, os, urllib.request
+          from pathlib import Path
+          url = os.environ['ACTIONS_ID_TOKEN_REQUEST_URL'] + '&audience=sts.amazonaws.com'
+          request = urllib.request.Request(url, headers={
+              'Authorization': 'Bearer ' + os.environ['ACTIONS_ID_TOKEN_REQUEST_TOKEN']})
+          with urllib.request.urlopen(request, timeout=15) as response:
+              token = json.load(response)['value']
+          payload = token.split('.')[1]
+          claims = json.loads(base64.urlsafe_b64decode(payload + '=' * (-len(payload) % 4)))
+          expected = {
+              'iss': 'https://token.actions.githubusercontent.com',
+              'aud': 'sts.amazonaws.com',
+              'sub': 'repo:Atharvabagul84@64049571/restoreproof@1407771955:ref:refs/heads/main',
+              'repository_id': '1407771955', 'repository_owner_id': '64049571',
+              'ref': 'refs/heads/main', 'repository_visibility': 'private'}
+          selected = {key: claims.get(key) for key in expected}
+          Path('oidc-identity.json').write_text(json.dumps(selected, indent=2) + '\n')
+          if selected != expected:
+              raise SystemExit('OIDC identity differs from the Terraform trust policy; review retained identity fields.')
+          print('GitHub issuer identity matches the exact Terraform subject. No AWS role assumed.')
+          PY
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        if: always()
+        with:
+          name: github-oidc-identity
+          path: oidc-identity.json
+          retention-days: 1
+
+  local-lab:
+    # Scheduled synthetic drills use only loopback Moto and ephemeral runner containers.
+    if: >-
+      ${{ github.repository_id == '1407771955' && github.ref == 'refs/heads/main' &&
+          github.event.repository.private == true && vars.RESTOREPROOF_FREE_CI_VERIFIED == 'true' &&
+          ((github.event_name == 'workflow_dispatch' && inputs.mode == 'local-lab') ||
+           (github.event_name == 'schedule' && vars.RESTOREPROOF_LAB_SCHEDULE_ENABLED == 'true')) }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    concurrency:
+      group: restoreproof-s3-lab-main
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-lab-lock.txt '.[s3-lab]'
+      - name: Exercise unit boundaries and actual S3 HTTP failures
+        env:
+          RESTOREPROOF_S3_INTEGRATION: '1'
+        run: python -m unittest discover -s tests -v
+      - name: Recover real Chisel and verify all five storage failure causes
+        env:
+          RESTOREPROOF_S3_APP_INTEGRATION: '1'
+        run: python -m unittest discover -s tests -p test_s3_chisel_integration.py -v
+      - name: Export this run's recovery evidence as offline HTML
+        if: always()
+        run: |
+          mkdir -p runs/report
+          python -m restoreproof report-html --input runs/s3-chisel --output runs/report/restoreproof.html > runs/report/export.json
+      - name: Show the evidence scope and last successful recovery
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          path = Path('runs/report/export.json')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
+              summary.write('## RestoreProof synthetic recovery lab\n\n')
+              summary.write('Loopback Moto storage and real Chisel containers. No AWS credentials or cloud resources.\n\n')
+              try:
+                  result = json.loads(path.read_text())
+                  if result.get('export_status') != 'PASS':
+                      raise ValueError('No successful evidence export')
+                  for scope in result['scopes']:
+                      latest, success = scope['latest_attempt'], scope['last_success']
+                      summary.write(f'- Recorded attempts: {scope["run_count"]}\n')
+                      summary.write(f'- Latest attempt: `{latest["status"]}` / `{latest["run_id"]}`\n')
+                      summary.write(f'- Last successful recovery: `{success["run_id"] if success else "none"}`\n')
+                  summary.write('\nControlled failure attempts remain FAIL or INCOMPLETE even when the scenario suite passes. ')
+                  summary.write('Download `s3-chisel-local-lab` and open `report/restoreproof.html` offline. Artifacts expire after one day.\n')
+              except (OSError, ValueError, KeyError, TypeError):
+                  summary.write('No complete HTML evidence export is available. Inspect the failed preparation, test or export step.\n')
+          PY
+      - name: Retain reviewed report types; exclude backups and credentials
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: s3-chisel-local-lab
+          path: |
+            runs/report/restoreproof.html
+            runs/report/export.json
+            runs/s3-chisel/**/suite.json
+            runs/s3-chisel/**/report.json
+            runs/s3-chisel/**/junit.xml
+          retention-days: 1
+          if-no-files-found: warn
+
+  aws:
+    # Schedule definitions are inert until all account-specific gates are enabled.
+    if: >-
+      ${{ github.repository_id == '1407771955' && github.ref == 'refs/heads/main' &&
+          vars.RESTOREPROOF_FREE_CI_VERIFIED == 'true' && vars.RESTOREPROOF_AWS_FREE_VERIFIED == 'true' &&
+          vars.RESTOREPROOF_ROLE_ARN != '' &&
+          ((github.event_name == 'workflow_dispatch' && inputs.mode == 'aws') ||
+           (github.event_name == 'schedule' && vars.RESTOREPROOF_SCHEDULE_ENABLED == 'true')) }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    concurrency:
+      group: restoreproof-s3-cloud-main
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      RESTOREPROOF_AWS_FREE_VERIFIED: ${{ vars.RESTOREPROOF_AWS_FREE_VERIFIED }}
+      AWS_REGION: ${{ vars.RESTOREPROOF_AWS_REGION || 'us-east-1' }}
+      CONTRACT_PATH: ${{ inputs.contract_path || 'contracts/s3-chisel.json' }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-lock.txt .
+      - name: Prepare images before obtaining temporary cloud credentials
+        run: python -m restoreproof prepare-app
+      - name: Exchange repository OIDC identity for scoped temporary credentials
+        uses: aws-actions/configure-aws-credentials@e1253824e5c10ff9df46874f81ed3ec929e19cfd # v6.3.0
+        with:
+          role-to-assume: ${{ vars.RESTOREPROOF_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+          allowed-account-ids: ${{ vars.RESTOREPROOF_AWS_ACCOUNT_ID }}
+          role-session-name: restoreproof-${{ github.run_id }}
+          role-duration-seconds: 1800
+          unset-current-credentials: true
+      - name: Retrieve exact version, recover Chisel, publish evidence and history
+        run: >-
+          python -m restoreproof verify-s3 "$CONTRACT_PATH" --mode aws --region "$AWS_REGION"
+          --output runs/s3 --summary runs/current.json --publish
+      - name: Show this attempt and the last successful recovery
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          path = Path('runs/current.json')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
+              if not path.exists():
+                  summary.write('Recovery did not produce a run summary. Inspect the failed preparation/authentication step.\n')
+              else:
+                  result = json.loads(path.read_text())
+                  summary.write('## RestoreProof S3 recovery\n\n')
+                  for key in ('status', 'verification_status', 'publication_status', 'run_id'):
+                      summary.write(f'- {key}: `{result[key]}`\n')
+                  success = result.get('last_success')
+                  if success:
+                      summary.write(f'\nLast successful verification: `{success["run_id"]}` at `{success["started_at"]}`.\n')
+                  else:
+                      summary.write('\nNo last-success record available for this attempt.\n')
+          PY
+      - name: Retain local evidence even if AWS publication fails
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: s3-recovery-${{ github.run_id }}
+          path: |
+            runs/current.json
+            runs/s3/**/report.json
+            runs/s3/**/junit.xml
+            runs/s3/**/run-summary.json
+          retention-days: 1
+          if-no-files-found: warn

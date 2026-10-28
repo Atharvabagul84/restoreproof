@@ -1,0 +1,385 @@
+﻿2026-10-06T19:17:57.9931853Z Current runner version: '2.337.0'
+2026-10-06T19:17:57.9992021Z ##[group]Runner Image Provisioner
+2026-10-06T19:17:57.9993340Z Hosted Compute Agent
+2026-10-06T19:17:57.9994356Z Version: 20260901.588
+2026-10-06T19:17:57.9995649Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+2026-10-06T19:17:57.9997149Z Build Date: 2026-09-01T19:56:44Z
+2026-10-06T19:17:57.9998905Z Worker ID: {dbbbb006-8bb0-4760-91cf-a701cc28812f}
+2026-10-06T19:17:58.0000203Z Azure Region: eastus
+2026-10-06T19:17:58.0001214Z ##[endgroup]
+2026-10-06T19:17:58.0003827Z ##[group]Operating System
+2026-10-06T19:17:58.0004835Z Ubuntu
+2026-10-06T19:17:58.0005803Z 24.04.5
+2026-10-06T19:17:58.0027236Z LTS
+2026-10-06T19:17:58.0028181Z ##[endgroup]
+2026-10-06T19:17:58.0029258Z ##[group]Runner Image
+2026-10-06T19:17:58.0030319Z Image: ubuntu-24.04
+2026-10-06T19:17:58.0031357Z Version: 20260927.320.1
+2026-10-06T19:17:58.0033671Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-06T19:17:58.0036801Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+2026-10-06T19:17:58.0038706Z ##[endgroup]
+2026-10-06T19:17:58.0040519Z ##[group]GITHUB_TOKEN Permissions
+2026-10-06T19:17:58.0043639Z Contents: read
+2026-10-06T19:17:58.0044695Z Metadata: read
+2026-10-06T19:17:58.0045619Z ##[endgroup]
+2026-10-06T19:17:58.0059609Z Secret source: Actions
+2026-10-06T19:17:58.0061185Z Cache mode: write
+2026-10-06T19:17:58.0062711Z Prepare workflow directory
+2026-10-06T19:17:58.0934468Z Prepare all required actions
+2026-10-06T19:17:58.1029063Z Getting action download info
+2026-10-06T19:17:58.3079876Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-06T19:17:58.5175138Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+2026-10-06T19:17:58.7624296Z Complete job name: unit
+2026-10-06T19:17:58.8397135Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-06T19:17:58.8398311Z with:
+2026-10-06T19:17:58.8398776Z   persist-credentials: false
+2026-10-06T19:17:58.8399344Z   repository: Atharvabagul84/restoreproof
+2026-10-06T19:17:58.8403913Z   token: ***
+2026-10-06T19:17:58.8404351Z   ssh-strict: true
+2026-10-06T19:17:58.8404804Z   ssh-user: git
+2026-10-06T19:17:58.8405241Z   clean: true
+2026-10-06T19:17:58.8405698Z   sparse-checkout-cone-mode: true
+2026-10-06T19:17:58.8406748Z   fetch-depth: 1
+2026-10-06T19:17:58.8407215Z   fetch-tags: false
+2026-10-06T19:17:58.8407699Z   show-progress: true
+2026-10-06T19:17:58.8408190Z   lfs: false
+2026-10-06T19:17:58.8408640Z   submodules: false
+2026-10-06T19:17:58.8409124Z   set-safe-directory: true
+2026-10-06T19:17:58.8409676Z   allow-unsafe-pr-checkout: false
+2026-10-06T19:17:58.8410583Z ##[endgroup]
+2026-10-06T19:17:58.9837174Z Syncing repository: Atharvabagul84/restoreproof
+2026-10-06T19:17:58.9839905Z ##[group]Getting Git version info
+2026-10-06T19:17:58.9841125Z Working directory is '/home/runner/work/restoreproof/restoreproof'
+2026-10-06T19:17:58.9842768Z [command]/usr/bin/git version
+2026-10-06T19:17:59.0960722Z git version 2.55.0
+2026-10-06T19:17:59.0979941Z ##[endgroup]
+2026-10-06T19:17:59.1012417Z Temporarily overriding HOME='/home/runner/work/_temp/9f7506bd-8ce5-4245-af7e-481311c5c3b3' before making global git config changes
+2026-10-06T19:17:59.1016986Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-06T19:17:59.1020212Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/restoreproof/restoreproof
+2026-10-06T19:17:59.1027054Z Deleting the contents of '/home/runner/work/restoreproof/restoreproof'
+2026-10-06T19:17:59.1030763Z ##[group]Determining repository object format
+2026-10-06T19:17:59.1034811Z ##[endgroup]
+2026-10-06T19:17:59.1129948Z ##[group]Initializing the repository
+2026-10-06T19:17:59.1197364Z [command]/usr/bin/git init /home/runner/work/restoreproof/restoreproof
+2026-10-06T19:17:59.1223349Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-06T19:17:59.1225303Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-06T19:17:59.1228090Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-06T19:17:59.1230132Z hint: call:
+2026-10-06T19:17:59.1231805Z hint:
+2026-10-06T19:17:59.1233296Z hint: 	git config --global init.defaultBranch <name>
+2026-10-06T19:17:59.1235145Z hint:
+2026-10-06T19:17:59.1237022Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-06T19:17:59.1239667Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-06T19:17:59.1241467Z hint:
+2026-10-06T19:17:59.1251519Z hint: 	git branch -m <name>
+2026-10-06T19:17:59.1253016Z hint:
+2026-10-06T19:17:59.1254927Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-06T19:17:59.1257624Z Initialized empty Git repository in /home/runner/work/restoreproof/restoreproof/.git/
+2026-10-06T19:17:59.1262180Z [command]/usr/bin/git remote add origin https://github.com/Atharvabagul84/restoreproof
+2026-10-06T19:17:59.1267125Z ##[endgroup]
+2026-10-06T19:17:59.1268305Z ##[group]Disabling automatic garbage collection
+2026-10-06T19:17:59.1269347Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-06T19:17:59.1271508Z ##[endgroup]
+2026-10-06T19:17:59.1272577Z ##[group]Setting up auth
+2026-10-06T19:17:59.1273377Z Removing SSH command configuration
+2026-10-06T19:17:59.1274550Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-06T19:17:59.1278271Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-06T19:17:59.1695429Z Removing HTTP extra header
+2026-10-06T19:17:59.1697918Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-06T19:17:59.1702685Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-06T19:17:59.1873519Z Removing includeIf entries pointing to credentials config files
+2026-10-06T19:17:59.1875372Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-06T19:17:59.1893829Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-06T19:17:59.2165338Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-86cdc4dc-7e9c-422f-a67d-3777a5b80859.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-06T19:17:59.2208582Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/restoreproof/restoreproof/.git.path /home/runner/work/_temp/git-credentials-86cdc4dc-7e9c-422f-a67d-3777a5b80859.config
+2026-10-06T19:17:59.2247010Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/restoreproof/restoreproof/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-86cdc4dc-7e9c-422f-a67d-3777a5b80859.config
+2026-10-06T19:17:59.2289451Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-86cdc4dc-7e9c-422f-a67d-3777a5b80859.config
+2026-10-06T19:17:59.2328416Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-86cdc4dc-7e9c-422f-a67d-3777a5b80859.config
+2026-10-06T19:17:59.2365038Z ##[endgroup]
+2026-10-06T19:17:59.2367076Z ##[group]Fetching the repository
+2026-10-06T19:17:59.2374082Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +a87739c19e73c9ca08c78aced535da4a0f8453e8:refs/remotes/origin/main
+2026-10-06T19:17:59.5182402Z From https://github.com/Atharvabagul84/restoreproof
+2026-10-06T19:17:59.5197436Z  * [new ref]         a87739c19e73c9ca08c78aced535da4a0f8453e8 -> origin/main
+2026-10-06T19:17:59.5264903Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-06T19:17:59.5266822Z   origin/main
+2026-10-06T19:17:59.5269509Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-10-06T19:17:59.5314306Z a87739c19e73c9ca08c78aced535da4a0f8453e8
+2026-10-06T19:17:59.5357398Z ##[endgroup]
+2026-10-06T19:17:59.5377442Z ##[group]Determining the checkout info
+2026-10-06T19:17:59.5394681Z ##[endgroup]
+2026-10-06T19:17:59.5401369Z [command]/usr/bin/git sparse-checkout disable
+2026-10-06T19:17:59.5411817Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-06T19:17:59.5497252Z ##[group]Checking out the ref
+2026-10-06T19:17:59.5499525Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-06T19:17:59.5607205Z Switched to a new branch 'main'
+2026-10-06T19:17:59.5615405Z branch 'main' set up to track 'origin/main'.
+2026-10-06T19:17:59.5623854Z ##[endgroup]
+2026-10-06T19:17:59.5678189Z [command]/usr/bin/git log -1 --format=%H
+2026-10-06T19:17:59.5718881Z a87739c19e73c9ca08c78aced535da4a0f8453e8
+2026-10-06T19:17:59.5731546Z ##[group]Removing auth
+2026-10-06T19:17:59.5733029Z Removing SSH command configuration
+2026-10-06T19:17:59.5735496Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-06T19:17:59.5775565Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-06T19:17:59.6028342Z Removing HTTP extra header
+2026-10-06T19:17:59.6031174Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-06T19:17:59.6070238Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-06T19:17:59.6309118Z Removing includeIf entries pointing to credentials config files
+2026-10-06T19:17:59.6313680Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-06T19:17:59.6346883Z includeif.gitdir:/home/runner/work/restoreproof/restoreproof/.git.path
+2026-10-06T19:17:59.6350773Z includeif.gitdir:/home/runner/work/restoreproof/restoreproof/.git/worktrees/*.path
+2026-10-06T19:17:59.6356948Z includeif.gitdir:/github/workspace/.git.path
+2026-10-06T19:17:59.6368545Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-06T19:17:59.6399662Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/restoreproof/restoreproof/.git.path
+2026-10-06T19:17:59.6404641Z /home/runner/work/_temp/git-credentials-86cdc4dc-7e9c-422f-a67d-3777a5b80859.config
+2026-10-06T19:17:59.6420858Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/restoreproof/restoreproof/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-86cdc4dc\-7e9c\-422f\-a67d\-3777a5b80859\.config
+2026-10-06T19:17:59.6449893Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/restoreproof/restoreproof/.git/worktrees/*.path
+2026-10-06T19:17:59.6491792Z /home/runner/work/_temp/git-credentials-86cdc4dc-7e9c-422f-a67d-3777a5b80859.config
+2026-10-06T19:17:59.6505432Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/restoreproof/restoreproof/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-86cdc4dc\-7e9c\-422f\-a67d\-3777a5b80859\.config
+2026-10-06T19:17:59.6553676Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-06T19:17:59.6593726Z /github/runner_temp/git-credentials-86cdc4dc-7e9c-422f-a67d-3777a5b80859.config
+2026-10-06T19:17:59.6612052Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-86cdc4dc\-7e9c\-422f\-a67d\-3777a5b80859\.config
+2026-10-06T19:17:59.6654059Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-06T19:17:59.6690452Z /github/runner_temp/git-credentials-86cdc4dc-7e9c-422f-a67d-3777a5b80859.config
+2026-10-06T19:17:59.6700137Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-86cdc4dc\-7e9c\-422f\-a67d\-3777a5b80859\.config
+2026-10-06T19:17:59.6740890Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-06T19:17:59.6994418Z Removing credentials config '/home/runner/work/_temp/git-credentials-86cdc4dc-7e9c-422f-a67d-3777a5b80859.config'
+2026-10-06T19:17:59.7003266Z ##[endgroup]
+2026-10-06T19:17:59.7348425Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+2026-10-06T19:17:59.7349878Z with:
+2026-10-06T19:17:59.7350593Z   python-version: 3.12
+2026-10-06T19:17:59.7351392Z   check-latest: false
+2026-10-06T19:17:59.7361178Z   token: ***
+2026-10-06T19:17:59.7361921Z   update-environment: true
+2026-10-06T19:17:59.7362800Z   allow-prereleases: false
+2026-10-06T19:17:59.7363656Z   freethreaded: false
+2026-10-06T19:17:59.7364410Z ##[endgroup]
+2026-10-06T19:17:59.8784563Z ##[group]Installed versions
+2026-10-06T19:17:59.9077629Z Successfully set up CPython (3.12.14)
+2026-10-06T19:17:59.9080989Z ##[endgroup]
+2026-10-06T19:17:59.9449426Z ##[group]Run python -m pip install -r requirements-lock.txt .
+2026-10-06T19:17:59.9452279Z [36;1mpython -m pip install -r requirements-lock.txt .[0m
+2026-10-06T19:17:59.9833002Z shell: /usr/bin/bash -e {0}
+2026-10-06T19:17:59.9834676Z env:
+2026-10-06T19:17:59.9836603Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:17:59.9839234Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-10-06T19:17:59.9841419Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:17:59.9843368Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:17:59.9845283Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:17:59.9847349Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-10-06T19:17:59.9849016Z ##[endgroup]
+2026-10-06T19:18:03.0278890Z Processing ./.
+2026-10-06T19:18:03.0297017Z   Installing build dependencies: started
+2026-10-06T19:18:04.4410018Z   Installing build dependencies: finished with status 'done'
+2026-10-06T19:18:04.4420104Z   Getting requirements to build wheel: started
+2026-10-06T19:18:05.0277784Z   Getting requirements to build wheel: finished with status 'done'
+2026-10-06T19:18:05.0285052Z   Preparing metadata (pyproject.toml): started
+2026-10-06T19:18:05.2332998Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-10-06T19:18:05.4270435Z Collecting pydantic==2.13.5 (from -r requirements-lock.txt (line 2))
+2026-10-06T19:18:05.4774619Z   Downloading pydantic-2.13.5-py3-none-any.whl.metadata (110 kB)
+2026-10-06T19:18:06.2138676Z Collecting pydantic-core==2.46.5 (from -r requirements-lock.txt (line 3))
+2026-10-06T19:18:06.2187141Z   Downloading pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+2026-10-06T19:18:06.2368280Z Collecting annotated-types==0.8.0 (from -r requirements-lock.txt (line 4))
+2026-10-06T19:18:06.2407501Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+2026-10-06T19:18:06.2637072Z Collecting typing-extensions==4.16.0 (from -r requirements-lock.txt (line 5))
+2026-10-06T19:18:06.2677135Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-06T19:18:06.2839377Z Collecting typing-inspection==0.4.4 (from -r requirements-lock.txt (line 6))
+2026-10-06T19:18:06.2889089Z   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+2026-10-06T19:18:06.3008967Z Downloading pydantic-2.13.5-py3-none-any.whl (472 kB)
+2026-10-06T19:18:06.3140691Z Downloading pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-10-06T19:18:06.3286803Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 166.4 MB/s  0:00:00
+2026-10-06T19:18:06.3324875Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+2026-10-06T19:18:06.3389335Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-06T19:18:06.3451610Z Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+2026-10-06T19:18:06.3670397Z Building wheels for collected packages: restoreproof
+2026-10-06T19:18:06.3680056Z   Building wheel for restoreproof (pyproject.toml): started
+2026-10-06T19:18:06.6078485Z   Building wheel for restoreproof (pyproject.toml): finished with status 'done'
+2026-10-06T19:18:06.6080597Z   Created wheel for restoreproof: filename=restoreproof-0.2.0-py3-none-any.whl size=33191 sha256=2bdac2e46de2d8d7765e59bf1c33bdd98dc1eab33b13c67ecf221bf69e2efcdb
+2026-10-06T19:18:06.6083454Z   Stored in directory: /tmp/pip-ephem-wheel-cache-5p2ovaf8/wheels/50/44/10/56e3346f9890aac0710a035a7ce65d24af3da43689cee7ff2f
+2026-10-06T19:18:06.6116562Z Successfully built restoreproof
+2026-10-06T19:18:06.6504595Z Installing collected packages: typing-extensions, annotated-types, typing-inspection, pydantic-core, pydantic, restoreproof
+2026-10-06T19:18:07.0940220Z 
+2026-10-06T19:18:07.0958137Z Successfully installed annotated-types-0.8.0 pydantic-2.13.5 pydantic-core-2.46.5 restoreproof-0.2.0 typing-extensions-4.16.0 typing-inspection-0.4.4
+2026-10-06T19:18:07.1888217Z ##[group]Run python -m unittest discover -s tests -v
+2026-10-06T19:18:07.1888682Z [36;1mpython -m unittest discover -s tests -v[0m
+2026-10-06T19:18:07.1956532Z shell: /usr/bin/bash -e {0}
+2026-10-06T19:18:07.1956829Z env:
+2026-10-06T19:18:07.1957144Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:18:07.1957675Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-10-06T19:18:07.1958199Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:18:07.1958676Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:18:07.1959139Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:18:07.1959608Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-10-06T19:18:07.1959998Z ##[endgroup]
+2026-10-06T19:18:08.0988147Z test_application_role_cannot_ddl_or_bypass_rls (test_application_integration.ApplicationIntegrationTests.test_application_role_cannot_ddl_or_bypass_rls) ... skipped 'requires explicitly enabled Docker'
+2026-10-06T19:18:08.0991665Z test_missing_restored_table_is_not_repaired_by_application_setup (test_application_integration.ApplicationIntegrationTests.test_missing_restored_table_is_not_repaired_by_application_setup) ... skipped 'requires explicitly enabled Docker'
+2026-10-06T19:18:08.0994393Z test_restored_orders_pass_actual_http_journey (test_application_integration.ApplicationIntegrationTests.test_restored_orders_pass_actual_http_journey) ... skipped 'requires explicitly enabled Docker'
+2026-10-06T19:18:08.0997438Z test_sql_can_pass_while_revoked_write_privilege_fails_http (test_application_integration.ApplicationIntegrationTests.test_sql_can_pass_while_revoked_write_privilege_fails_http) ... skipped 'requires explicitly enabled Docker'
+2026-10-06T19:18:08.2759027Z test_cleanup_rejects_arbitrary_container_name (test_cli.CliTests.test_cleanup_rejects_arbitrary_container_name) ... ok
+2026-10-06T19:18:08.4467694Z test_help_describes_commands_without_docker (test_cli.CliTests.test_help_describes_commands_without_docker) ... ok
+2026-10-06T19:18:08.6257844Z test_invalid_archive_returns_three_with_inspectable_report (test_cli.CliTests.test_invalid_archive_returns_three_with_inspectable_report) ... ok
+2026-10-06T19:18:08.6260277Z test_allows_finite_fractional_thresholds_and_json_expectations (test_contract.ContractTests.test_allows_finite_fractional_thresholds_and_json_expectations) ... ok
+2026-10-06T19:18:08.6262805Z test_archive_verification_is_separate_from_loading (test_contract.ContractTests.test_archive_verification_is_separate_from_loading) ... ok
+2026-10-06T19:18:08.6269910Z test_contract_read_is_bounded_and_malformed_json_is_safe (test_contract.ContractTests.test_contract_read_is_bounded_and_malformed_json_is_safe) ... ok
+2026-10-06T19:18:08.6280284Z test_loads_defaults_and_resolves_archive_relative_to_contract (test_contract.ContractTests.test_loads_defaults_and_resolves_archive_relative_to_contract) ... ok
+2026-10-06T19:18:08.6288611Z test_rejects_archive_over_64_mib_before_hashing_it (test_contract.ContractTests.test_rejects_archive_over_64_mib_before_hashing_it) ... ok
+2026-10-06T19:18:08.6298277Z test_rejects_checksum_mismatch (test_contract.ContractTests.test_rejects_checksum_mismatch) ... ok
+2026-10-06T19:18:08.6340384Z test_rejects_coerced_versions_types_and_out_of_bounds_thresholds (test_contract.ContractTests.test_rejects_coerced_versions_types_and_out_of_bounds_thresholds) ... ok
+2026-10-06T19:18:08.6349894Z test_rejects_duplicate_check_names_and_empty_checks (test_contract.ContractTests.test_rejects_duplicate_check_names_and_empty_checks) ... ok
+2026-10-06T19:18:08.6376386Z test_rejects_empty_or_excessive_sql (test_contract.ContractTests.test_rejects_empty_or_excessive_sql) ... ok
+2026-10-06T19:18:08.6403800Z test_rejects_naive_invalid_and_numeric_incident_dates (test_contract.ContractTests.test_rejects_naive_invalid_and_numeric_incident_dates) ... ok
+2026-10-06T19:18:08.6434283Z test_rejects_nonfinite_values_in_nested_expectations_and_thresholds (test_contract.ContractTests.test_rejects_nonfinite_values_in_nested_expectations_and_thresholds) ... ok
+2026-10-06T19:18:08.6439737Z test_rejects_overflowing_json_numbers (test_contract.ContractTests.test_rejects_overflowing_json_numbers) ... ok
+2026-10-06T19:18:08.6460172Z test_rejects_reserved_report_identifiers (test_contract.ContractTests.test_rejects_reserved_report_identifiers) ... ok
+2026-10-06T19:18:08.6478236Z test_rejects_unknown_fields_at_each_model_boundary (test_contract.ContractTests.test_rejects_unknown_fields_at_each_model_boundary) ... ok
+2026-10-06T19:18:08.6488180Z test_rejects_wrong_magic_even_with_matching_checksum (test_contract.ContractTests.test_rejects_wrong_magic_even_with_matching_checksum) ... ok
+2026-10-06T19:18:08.6508082Z test_requires_a_valid_sha256 (test_contract.ContractTests.test_requires_a_valid_sha256) ... ok
+2026-10-06T19:18:08.6524497Z test_restricts_images_to_approved_tag_and_optional_digest (test_contract.ContractTests.test_restricts_images_to_approved_tag_and_optional_digest) ... ok
+2026-10-06T19:18:08.6537637Z test_client_environment_cannot_inherit_context_tls_or_other_daemon (test_daemon_drill.DaemonIsolationGuardTests.test_client_environment_cannot_inherit_context_tls_or_other_daemon) ... ok
+2026-10-06T19:18:08.6557914Z test_containerd_state_outside_private_runtime_is_rejected (test_daemon_drill.DaemonIsolationGuardTests.test_containerd_state_outside_private_runtime_is_rejected) ... ok
+2026-10-06T19:18:08.6572782Z test_containerd_uses_explicit_private_config_without_cri_tcp_or_imports (test_daemon_drill.DaemonIsolationGuardTests.test_containerd_uses_explicit_private_config_without_cri_tcp_or_imports) ... ok
+2026-10-06T19:18:08.6597059Z test_existing_runtime_is_not_adopted (test_daemon_drill.DaemonIsolationGuardTests.test_existing_runtime_is_not_adopted) ... ok
+2026-10-06T19:18:08.6599243Z test_explicit_enable_on_non_linux_fails_prerequisites (test_daemon_drill.DaemonIsolationGuardTests.test_explicit_enable_on_non_linux_fails_prerequisites) ... ok
+2026-10-06T19:18:08.6608102Z test_pidfile_mismatch_refuses_to_signal_even_recorded_process (test_daemon_drill.DaemonIsolationGuardTests.test_pidfile_mismatch_refuses_to_signal_even_recorded_process) ... ok
+2026-10-06T19:18:08.6622056Z test_private_configuration_disables_host_network_mutations_and_image_store (test_daemon_drill.DaemonIsolationGuardTests.test_private_configuration_disables_host_network_mutations_and_image_store) ... ok
+2026-10-06T19:18:08.6637213Z test_private_containerd_pidfile_mismatch_refuses_signal (test_daemon_drill.DaemonIsolationGuardTests.test_private_containerd_pidfile_mismatch_refuses_signal) ... ok
+2026-10-06T19:18:08.6643484Z test_runtime_escape_is_rejected_before_filesystem_mutation (test_daemon_drill.DaemonIsolationGuardTests.test_runtime_escape_is_rejected_before_filesystem_mutation) ... ok
+2026-10-06T19:18:08.6660510Z test_same_pid_with_changed_start_time_cannot_be_signaled (test_daemon_drill.DaemonIsolationGuardTests.test_same_pid_with_changed_start_time_cannot_be_signaled) ... ok
+2026-10-06T19:18:08.6673594Z test_stop_without_owned_spawn_is_refused (test_daemon_drill.DaemonIsolationGuardTests.test_stop_without_owned_spawn_is_refused) ... ok
+2026-10-06T19:18:08.6676751Z test_private_daemon_outage_preserves_incomplete_evidence_and_recovers (test_daemon_drill.DaemonLossIntegrationTests.test_private_daemon_outage_preserves_incomplete_evidence_and_recovers) ... skipped 'requires explicitly enabled root Linux private-daemon drill'
+2026-10-06T19:18:08.6684436Z test_archive_size_is_checked_before_copy (test_docker_postgres.DockerPostgresTests.test_archive_size_is_checked_before_copy) ... ok
+2026-10-06T19:18:08.6692187Z test_changed_copied_bytes_are_rejected_before_restore (test_docker_postgres.DockerPostgresTests.test_changed_copied_bytes_are_rejected_before_restore) ... ok
+2026-10-06T19:18:08.6694413Z test_cleanup_verifies_absence_and_never_prunes (test_docker_postgres.DockerPostgresTests.test_cleanup_verifies_absence_and_never_prunes) ... ok
+2026-10-06T19:18:08.6697313Z test_create_has_no_host_access_and_returns_observed_identity (test_docker_postgres.DockerPostgresTests.test_create_has_no_host_access_and_returns_observed_identity) ... ok
+2026-10-06T19:18:08.6699634Z test_daemon_failure_is_not_reported_as_absence (test_docker_postgres.DockerPostgresTests.test_daemon_failure_is_not_reported_as_absence) ... ok
+2026-10-06T19:18:08.6703532Z test_dump_rejects_oversized_archive_before_host_copy (test_docker_postgres.DockerPostgresTests.test_dump_rejects_oversized_archive_before_host_copy) ... ok
+2026-10-06T19:18:08.6710222Z test_execute_and_dump_only_use_created_container (test_docker_postgres.DockerPostgresTests.test_execute_and_dump_only_use_created_container) ... ok
+2026-10-06T19:18:08.6712443Z test_explicit_recovery_refuses_foreign_matching_name (test_docker_postgres.DockerPostgresTests.test_explicit_recovery_refuses_foreign_matching_name) ... ok
+2026-10-06T19:18:08.6714688Z test_explicit_recovery_removes_matching_owned_run (test_docker_postgres.DockerPostgresTests.test_explicit_recovery_removes_matching_owned_run) ... ok
+2026-10-06T19:18:08.6717310Z test_explicit_recovery_reports_renamed_run_without_deleting (test_docker_postgres.DockerPostgresTests.test_explicit_recovery_reports_renamed_run_without_deleting) ... ok
+2026-10-06T19:18:08.6719610Z test_explicit_recovery_reports_verified_absence (test_docker_postgres.DockerPostgresTests.test_explicit_recovery_reports_verified_absence) ... ok
+2026-10-06T19:18:08.6721539Z test_incomplete_removal_is_reported (test_docker_postgres.DockerPostgresTests.test_incomplete_removal_is_reported) ... ok
+2026-10-06T19:18:08.6723586Z test_invalid_expected_digest_is_rejected_before_copy (test_docker_postgres.DockerPostgresTests.test_invalid_expected_digest_is_rejected_before_copy) ... ok
+2026-10-06T19:18:08.6725747Z test_preexisting_name_is_never_adopted_or_deleted (test_docker_postgres.DockerPostgresTests.test_preexisting_name_is_never_adopted_or_deleted) ... ok
+2026-10-06T19:18:08.6728228Z test_query_rejects_nonstandard_json_and_oversized_sql (test_docker_postgres.DockerPostgresTests.test_query_rejects_nonstandard_json_and_oversized_sql) ... ok
+2026-10-06T19:18:08.6730453Z test_query_uses_readonly_transaction_and_exact_json (test_docker_postgres.DockerPostgresTests.test_query_uses_readonly_transaction_and_exact_json) ... ok
+2026-10-06T19:18:08.6732647Z test_rejects_untrusted_names_images_and_timeouts (test_docker_postgres.DockerPostgresTests.test_rejects_untrusted_names_images_and_timeouts) ... ok
+2026-10-06T19:18:08.6739211Z test_restore_copies_only_to_owned_container_and_uses_transaction (test_docker_postgres.DockerPostgresTests.test_restore_copies_only_to_owned_container_and_uses_transaction) ... ok
+2026-10-06T19:18:08.6741906Z test_timed_out_create_is_still_discovered_and_cleaned (test_docker_postgres.DockerPostgresTests.test_timed_out_create_is_still_discovered_and_cleaned) ... ok
+2026-10-06T19:18:08.6744199Z test_wrong_label_and_replaced_identity_are_not_deleted (test_docker_postgres.DockerPostgresTests.test_wrong_label_and_replaced_identity_are_not_deleted) ... ok
+2026-10-06T19:18:08.6965642Z test_checksum_mismatch_does_not_construct_backend (test_engine.EngineTests.test_checksum_mismatch_does_not_construct_backend) ... ok
+2026-10-06T19:18:08.7061158Z test_cleanup_failure_overrides_success (test_engine.EngineTests.test_cleanup_failure_overrides_success) ... ok
+2026-10-06T19:18:08.7136421Z test_failed_allocation_still_attempts_owned_cleanup (test_engine.EngineTests.test_failed_allocation_still_attempts_owned_cleanup) ... ok
+2026-10-06T19:18:08.7219780Z test_healthy_restore_writes_consistent_reports_and_verifies_cleanup (test_engine.EngineTests.test_healthy_restore_writes_consistent_reports_and_verifies_cleanup) ... ok
+2026-10-06T19:18:08.7290742Z test_keyboard_interrupt_writes_partial_report_and_cleans (test_engine.EngineTests.test_keyboard_interrupt_writes_partial_report_and_cleans) ... ok
+2026-10-06T19:18:08.7467715Z test_repeated_runs_preserve_separate_evidence (test_engine.EngineTests.test_repeated_runs_preserve_separate_evidence) ... ok
+2026-10-06T19:18:08.7538540Z test_restore_failure_still_cleans_allocated_target (test_engine.EngineTests.test_restore_failure_still_cleans_allocated_target) ... ok
+2026-10-06T19:18:08.7627484Z test_stale_watermark_fails_even_when_application_checks_pass (test_engine.EngineTests.test_stale_watermark_fails_even_when_application_checks_pass) ... ok
+2026-10-06T19:18:08.7713065Z test_started_database_with_wrong_application_data_fails (test_engine.EngineTests.test_started_database_with_wrong_application_data_fails) ... ok
+2026-10-06T19:18:08.7803317Z test_unknown_watermark_never_becomes_success (test_engine.EngineTests.test_unknown_watermark_never_becomes_success) ... ok
+2026-10-06T19:18:08.7813237Z test_boolean_does_not_equal_a_number_at_any_depth (test_evaluation.EvaluationTests.test_boolean_does_not_equal_a_number_at_any_depth) ... ok
+2026-10-06T19:18:08.7816190Z test_check_fails_different_values (test_evaluation.EvaluationTests.test_check_fails_different_values) ... ok
+2026-10-06T19:18:08.7818231Z test_check_passes_equal_nested_json_and_reports_both_values (test_evaluation.EvaluationTests.test_check_passes_equal_nested_json_and_reports_both_values) ... ok
+2026-10-06T19:18:08.7820362Z test_check_rejects_non_json_actual_values (test_evaluation.EvaluationTests.test_check_rejects_non_json_actual_values) ... ok
+2026-10-06T19:18:08.7822433Z test_freshness_fails_a_stale_watermark (test_evaluation.EvaluationTests.test_freshness_fails_a_stale_watermark) ... ok
+2026-10-06T19:18:08.7824357Z test_freshness_passes_at_exact_policy_boundary (test_evaluation.EvaluationTests.test_freshness_passes_at_exact_policy_boundary) ... ok
+2026-10-06T19:18:08.7826659Z test_future_watermark_is_not_an_automatic_pass (test_evaluation.EvaluationTests.test_future_watermark_is_not_an_automatic_pass) ... ok
+2026-10-06T19:18:08.7828758Z test_missing_malformed_and_naive_watermarks_are_incomplete (test_evaluation.EvaluationTests.test_missing_malformed_and_naive_watermarks_are_incomplete) ... ok
+2026-10-06T19:18:08.7830061Z test_timezone_offsets_are_compared_as_instants (test_evaluation.EvaluationTests.test_timezone_offsets_are_compared_as_instants) ... ok
+2026-10-06T19:18:08.7948116Z test_application_failure_overrides_successful_sql_checks (test_extended_verification.ExtendedVerificationTests.test_application_failure_overrides_successful_sql_checks) ... ok
+2026-10-06T19:18:08.7962113Z test_contract_accepts_opt_in_journey_and_ledger (test_extended_verification.ExtendedVerificationTests.test_contract_accepts_opt_in_journey_and_ledger) ... ok
+2026-10-06T19:18:08.7977752Z test_duplicate_json_keys_cannot_silently_disable_checks (test_extended_verification.ExtendedVerificationTests.test_duplicate_json_keys_cannot_silently_disable_checks) ... ok
+2026-10-06T19:18:08.7997063Z test_journey_opt_in_is_strict_and_new_check_names_are_reserved (test_extended_verification.ExtendedVerificationTests.test_journey_opt_in_is_strict_and_new_check_names_are_reserved) ... ok
+2026-10-06T19:18:08.8093460Z test_ledger_bad_hash_rejected_before_target_allocation (test_extended_verification.ExtendedVerificationTests.test_ledger_bad_hash_rejected_before_target_allocation) ... ok
+2026-10-06T19:18:08.8214017Z test_ledger_detects_missing_interior_write_despite_fresh_checkpoint (test_extended_verification.ExtendedVerificationTests.test_ledger_detects_missing_interior_write_despite_fresh_checkpoint) ... ok
+2026-10-06T19:18:08.8329844Z test_ledger_invalid_recovered_evidence_is_incomplete (test_extended_verification.ExtendedVerificationTests.test_ledger_invalid_recovered_evidence_is_incomplete) ... ok
+2026-10-06T19:18:08.8443716Z test_partial_success_is_not_complete_application_evidence (test_extended_verification.ExtendedVerificationTests.test_partial_success_is_not_complete_application_evidence) ... ok
+2026-10-06T19:18:08.8555093Z test_selected_journey_cannot_pass_without_evidence (test_extended_verification.ExtendedVerificationTests.test_selected_journey_cannot_pass_without_evidence) ... ok
+2026-10-06T19:18:08.8644858Z test_unselected_journey_does_not_execute (test_extended_verification.ExtendedVerificationTests.test_unselected_journey_does_not_execute) ... ok
+2026-10-06T19:18:08.8647990Z test_complete_ledger_passes (test_feature_integration.FeatureIntegrationTests.test_complete_ledger_passes) ... skipped 'requires Docker; opt in explicitly'
+2026-10-06T19:18:08.8651452Z test_database_checks_pass_but_missing_required_order_fails_journey (test_feature_integration.FeatureIntegrationTests.test_database_checks_pass_but_missing_required_order_fails_journey) ... skipped 'requires Docker; opt in explicitly'
+2026-10-06T19:18:08.8655561Z test_interior_write_loss_fails_while_latest_checkpoint_passes (test_feature_integration.FeatureIntegrationTests.test_interior_write_loss_fails_while_latest_checkpoint_passes) ... skipped 'requires Docker; opt in explicitly'
+2026-10-06T19:18:08.8659504Z test_restored_application_supports_authorized_read_and_write (test_feature_integration.FeatureIntegrationTests.test_restored_application_supports_authorized_read_and_write) ... skipped 'requires Docker; opt in explicitly'
+2026-10-06T19:18:08.8662621Z test_crash_recovery_cleanup_is_repeatable_on_a_real_container (test_integration.DockerIntegrationTests.test_crash_recovery_cleanup_is_repeatable_on_a_real_container) ... skipped 'requires Docker; opt in explicitly'
+2026-10-06T19:18:08.8665413Z test_healthy_real_database_restore_passes (test_integration.DockerIntegrationTests.test_healthy_real_database_restore_passes) ... skipped 'requires Docker; opt in explicitly'
+2026-10-06T19:18:08.8668535Z test_live_target_has_declared_isolation_and_resource_limits (test_integration.DockerIntegrationTests.test_live_target_has_declared_isolation_and_resource_limits) ... skipped 'requires Docker; opt in explicitly'
+2026-10-06T19:18:08.8671678Z test_matching_checksum_does_not_make_truncated_archive_restorable (test_integration.DockerIntegrationTests.test_matching_checksum_does_not_make_truncated_archive_restorable) ... skipped 'requires Docker; opt in explicitly'
+2026-10-06T19:18:08.8675165Z test_semantically_invalid_database_starts_but_fails_application_check (test_integration.DockerIntegrationTests.test_semantically_invalid_database_starts_but_fails_application_check) ... skipped 'requires Docker; opt in explicitly'
+2026-10-06T19:18:08.8690798Z test_stale_real_backup_fails_recovery_policy (test_integration.DockerIntegrationTests.test_stale_real_backup_fails_recovery_policy) ... skipped 'requires Docker; opt in explicitly'
+2026-10-06T19:18:08.8692377Z test_changed_file_fails_digest_even_when_valid_json (test_ledger.LedgerTests.test_changed_file_fails_digest_even_when_valid_json) ... ok
+2026-10-06T19:18:08.8694255Z test_complete_unordered_results_pass_without_sequence_gap_inference (test_ledger.LedgerTests.test_complete_unordered_results_pass_without_sequence_gap_inference) ... ok
+2026-10-06T19:18:08.8697158Z test_duplicate_recovered_ids_fail_without_silently_overwriting_rows (test_ledger.LedgerTests.test_duplicate_recovered_ids_fail_without_silently_overwriting_rows) ... ok
+2026-10-06T19:18:08.8702726Z test_duplicate_sequences_across_distinct_recovered_ids_fail (test_ledger.LedgerTests.test_duplicate_sequences_across_distinct_recovered_ids_fail) ... ok
+2026-10-06T19:18:08.8705222Z test_expected_ids_and_sequences_must_each_be_unique (test_ledger.LedgerTests.test_expected_ids_and_sequences_must_each_be_unique) ... ok
+2026-10-06T19:18:08.8757296Z test_expected_schema_is_strict_and_nonempty (test_ledger.LedgerTests.test_expected_schema_is_strict_and_nonempty) ... ok
+2026-10-06T19:18:08.8763485Z test_future_acknowledgement_is_incomplete_when_incident_is_known (test_ledger.LedgerTests.test_future_acknowledgement_is_incomplete_when_incident_is_known) ... ok
+2026-10-06T19:18:08.8765649Z test_invalid_expected_evidence_is_incomplete_when_compared_directly (test_ledger.LedgerTests.test_invalid_expected_evidence_is_incomplete_when_compared_directly) ... ok
+2026-10-06T19:18:08.8768173Z test_invalid_incident_is_incomplete_and_omission_is_disclosed (test_ledger.LedgerTests.test_invalid_incident_is_incomplete_and_omission_is_disclosed) ... ok
+2026-10-06T19:18:08.8781438Z test_invalid_json_duplicate_keys_nonfinite_and_unknown_fields_rejected (test_ledger.LedgerTests.test_invalid_json_duplicate_keys_nonfinite_and_unknown_fields_rejected) ... ok
+2026-10-06T19:18:08.8787162Z test_load_accepts_checksum_verified_independent_json_file (test_ledger.LedgerTests.test_load_accepts_checksum_verified_independent_json_file) ... ok
+2026-10-06T19:18:08.8832166Z test_load_bounds_bytes_before_json_parse (test_ledger.LedgerTests.test_load_bounds_bytes_before_json_parse) ... ok
+2026-10-06T19:18:08.8836896Z test_load_missing_file_and_invalid_digest_are_safe_errors (test_ledger.LedgerTests.test_load_missing_file_and_invalid_digest_are_safe_errors) ... ok
+2026-10-06T19:18:08.8841859Z test_missing_interior_write_fails_despite_fresh_latest_acknowledgement (test_ledger.LedgerTests.test_missing_interior_write_fails_despite_fresh_latest_acknowledgement) ... ok
+2026-10-06T19:18:08.8847152Z test_payload_sequence_and_acknowledgement_mismatches_are_reported (test_ledger.LedgerTests.test_payload_sequence_and_acknowledgement_mismatches_are_reported) ... ok
+2026-10-06T19:18:08.8857538Z test_report_lists_are_bounded_while_counts_remain_exact (test_ledger.LedgerTests.test_report_lists_are_bounded_while_counts_remain_exact) ... ok
+2026-10-06T19:18:08.9337369Z test_row_limit_rejects_expected_and_recovered_evidence (test_ledger.LedgerTests.test_row_limit_rejects_expected_and_recovered_evidence) ... ok
+2026-10-06T19:18:08.9339655Z test_timestamp_offsets_and_hex_case_are_semantically_equal (test_ledger.LedgerTests.test_timestamp_offsets_and_hex_case_are_semantically_equal) ... ok
+2026-10-06T19:18:08.9342045Z test_trailing_loss_and_empty_restore_report_exact_known_missing_ids (test_ledger.LedgerTests.test_trailing_loss_and_empty_restore_report_exact_known_missing_ids) ... ok
+2026-10-06T19:18:08.9345081Z test_unexpected_recovered_write_is_explicit_closed_scope_failure (test_ledger.LedgerTests.test_unexpected_recovered_write_is_explicit_closed_scope_failure) ... ok
+2026-10-06T19:18:08.9349438Z test_unknown_or_invalid_recovered_evidence_is_incomplete_not_zero_loss (test_ledger.LedgerTests.test_unknown_or_invalid_recovered_evidence_is_incomplete_not_zero_loss) ... ok
+2026-10-06T19:18:09.0837872Z test_complete_journey_produces_secret_free_observable_checks (test_orders.OrdersTests.test_complete_journey_produces_secret_free_observable_checks) ... ok
+2026-10-06T19:18:09.1607395Z test_http_missing_and_foreign_orders_are_indistinguishable (test_orders.OrdersTests.test_http_missing_and_foreign_orders_are_indistinguishable) ... ok
+2026-10-06T19:18:09.2128177Z test_http_provider_failure_is_sanitized (test_orders.OrdersTests.test_http_provider_failure_is_sanitized) ... ok
+2026-10-06T19:18:09.2662577Z test_http_reads_creates_and_reads_committed_order_on_new_request (test_orders.OrdersTests.test_http_reads_creates_and_reads_committed_order_on_new_request) ... ok
+2026-10-06T19:18:09.2692256Z test_http_rejects_oversized_malformed_and_tenant_override_bodies (test_orders.OrdersTests.test_http_rejects_oversized_malformed_and_tenant_override_bodies) ... ok
+2026-10-06T19:18:09.3213018Z test_http_unauthenticated_and_invalid_token_are_rejected (test_orders.OrdersTests.test_http_unauthenticated_and_invalid_token_are_rejected) ... ok
+2026-10-06T19:18:09.3219802Z test_missing_table_is_reported_without_seeding_or_repair (test_orders.OrdersTests.test_missing_table_is_reported_without_seeding_or_repair) ... ok
+2026-10-06T19:18:09.3222321Z test_non_ascii_authorization_is_unauthenticated (test_orders.OrdersTests.test_non_ascii_authorization_is_unauthenticated) ... ok
+2026-10-06T19:18:09.4817460Z test_readonly_application_fails_journey_even_when_database_read_is_healthy (test_orders.OrdersTests.test_readonly_application_fails_journey_even_when_database_read_is_healthy) ... ok
+2026-10-06T19:18:09.4829571Z test_repository_connects_as_restricted_role_without_application_tenant_filter (test_orders.OrdersTests.test_repository_connects_as_restricted_role_without_application_tenant_filter) ... ok
+2026-10-06T19:18:09.4833078Z test_repository_rejects_sql_injection_before_calling_database (test_orders.OrdersTests.test_repository_rejects_sql_injection_before_calling_database) ... ok
+2026-10-06T19:18:09.4844575Z test_role_setup_never_repairs_schema_policies_or_data (test_orders.OrdersTests.test_role_setup_never_repairs_schema_policies_or_data) ... ok
+2026-10-06T19:18:09.4847130Z test_service_authentication_precedes_repository_access (test_orders.OrdersTests.test_service_authentication_precedes_repository_access) ... ok
+2026-10-06T19:18:09.4849540Z test_service_rejects_caller_selected_tenant_and_invalid_quantities (test_orders.OrdersTests.test_service_rejects_caller_selected_tenant_and_invalid_quantities) ... ok
+2026-10-06T19:18:09.5072403Z test_arguments_remain_literal_and_stdin_round_trips (test_process.ProcessTests.test_arguments_remain_literal_and_stdin_round_trips) ... ok
+2026-10-06T19:18:09.5237818Z test_failure_never_discloses_stderr_or_command_arguments (test_process.ProcessTests.test_failure_never_discloses_stderr_or_command_arguments) ... ok
+2026-10-06T19:18:09.5240208Z test_invalid_limits_are_rejected (test_process.ProcessTests.test_invalid_limits_are_rejected) ... ok
+2026-10-06T19:18:09.5261747Z test_keyboard_interrupt_reaps_only_its_child_before_reraising (test_process.ProcessTests.test_keyboard_interrupt_reaps_only_its_child_before_reraising) ... ok
+2026-10-06T19:18:09.5267998Z test_oversized_stdin_is_rejected_before_execution (test_process.ProcessTests.test_oversized_stdin_is_rejected_before_execution) ... ok
+2026-10-06T19:18:09.5431516Z test_stderr_is_bounded_and_redacted (test_process.ProcessTests.test_stderr_is_bounded_and_redacted) ... ok
+2026-10-06T19:18:09.5595033Z test_stdout_is_bounded (test_process.ProcessTests.test_stdout_is_bounded) ... ok
+2026-10-06T19:18:09.5597280Z test_string_commands_are_rejected (test_process.ProcessTests.test_string_commands_are_rejected) ... ok
+2026-10-06T19:18:09.6619283Z test_timeout_terminates_process (test_process.ProcessTests.test_timeout_terminates_process) ... ok
+2026-10-06T19:18:09.6647266Z test_failure_and_incomplete_are_visible_in_junit (test_reports.ReportTests.test_failure_and_incomplete_are_visible_in_junit) ... ok
+2026-10-06T19:18:09.6671037Z test_invalid_without_checks_cannot_produce_green_junit (test_reports.ReportTests.test_invalid_without_checks_cannot_produce_green_junit) ... ok
+2026-10-06T19:18:09.6697200Z test_junit_write_failure_does_not_publish_successful_json (test_reports.ReportTests.test_junit_write_failure_does_not_publish_successful_json) ... ok
+2026-10-06T19:18:09.6700264Z test_hard_kill_during_active_query_recovers_only_owned_target (test_resilience_integration.ResilienceIntegrationTests.test_hard_kill_during_active_query_recovers_only_owned_target) ... skipped 'requires Docker; opt in explicitly'
+2026-10-06T19:18:09.6704115Z test_hard_kill_during_checks_phase_preserves_incomplete_journal (test_resilience_integration.ResilienceIntegrationTests.test_hard_kill_during_checks_phase_preserves_incomplete_journal) ... skipped 'requires Docker; opt in explicitly'
+2026-10-06T19:18:09.6708301Z test_hard_kill_during_restore_phase_recovers_only_owned_target (test_resilience_integration.ResilienceIntegrationTests.test_hard_kill_during_restore_phase_recovers_only_owned_target) ... skipped 'requires Docker; opt in explicitly'
+2026-10-06T19:18:09.6711674Z test_overlapping_verifiers_share_output_without_cross_cleanup (test_resilience_integration.ResilienceIntegrationTests.test_overlapping_verifiers_share_output_without_cross_cleanup) ... skipped 'requires Docker; opt in explicitly'
+2026-10-06T19:18:09.6824975Z test_cleanup_waits_until_control_response_is_acknowledged (test_restore_write_integration.CleanupControlBarrierTests.test_cleanup_waits_until_control_response_is_acknowledged) ... ok
+2026-10-06T19:18:09.7345510Z test_missing_control_response_times_out_but_still_cleans (test_restore_write_integration.CleanupControlBarrierTests.test_missing_control_response_times_out_but_still_cleans) ... ok
+2026-10-06T19:18:09.7351133Z test_wrong_run_release_cannot_masquerade_as_confirmed_control_response (test_restore_write_integration.CleanupControlBarrierTests.test_wrong_run_release_cannot_masquerade_as_confirmed_control_response) ... ok
+2026-10-06T19:18:09.7355533Z test_kill_cli_during_copy_writes_recovers_and_same_archive_retries (test_restore_write_integration.RestoreWriteIntegrationTests.test_kill_cli_during_copy_writes_recovers_and_same_archive_retries) ... skipped 'requires Docker; opt in explicitly'
+2026-10-06T19:18:09.7359154Z test_terminate_copy_backend_returns_incomplete_and_cleans_automatically (test_restore_write_integration.RestoreWriteIntegrationTests.test_terminate_copy_backend_returns_incomplete_and_cleans_automatically) ... skipped 'requires Docker; opt in explicitly'
+2026-10-06T19:18:09.7361305Z 
+2026-10-06T19:18:09.7361769Z ----------------------------------------------------------------------
+2026-10-06T19:18:09.7363143Z Ran 151 tests in 1.636s
+2026-10-06T19:18:09.7363574Z 
+2026-10-06T19:18:09.7364458Z OK (skipped=21)
+2026-10-06T19:18:09.7777424Z Post job cleanup.
+2026-10-06T19:18:09.9289778Z Post job cleanup.
+2026-10-06T19:18:10.0404546Z [command]/usr/bin/git version
+2026-10-06T19:18:10.0487638Z git version 2.55.0
+2026-10-06T19:18:10.0523065Z Temporarily overriding HOME='/home/runner/work/_temp/8171f43b-a6f9-475f-9283-efee351806b4' before making global git config changes
+2026-10-06T19:18:10.0524641Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-06T19:18:10.0526494Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/restoreproof/restoreproof
+2026-10-06T19:18:10.1037933Z Removing SSH command configuration
+2026-10-06T19:18:10.1058209Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-06T19:18:10.1359179Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-06T19:18:10.1877408Z Removing HTTP extra header
+2026-10-06T19:18:10.1886881Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-06T19:18:10.2242551Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-06T19:18:10.2251821Z Removing includeIf entries pointing to credentials config files
+2026-10-06T19:18:10.2252701Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-06T19:18:10.2268195Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-06T19:18:10.2680342Z Cleaning up orphan processes

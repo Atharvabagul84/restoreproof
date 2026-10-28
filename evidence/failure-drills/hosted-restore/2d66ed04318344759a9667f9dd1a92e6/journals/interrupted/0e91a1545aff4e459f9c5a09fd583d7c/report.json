@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "run_id": "0e91a1545aff4e459f9c5a09fd583d7c",
+  "started_at": "2026-10-06T19:20:08.955901+00:00",
+  "status": "INCOMPLETE",
+  "exit_code": 2,
+  "phase": "restore",
+  "report_path": "/home/runner/work/restoreproof/restoreproof/runs/integration/restore-write/2d66ed04318344759a9667f9dd1a92e6/runs/interrupted/0e91a1545aff4e459f9c5a09fd583d7c/report.json",
+  "checks": [],
+  "errors": [],
+  "cleanup": {
+    "status": "NOT_REQUIRED",
+    "remaining": []
+  },
+  "target": {
+    "container_id": "4e085d34a38ef7ab06483f2bd1196b4289dcab41eef061514c8ba5346557230f",
+    "image_id": "sha256:589f742565e4f6d22149176b032974f55f8201a8a37b71ed587ec5c6902e689f"
+  },
+  "timings": {
+    "create_seconds": 1.468219
+  },
+  "measurement_boundary": "Before contract preflight through application/checkpoint verification; cleanup recorded separately.",
+  "archive_sha256": "2522dee10bd3ebaa6cc38e31e7bd6f9be79454656b4974714ece5c888bebbef2",
+  "image_reference": "postgres:17.11-bookworm"
+}

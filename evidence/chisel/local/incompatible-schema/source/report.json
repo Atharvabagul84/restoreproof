@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "run_id": "3a6576b3ecab4e2da4e0b3a03dacb4b5",
+  "started_at": "2026-10-06T20:24:14.246566+00:00",
+  "status": "PASS",
+  "exit_code": 0,
+  "phase": "complete",
+  "report_path": "<workspace>\\outputs\\restoreproof\\runs\\chisel-ci\\suite-efbe30c072184bd2bd16987c7b4141a8\\incompatible-schema\\source-3a6576b3ecab4e2da4e0b3a03dacb4b5\\report.json",
+  "checks": [],
+  "errors": [],
+  "cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "target": {
+    "database_id": "6a2785b3f6674ca8ee7193e145c076ed066800cd1946d5de8b8c29dc8cfb5d48",
+    "database_image_id": "sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826",
+    "components": {
+      "mail": "ef236862d10f88f4e3d45f1a4b84f6e2a116eb3659923da2a9726a20308ce0c0",
+      "gateway": "39f276e0eb683887d98d480a2863a27b07b0b1dff1e06bcd174b83481f8cb64c",
+      "auth": "4365056a9eb0a236855575734196168b974c8e3052d846697a77cb9cd0b94f77",
+      "app": "ffe00bae4cdcee8aaeaa291369ef955f4d1286895c395f9f93a498c281bbceec",
+      "rest": "ec7779dc53f462ef9b153f69d7fc61a55b2ffb1db81e6e0232ee312b0e5a03c5"
+    },
+    "images": {
+      "database": "postgres:17.11-bookworm@sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826",
+      "auth": "sha256:c0c25187a6b835e65a6f6e6c6b39d090e832d40e6de5186f2c038e0411944232",
+      "rest": "sha256:d155c6718ed9a9f990d159a2ab7c0a3f16944dbb6d0a0344557421042acfe0df",
+      "mail": "sha256:b68349e3a014b90c5610bfb26b2ae36f3892d7b8cf25ee140c6c71c98d2fcf48",
+      "gateway": "sha256:fe46f78e53d55c8f3ad440e02ff5982c61a15cfeed75cf946b4c5a1b49abce8d",
+      "app": "sha256:9ad3a11c1029c9ab12eaec1400b4a85ecf773ef3169bc53de596b3cdd23895b3"
+    },
+    "planned_names": {
+      "app": "restoreproof-3a6576b3ecab4e2da4e0b3a03dacb4b5-app",
+      "auth": "restoreproof-3a6576b3ecab4e2da4e0b3a03dacb4b5-auth",
+      "gateway": "restoreproof-3a6576b3ecab4e2da4e0b3a03dacb4b5-gateway",
+      "mail": "restoreproof-3a6576b3ecab4e2da4e0b3a03dacb4b5-mail",
+      "rest": "restoreproof-3a6576b3ecab4e2da4e0b3a03dacb4b5-rest"
+    },
+    "observed_isolation": {
+      "database": {
+        "network_mode": "none",
+        "memory_bytes": 536870912,
+        "nano_cpus": 1000000000,
+        "pids_limit": 128,
+        "read_only_root": false,
+        "cap_drop": [],
+        "security_options": [],
+        "tmpfs": {
+          "/var/lib/postgresql/data": "rw,noexec,nosuid,size=268435456"
+        },
+        "host_mounts": [],
+        "published_ports": []
+      },
+      "mail": {
+        "network_mode": "container:6a2785b3f6674ca8ee7193e145c076ed066800cd1946d5de8b8c29dc8cfb5d48",
+        "memory_bytes": 268435456,
+        "nano_cpus": 1000000000,
+        "pids_limit": 128,
+        "read_only_root": true,
+        "cap_drop": [
+          "ALL"
+        ],
+        "security_options": [
+          "no-new-privileges"
+        ],
+        "tmpfs": {
+          "/tmp": "rw,nosuid,size=67108864"
+        },
+        "host_mounts": [],
+        "published_ports": []
+      },
+      "gateway": {
+        "network_mode": "container:6a2785b3f6674ca8ee7193e145c076ed066800cd1946d5de8b8c29dc8cfb5d48",
+        "memory_bytes": 268435456,
+        "nano_cpus": 1000000000,
+        "pids_limit": 128,
+        "read_only_root": true,
+        "cap_drop": [
+          "ALL"
+        ],
+        "security_options": [
+          "no-new-privileges"
+        ],
+        "tmpfs": {
+          "/tmp": "rw,nosuid,size=67108864"
+        },
+        "host_mounts": [],
+        "published_ports": []
+      },
+      "auth": {
+        "network_mode": "container:6a2785b3f6674ca8ee7193e145c076ed066800cd1946d5de8b8c29dc8cfb5d48",
+        "memory_bytes": 268435456,
+        "nano_cpus": 1000000000,
+        "pids_limit": 128,
+        "read_only_root": true,
+        "cap_drop": [
+          "ALL"
+        ],
+        "security_options": [
+          "no-new-privileges"
+        ],
+        "tmpfs": {
+          "/tmp": "rw,nosuid,size=67108864"
+        },
+        "host_mounts": [],
+        "published_ports": []
+      },
+      "app": {
+        "network_mode": "container:6a2785b3f6674ca8ee7193e145c076ed066800cd1946d5de8b8c29dc8cfb5d48",
+        "memory_bytes": 805306368,
+        "nano_cpus": 1000000000,
+        "pids_limit": 128,
+        "read_only_root": true,
+        "cap_drop": [
+          "ALL"
+        ],
+        "security_options": [
+          "no-new-privileges"
+        ],
+        "tmpfs": {
+          "/tmp": "rw,nosuid,size=67108864"
+        },
+        "host_mounts": [],
+        "published_ports": []
+      },
+      "rest": {
+        "network_mode": "container:6a2785b3f6674ca8ee7193e145c076ed066800cd1946d5de8b8c29dc8cfb5d48",
+        "memory_bytes": 268435456,
+        "nano_cpus": 1000000000,
+        "pids_limit": 128,
+        "read_only_root": true,
+        "cap_drop": [
+          "ALL"
+        ],
+        "security_options": [
+          "no-new-privileges"
+        ],
+        "tmpfs": {
+          "/tmp": "rw,nosuid,size=67108864"
+        },
+        "host_mounts": [],
+        "published_ports": []
+      }
+    },
+    "network": "database=none; services=container:<database_id>",
+    "published_ports": [],
+    "host_mounts": []
+  },
+  "timings": {
+    "create-source_seconds": 6.0,
+    "start-source_seconds": 11.281,
+    "seed-through-http_seconds": 7.656,
+    "quiesce-source_seconds": 2.079,
+    "capture-backup_seconds": 1.282
+  },
+  "measurement_boundary": "Before contract preflight through application/checkpoint verification; cleanup recorded separately.",
+  "application": "chisel",
+  "role": "source-capture",
+  "scenario": "incompatible-schema"
+}

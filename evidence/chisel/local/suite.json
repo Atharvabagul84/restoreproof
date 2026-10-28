@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "scenarios": [
+    {
+      "scenario": "healthy",
+      "expected": "PASS",
+      "actual": "PASS",
+      "cleanup": "PASS",
+      "source_cleanup": "PASS",
+      "report_path": "<workspace>\\outputs\\restoreproof\\runs\\chisel-ci\\suite-efbe30c072184bd2bd16987c7b4141a8\\healthy\\f53aac3e98e944c087dd4e3672fccde2\\report.json",
+      "source_report_path": "<workspace>\\outputs\\restoreproof\\runs\\chisel-ci\\suite-efbe30c072184bd2bd16987c7b4141a8\\healthy\\source-c24368c487634448af9a2546f77ffbe7\\report.json"
+    },
+    {
+      "scenario": "missing-data",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "cleanup": "PASS",
+      "source_cleanup": "PASS",
+      "report_path": "<workspace>\\outputs\\restoreproof\\runs\\chisel-ci\\suite-efbe30c072184bd2bd16987c7b4141a8\\missing-data\\f8e2c95a01664cc69a3e3ad3da781317\\report.json",
+      "source_report_path": "<workspace>\\outputs\\restoreproof\\runs\\chisel-ci\\suite-efbe30c072184bd2bd16987c7b4141a8\\missing-data\\source-b2a2934b2c5845afa7c2a04ddd9ff8d9\\report.json"
+    },
+    {
+      "scenario": "incompatible-schema",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "cleanup": "PASS",
+      "source_cleanup": "PASS",
+      "report_path": "<workspace>\\outputs\\restoreproof\\runs\\chisel-ci\\suite-efbe30c072184bd2bd16987c7b4141a8\\incompatible-schema\\ab0892f533c5439790c0c781556fda1c\\report.json",
+      "source_report_path": "<workspace>\\outputs\\restoreproof\\runs\\chisel-ci\\suite-efbe30c072184bd2bd16987c7b4141a8\\incompatible-schema\\source-3a6576b3ecab4e2da4e0b3a03dacb4b5\\report.json"
+    },
+    {
+      "scenario": "auth-unavailable",
+      "expected": "INCOMPLETE",
+      "actual": "INCOMPLETE",
+      "cleanup": "PASS",
+      "source_cleanup": "PASS",
+      "report_path": "<workspace>\\outputs\\restoreproof\\runs\\chisel-ci\\suite-efbe30c072184bd2bd16987c7b4141a8\\auth-unavailable\\60ca7c35c4934712a98b713a8fdc6e5c\\report.json",
+      "source_report_path": "<workspace>\\outputs\\restoreproof\\runs\\chisel-ci\\suite-efbe30c072184bd2bd16987c7b4141a8\\auth-unavailable\\source-78030939e1614e51b8b1d9bb5156de39\\report.json"
+    },
+    {
+      "scenario": "missing-config",
+      "expected": "INCOMPLETE",
+      "actual": "INCOMPLETE",
+      "cleanup": "PASS",
+      "source_cleanup": "PASS",
+      "report_path": "<workspace>\\outputs\\restoreproof\\runs\\chisel-ci\\suite-efbe30c072184bd2bd16987c7b4141a8\\missing-config\\de394d8ecfea4604a21f9d174d23ca39\\report.json",
+      "source_report_path": "<workspace>\\outputs\\restoreproof\\runs\\chisel-ci\\suite-efbe30c072184bd2bd16987c7b4141a8\\missing-config\\source-f69784f4b11c4ba8a8abf61a87803af9\\report.json"
+    }
+  ],
+  "summary_path": "<workspace>\\outputs\\restoreproof\\runs\\chisel-ci\\suite-efbe30c072184bd2bd16987c7b4141a8\\suite.json"
+}

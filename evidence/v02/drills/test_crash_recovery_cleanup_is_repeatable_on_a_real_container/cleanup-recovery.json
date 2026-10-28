@@ -1,0 +1,13 @@
+{
+  "run_id": "166bdbe7bab541bc9de1ae2bde74ecb6",
+  "recovered": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "repeated": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Container absence verified."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "bucket": "restoreproof-123456789012-ap-southeast-2",
+  "key": "backups/chisel/live-fa976b9b1c044e29bd3f61b40d11753b/source.dump",
+  "original_version": "D8bX4tAGy_JUGkg2l1WNaSw726DOg1u2",
+  "newer_version": "PnOTzTyeAmHk_ujvg4hhRIMUOyW1Axdf",
+  "sha256": "d4453ac30e2764fe9c7421932245f9d3749294d7d005317ccc050a927eb79c43",
+  "size_bytes": 139146,
+  "captured_at": "2026-10-07T05:32:56.475736+00:00",
+  "uploaded_at": "2026-10-07T05:35:54.683223+00:00",
+  "encryption": "AES256"
+}

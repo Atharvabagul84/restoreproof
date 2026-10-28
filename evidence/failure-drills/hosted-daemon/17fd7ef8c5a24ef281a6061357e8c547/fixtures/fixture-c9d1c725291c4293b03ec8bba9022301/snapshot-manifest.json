@@ -1,0 +1,49 @@
+{
+  "teams": [
+    {
+      "id": 1,
+      "name": "Flight systems"
+    },
+    {
+      "id": 2,
+      "name": "Ground operations"
+    }
+  ],
+  "features": [
+    {
+      "id": 101,
+      "team_id": 1,
+      "title": "Telemetry replay",
+      "revision": 2
+    },
+    {
+      "id": 102,
+      "team_id": 2,
+      "title": "Release checklist",
+      "revision": 1
+    }
+  ],
+  "snapshots": [
+    {
+      "feature_id": 101,
+      "revision": 1,
+      "body": "First revision"
+    },
+    {
+      "feature_id": 101,
+      "revision": 2,
+      "body": "Durable replay"
+    },
+    {
+      "feature_id": 102,
+      "revision": 1,
+      "body": "Verified release"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": 1,
+      "committed_at": "2026-01-01T00:00:00+00:00"
+    }
+  ]
+}

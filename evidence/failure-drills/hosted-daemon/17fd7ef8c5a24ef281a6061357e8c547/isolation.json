@@ -1,0 +1,106 @@
+{
+  "daemon_command": [
+    "/usr/bin/dockerd",
+    "--config-file=/home/runner/work/restoreproof/restoreproof/.rp-d/17fd7ef8c5a2/daemon.json",
+    "--host=unix:///home/runner/work/restoreproof/restoreproof/.rp-d/17fd7ef8c5a2/docker.sock",
+    "--containerd=/home/runner/work/restoreproof/restoreproof/.rp-d/17fd7ef8c5a2/containerd.sock",
+    "--data-root=/home/runner/work/restoreproof/restoreproof/.rp-d/17fd7ef8c5a2/data",
+    "--exec-root=/home/runner/work/restoreproof/restoreproof/.rp-d/17fd7ef8c5a2/exec",
+    "--pidfile=/home/runner/work/restoreproof/restoreproof/.rp-d/17fd7ef8c5a2/daemon.pid",
+    "--bridge=none",
+    "--iptables=false",
+    "--ip6tables=false",
+    "--ip-masq=false",
+    "--ip-forward=false",
+    "--userland-proxy=false",
+    "--storage-driver=vfs",
+    "--live-restore=false",
+    "--shutdown-timeout=10",
+    "--exec-opt=native.cgroupdriver=cgroupfs",
+    "--cgroup-parent=restoreproof-946d4d8fa30442f3ba6dde2bde792ff5",
+    "--containerd-namespace=rp-946d4d8fa30442f3ba6dde2bde792ff5",
+    "--containerd-plugins-namespace=rp-plugins-946d4d8fa30442f3ba6dde2bde792ff5"
+  ],
+  "outer_daemon_id": "96bc9d58-7015-4b4a-8357-8e592f0b19b5",
+  "private_daemon_id": "0b670d0f-ef3f-4886-9ef4-44cf92b5e9ee",
+  "runtime": "/home/runner/work/restoreproof/restoreproof/.rp-d/17fd7ef8c5a2",
+  "containerd_paths_verified_private": true,
+  "containerd_paths": {
+    "root": "/home/runner/work/restoreproof/restoreproof/.rp-d/17fd7ef8c5a2/containerd-root",
+    "state": "/home/runner/work/restoreproof/restoreproof/.rp-d/17fd7ef8c5a2/containerd-state",
+    "socket": "/home/runner/work/restoreproof/restoreproof/.rp-d/17fd7ef8c5a2/containerd.sock"
+  },
+  "containerd_pid": 2406,
+  "containerd_start_time": "5026",
+  "containerd_command": [
+    "/usr/bin/containerd",
+    "--config",
+    "/home/runner/work/restoreproof/restoreproof/.rp-d/17fd7ef8c5a2/containerd.toml"
+  ],
+  "private_daemon": {
+    "ServerVersion": "28.0.4",
+    "Driver": "vfs",
+    "CgroupDriver": "cgroupfs",
+    "CgroupVersion": "2",
+    "DockerRootDir": "/home/runner/work/restoreproof/restoreproof/.rp-d/17fd7ef8c5a2/data",
+    "KernelVersion": "6.17.0-1022-azure",
+    "OperatingSystem": "Ubuntu 24.04.5 LTS",
+    "Architecture": "x86_64",
+    "ContainerdCommit": {
+      "ID": "ee2735368117d2eb259779949d5e75cdafec9761",
+      "Expected": "ee2735368117d2eb259779949d5e75cdafec9761"
+    },
+    "RuncCommit": {
+      "ID": "v1.5.1-0-g8f2685a4",
+      "Expected": "v1.5.1-0-g8f2685a4"
+    }
+  },
+  "server_components": [
+    {
+      "Name": "Engine",
+      "Version": "28.0.4",
+      "Details": {
+        "ApiVersion": "1.48",
+        "Arch": "amd64",
+        "BuildTime": "Tue Mar 25 15:07:16 2025",
+        "Experimental": "false",
+        "GitCommit": "6430e49",
+        "GoVersion": "go1.23.7",
+        "KernelVersion": "6.17.0-1022-azure",
+        "MinAPIVersion": "1.24",
+        "Os": "linux"
+      }
+    },
+    {
+      "Name": "containerd",
+      "Version": "v2.3.6",
+      "Details": {
+        "GitCommit": "ee2735368117d2eb259779949d5e75cdafec9761"
+      }
+    },
+    {
+      "Name": "runc",
+      "Version": "1.5.1",
+      "Details": {
+        "GitCommit": "v1.5.1-0-g8f2685a4"
+      }
+    },
+    {
+      "Name": "docker-init",
+      "Version": "0.19.0",
+      "Details": {
+        "GitCommit": "de40ad0"
+      }
+    }
+  ],
+  "image": {
+    "reference": "postgres:17.11-bookworm",
+    "source_id": "sha256:589f742565e4f6d22149176b032974f55f8201a8a37b71ed587ec5c6902e689f",
+    "source_repo_digests": [
+      "postgres@sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826"
+    ],
+    "private_id": "sha256:589f742565e4f6d22149176b032974f55f8201a8a37b71ed587ec5c6902e689f",
+    "private_repo_digests": []
+  },
+  "boundary": "Controlled SIGTERM of only the private daemon; live-restore is disabled."
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "run_id": "5563ff924b0344b1865c4b6f65642b92",
+  "started_at": "2026-10-07T03:55:25.483647+00:00",
+  "status": "INCOMPLETE",
+  "exit_code": 2,
+  "phase": "complete",
+  "report_path": "/home/runner/work/restoreproof/restoreproof/runs/s3-chisel/suite-c3cb402ec7474a0988bb940de339c126/drills/5563ff924b0344b1865c4b6f65642b92/report.json",
+  "checks": [
+    {
+      "name": "backup-retrieval",
+      "status": "INCOMPLETE",
+      "reason": "download-interrupted"
+    }
+  ],
+  "errors": [
+    "download-interrupted"
+  ],
+  "cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "application_allocated": false
+  },
+  "target": {},
+  "timings": {
+    "retrieve-backup_seconds": 0.004122,
+    "total_seconds": 0.006959
+  },
+  "measurement_boundary": "End-to-end attempt includes retrieval and application recovery; total includes cleanup and any image preparation. Not production RTO.",
+  "role": "s3-recovery",
+  "application": "chisel",
+  "implementation": {
+    "package_version": "0.4.0",
+    "source_sha256": "9bbed984f634dbc1dad26dd6e457037a345aa941d4412da2dabb89b8467792c8"
+  },
+  "storage_endpoint": "http://127.0.0.1:41101",
+  "backup": {
+    "bucket": "restoreproof-lab-example",
+    "key": "backups/chisel/source.dump",
+    "version_id": "612f3cdf-9d28-48ef-956c-613e7a8df320",
+    "sha256": "d6e656ef9976a07fd8929e649159946cbd5cfff8128e6462ab7211c96e8e0211",
+    "expected_bucket_owner": "123456789012",
+    "captured_at": "2026-10-07T03:55:08.058647Z",
+    "max_age_seconds": 86400
+  },
+  "failure_code": "download-interrupted",
+  "download_cleanup": {
+    "status": "PASS",
+    "archive_retained": false
+  },
+  "completed_at": "2026-10-07T03:55:25.495783+00:00"
+}

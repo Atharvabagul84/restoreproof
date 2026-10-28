@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="RestoreProof" tests="6" failures="0" errors="1">
+  <testcase name="unauthenticated-denied" />
+  <testcase name="email-otp-login" />
+  <testcase name="restored-identity" />
+  <testcase name="saved-brief-content" />
+  <testcase name="cleanup" />
+  <testcase name="verification-run">
+    <error type="INCOMPLETE">{"name": "verification-run", "status": "INCOMPLETE", "reason": ["application-journey did not complete (ProcessError)."]}</error>
+  </testcase>
+</testsuite>

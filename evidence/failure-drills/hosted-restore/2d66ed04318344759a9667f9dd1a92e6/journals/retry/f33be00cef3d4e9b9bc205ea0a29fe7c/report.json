@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "run_id": "f33be00cef3d4e9b9bc205ea0a29fe7c",
+  "started_at": "2026-10-06T19:20:11.251476+00:00",
+  "status": "PASS",
+  "exit_code": 0,
+  "phase": "finished",
+  "report_path": "/home/runner/work/restoreproof/restoreproof/runs/integration/restore-write/2d66ed04318344759a9667f9dd1a92e6/runs/retry/f33be00cef3d4e9b9bc205ea0a29fe7c/report.json",
+  "checks": [
+    {
+      "name": "restored-rows",
+      "status": "PASS",
+      "expected": {
+        "rows": 2048,
+        "min_id": 1,
+        "max_id": 2048,
+        "bad_payloads": 0
+      },
+      "actual": {
+        "rows": 2048,
+        "min_id": 1,
+        "max_id": 2048,
+        "bad_payloads": 0
+      }
+    },
+    {
+      "name": "freshness",
+      "status": "PASS",
+      "incident_at": "2026-01-01T00:00:30+00:00",
+      "recovered_at": "2026-01-01T00:00:00+00:00",
+      "age_seconds": 30.0,
+      "max_data_age_seconds": 60,
+      "reason": "within_policy"
+    },
+    {
+      "name": "recovery-duration",
+      "status": "PASS",
+      "actual_seconds": 2.294607,
+      "max_seconds": 90
+    }
+  ],
+  "errors": [],
+  "cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "target": {
+    "container_id": "c74805aecb852e829cbc8ca71b147db07518a7ecfe4a08a0049d872e1881cf70",
+    "image_id": "sha256:589f742565e4f6d22149176b032974f55f8201a8a37b71ed587ec5c6902e689f"
+  },
+  "timings": {
+    "create_seconds": 1.486798,
+    "restore_seconds": 0.53631,
+    "checks_seconds": 0.263744,
+    "verification_attempt_seconds": 2.294607,
+    "cleanup_seconds": 0.427923,
+    "total_seconds": 2.722552
+  },
+  "measurement_boundary": "Before contract preflight through application/checkpoint verification; cleanup recorded separately.",
+  "archive_sha256": "2522dee10bd3ebaa6cc38e31e7bd6f9be79454656b4974714ece5c888bebbef2",
+  "image_reference": "postgres:17.11-bookworm",
+  "finished_at": "2026-10-06T19:20:13.974071+00:00"
+}

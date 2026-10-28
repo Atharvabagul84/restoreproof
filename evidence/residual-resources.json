@@ -1,0 +1,8 @@
+{
+  "recorded_at": "2026-10-06T18:31:56.313465+00:00",
+  "command": "docker ps -a --filter label=io.restoreproof.run_id --format \"{{.ID}} {{.Names}} {{.Status}}\"",
+  "execution_context": "Local Docker Desktop Linux engine; read-only post-test check",
+  "observed_exit_code": 0,
+  "observed_stdout": "",
+  "remaining_run_labeled_containers": []
+}

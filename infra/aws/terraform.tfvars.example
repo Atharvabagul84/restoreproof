@@ -1,0 +1,8 @@
+# Copy to a gitignored terraform.tfvars and replace account/bucket values.
+# Do not opt in until the Free plan and prevention of charges are verified.
+allow_aws_resources = false
+aws_account_id      = "123456789012"
+aws_region          = "us-east-1"
+bucket_name         = "replace-with-your-unique-restoreproof-backups"
+# Reuse a pre-existing GitHub OIDC provider instead of attempting to recreate it:
+# github_oidc_provider_arn = "arn:aws:iam::123456789012:oidc-provider/token.actions.githubusercontent.com"

@@ -1,0 +1,232 @@
+{
+  "status": "PASS",
+  "scenarios": [
+    {
+      "scenario": "healthy",
+      "status": "PASS",
+      "expected": "PASS",
+      "matched_expected_cause": true,
+      "report_path": "/home/runner/work/restoreproof/restoreproof/runs/s3-chisel/suite-c3cb402ec7474a0988bb940de339c126/drills/53c4d5f4cf004a9b8391cccf54ec602e/report.json"
+    },
+    {
+      "scenario": "missing-object",
+      "status": "INCOMPLETE",
+      "expected": "INCOMPLETE",
+      "matched_expected_cause": true,
+      "report_path": "/home/runner/work/restoreproof/restoreproof/runs/s3-chisel/suite-c3cb402ec7474a0988bb940de339c126/drills/024b60019521427c9962b539b1683ad7/report.json"
+    },
+    {
+      "scenario": "access-denied",
+      "status": "INCOMPLETE",
+      "expected": "INCOMPLETE",
+      "matched_expected_cause": true,
+      "report_path": "/home/runner/work/restoreproof/restoreproof/runs/s3-chisel/suite-c3cb402ec7474a0988bb940de339c126/drills/ffa0b4c33b9941e58ca2013ed2841cd7/report.json"
+    },
+    {
+      "scenario": "checksum-mismatch",
+      "status": "FAIL",
+      "expected": "FAIL",
+      "matched_expected_cause": true,
+      "report_path": "/home/runner/work/restoreproof/restoreproof/runs/s3-chisel/suite-c3cb402ec7474a0988bb940de339c126/drills/0aab7ccc65464571b95c4867f8b3d002/report.json"
+    },
+    {
+      "scenario": "stale-backup",
+      "status": "FAIL",
+      "expected": "FAIL",
+      "matched_expected_cause": true,
+      "report_path": "/home/runner/work/restoreproof/restoreproof/runs/s3-chisel/suite-c3cb402ec7474a0988bb940de339c126/drills/735ee42be7f4464f98ca00c8ebd8e521/report.json"
+    },
+    {
+      "scenario": "download-interrupted",
+      "status": "INCOMPLETE",
+      "expected": "INCOMPLETE",
+      "matched_expected_cause": true,
+      "report_path": "/home/runner/work/restoreproof/restoreproof/runs/s3-chisel/suite-c3cb402ec7474a0988bb940de339c126/drills/5563ff924b0344b1865c4b6f65642b92/report.json"
+    }
+  ],
+  "summary_path": "/home/runner/work/restoreproof/restoreproof/runs/s3-chisel/suite-c3cb402ec7474a0988bb940de339c126/suite.json",
+  "storage": "local Moto over HTTP; not live AWS",
+  "storage_cleanup": "PASS",
+  "source_cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "source_report_path": "/home/runner/work/restoreproof/restoreproof/runs/s3-chisel/suite-c3cb402ec7474a0988bb940de339c126/source/source-858e83f278b5496db0f9ed29fffb2acc/report.json",
+  "source_contract_path": "/home/runner/work/restoreproof/restoreproof/runs/s3-chisel/suite-c3cb402ec7474a0988bb940de339c126/source/source-858e83f278b5496db0f9ed29fffb2acc/contract.json",
+  "original_version_id": "612f3cdf-9d28-48ef-956c-613e7a8df320",
+  "newer_version_id": "3f8caf2c-5ffa-4b00-89ee-eebf788220ad",
+  "history": {
+    "schema_version": 1,
+    "latest_attempt": {
+      "run_id": "5563ff924b0344b1865c4b6f65642b92",
+      "started_at": "2026-10-07T03:55:25.483647+00:00",
+      "completed_at": "2026-10-07T03:55:25.495783+00:00",
+      "status": "INCOMPLETE",
+      "backup": {
+        "bucket": "restoreproof-lab-example",
+        "key": "backups/chisel/source.dump",
+        "version_id": "612f3cdf-9d28-48ef-956c-613e7a8df320",
+        "sha256": "d6e656ef9976a07fd8929e649159946cbd5cfff8128e6462ab7211c96e8e0211",
+        "expected_bucket_owner": "123456789012",
+        "captured_at": "2026-10-07T03:55:08.058647Z",
+        "max_age_seconds": 86400
+      },
+      "implementation": {
+        "package_version": "0.4.0",
+        "source_sha256": "9bbed984f634dbc1dad26dd6e457037a345aa941d4412da2dabb89b8467792c8"
+      },
+      "failure_code": "download-interrupted",
+      "cleanup_status": "PASS"
+    },
+    "last_success": {
+      "run_id": "53c4d5f4cf004a9b8391cccf54ec602e",
+      "started_at": "2026-10-07T03:55:17.255993+00:00",
+      "completed_at": "2026-10-07T03:55:25.183991+00:00",
+      "status": "PASS",
+      "backup": {
+        "bucket": "restoreproof-lab-example",
+        "key": "backups/chisel/source.dump",
+        "version_id": "612f3cdf-9d28-48ef-956c-613e7a8df320",
+        "sha256": "d6e656ef9976a07fd8929e649159946cbd5cfff8128e6462ab7211c96e8e0211",
+        "expected_bucket_owner": "123456789012",
+        "captured_at": "2026-10-07T03:55:08.058647Z",
+        "max_age_seconds": 86400
+      },
+      "implementation": {
+        "package_version": "0.4.0",
+        "source_sha256": "9bbed984f634dbc1dad26dd6e457037a345aa941d4412da2dabb89b8467792c8"
+      },
+      "failure_code": null,
+      "cleanup_status": "PASS"
+    },
+    "recent_runs": [
+      {
+        "run_id": "5563ff924b0344b1865c4b6f65642b92",
+        "started_at": "2026-10-07T03:55:25.483647+00:00",
+        "completed_at": "2026-10-07T03:55:25.495783+00:00",
+        "status": "INCOMPLETE",
+        "backup": {
+          "bucket": "restoreproof-lab-example",
+          "key": "backups/chisel/source.dump",
+          "version_id": "612f3cdf-9d28-48ef-956c-613e7a8df320",
+          "sha256": "d6e656ef9976a07fd8929e649159946cbd5cfff8128e6462ab7211c96e8e0211",
+          "expected_bucket_owner": "123456789012",
+          "captured_at": "2026-10-07T03:55:08.058647Z",
+          "max_age_seconds": 86400
+        },
+        "implementation": {
+          "package_version": "0.4.0",
+          "source_sha256": "9bbed984f634dbc1dad26dd6e457037a345aa941d4412da2dabb89b8467792c8"
+        },
+        "failure_code": "download-interrupted",
+        "cleanup_status": "PASS"
+      },
+      {
+        "run_id": "735ee42be7f4464f98ca00c8ebd8e521",
+        "started_at": "2026-10-07T03:55:25.368164+00:00",
+        "completed_at": "2026-10-07T03:55:25.375613+00:00",
+        "status": "FAIL",
+        "backup": {
+          "bucket": "restoreproof-lab-example",
+          "key": "backups/chisel/source.dump",
+          "version_id": "612f3cdf-9d28-48ef-956c-613e7a8df320",
+          "sha256": "d6e656ef9976a07fd8929e649159946cbd5cfff8128e6462ab7211c96e8e0211",
+          "expected_bucket_owner": "123456789012",
+          "captured_at": "2026-10-05T03:55:25.367513Z",
+          "max_age_seconds": 86400
+        },
+        "implementation": {
+          "package_version": "0.4.0",
+          "source_sha256": "9bbed984f634dbc1dad26dd6e457037a345aa941d4412da2dabb89b8467792c8"
+        },
+        "failure_code": "stale-backup",
+        "cleanup_status": "PASS"
+      },
+      {
+        "run_id": "0aab7ccc65464571b95c4867f8b3d002",
+        "started_at": "2026-10-07T03:55:25.323969+00:00",
+        "completed_at": "2026-10-07T03:55:25.336743+00:00",
+        "status": "FAIL",
+        "backup": {
+          "bucket": "restoreproof-lab-example",
+          "key": "backups/chisel/source.dump",
+          "version_id": "612f3cdf-9d28-48ef-956c-613e7a8df320",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "expected_bucket_owner": "123456789012",
+          "captured_at": "2026-10-07T03:55:08.058647Z",
+          "max_age_seconds": 86400
+        },
+        "implementation": {
+          "package_version": "0.4.0",
+          "source_sha256": "9bbed984f634dbc1dad26dd6e457037a345aa941d4412da2dabb89b8467792c8"
+        },
+        "failure_code": "checksum-mismatch",
+        "cleanup_status": "PASS"
+      },
+      {
+        "run_id": "ffa0b4c33b9941e58ca2013ed2841cd7",
+        "started_at": "2026-10-07T03:55:25.276812+00:00",
+        "completed_at": "2026-10-07T03:55:25.288427+00:00",
+        "status": "INCOMPLETE",
+        "backup": {
+          "bucket": "restoreproof-lab-example",
+          "key": "backups/chisel/source.dump",
+          "version_id": "612f3cdf-9d28-48ef-956c-613e7a8df320",
+          "sha256": "d6e656ef9976a07fd8929e649159946cbd5cfff8128e6462ab7211c96e8e0211",
+          "expected_bucket_owner": "123456789012",
+          "captured_at": "2026-10-07T03:55:08.058647Z",
+          "max_age_seconds": 86400
+        },
+        "implementation": {
+          "package_version": "0.4.0",
+          "source_sha256": "9bbed984f634dbc1dad26dd6e457037a345aa941d4412da2dabb89b8467792c8"
+        },
+        "failure_code": "access-denied",
+        "cleanup_status": "PASS"
+      },
+      {
+        "run_id": "024b60019521427c9962b539b1683ad7",
+        "started_at": "2026-10-07T03:55:25.206017+00:00",
+        "completed_at": "2026-10-07T03:55:25.240683+00:00",
+        "status": "INCOMPLETE",
+        "backup": {
+          "bucket": "restoreproof-lab-example",
+          "key": "backups/chisel/source.dump",
+          "version_id": "missing-version",
+          "sha256": "d6e656ef9976a07fd8929e649159946cbd5cfff8128e6462ab7211c96e8e0211",
+          "expected_bucket_owner": "123456789012",
+          "captured_at": "2026-10-07T03:55:08.058647Z",
+          "max_age_seconds": 86400
+        },
+        "implementation": {
+          "package_version": "0.4.0",
+          "source_sha256": "9bbed984f634dbc1dad26dd6e457037a345aa941d4412da2dabb89b8467792c8"
+        },
+        "failure_code": "missing-object",
+        "cleanup_status": "PASS"
+      },
+      {
+        "run_id": "53c4d5f4cf004a9b8391cccf54ec602e",
+        "started_at": "2026-10-07T03:55:17.255993+00:00",
+        "completed_at": "2026-10-07T03:55:25.183991+00:00",
+        "status": "PASS",
+        "backup": {
+          "bucket": "restoreproof-lab-example",
+          "key": "backups/chisel/source.dump",
+          "version_id": "612f3cdf-9d28-48ef-956c-613e7a8df320",
+          "sha256": "d6e656ef9976a07fd8929e649159946cbd5cfff8128e6462ab7211c96e8e0211",
+          "expected_bucket_owner": "123456789012",
+          "captured_at": "2026-10-07T03:55:08.058647Z",
+          "max_age_seconds": 86400
+        },
+        "implementation": {
+          "package_version": "0.4.0",
+          "source_sha256": "9bbed984f634dbc1dad26dd6e457037a345aa941d4412da2dabb89b8467792c8"
+        },
+        "failure_code": null,
+        "cleanup_status": "PASS"
+      }
+    ]
+  }
+}

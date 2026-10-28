@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools==84.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "restoreproof"
+version = "0.5.0"
+description = "Verify application recovery using isolated PostgreSQL restores and explicit evidence."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+dependencies = ["pydantic==2.13.5", "boto3==1.43.108"]
+
+[project.optional-dependencies]
+s3-lab = ["moto[server]==5.2.3"]
+
+[project.scripts]
+restoreproof = "restoreproof.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+restoreproof = ["fixtures/*.sql", "reporting/*.css", "chisel/assets/*", "chisel/assets/app/**/*", "chisel/assets/app/.*", "chisel/assets/app/.github/**/*"]

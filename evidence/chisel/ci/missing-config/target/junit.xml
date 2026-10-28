@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="RestoreProof" tests="4" failures="0" errors="2">
+  <testcase name="unauthenticated-denied" />
+  <testcase name="email-otp-login">
+    <error type="INCOMPLETE">{"name": "email-otp-login", "status": "INCOMPLETE", "http": 503, "reason": "Application authentication dependency did not complete."}</error>
+  </testcase>
+  <testcase name="cleanup" />
+  <testcase name="verification-run">
+    <error type="INCOMPLETE">{"name": "verification-run", "status": "INCOMPLETE", "reason": ["application-journey did not complete (DependencyUnavailable)."]}</error>
+  </testcase>
+</testsuite>

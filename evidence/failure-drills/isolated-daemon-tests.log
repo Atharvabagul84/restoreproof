@@ -1,0 +1,381 @@
+﻿2026-10-06T19:18:17.7762001Z Current runner version: '2.337.0'
+2026-10-06T19:18:17.7799338Z ##[group]Runner Image Provisioner
+2026-10-06T19:18:17.7800588Z Hosted Compute Agent
+2026-10-06T19:18:17.7801541Z Version: 20260901.588
+2026-10-06T19:18:17.7802693Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+2026-10-06T19:18:17.7803923Z Build Date: 2026-09-01T19:56:44Z
+2026-10-06T19:18:17.7805157Z Worker ID: {df753fe2-3d07-4045-ba34-3710da15a66a}
+2026-10-06T19:18:17.7806369Z Azure Region: eastus
+2026-10-06T19:18:17.7807582Z ##[endgroup]
+2026-10-06T19:18:17.7810425Z ##[group]Operating System
+2026-10-06T19:18:17.7811543Z Ubuntu
+2026-10-06T19:18:17.7812859Z 24.04.5
+2026-10-06T19:18:17.7813711Z LTS
+2026-10-06T19:18:17.7814567Z ##[endgroup]
+2026-10-06T19:18:17.7815556Z ##[group]Runner Image
+2026-10-06T19:18:17.7816887Z Image: ubuntu-24.04
+2026-10-06T19:18:17.7817980Z Version: 20260927.320.1
+2026-10-06T19:18:17.7820110Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-06T19:18:17.7822879Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+2026-10-06T19:18:17.7824576Z ##[endgroup]
+2026-10-06T19:18:17.7826468Z ##[group]GITHUB_TOKEN Permissions
+2026-10-06T19:18:17.7829666Z Contents: read
+2026-10-06T19:18:17.7830755Z Metadata: read
+2026-10-06T19:18:17.7831742Z ##[endgroup]
+2026-10-06T19:18:17.7834863Z Secret source: Actions
+2026-10-06T19:18:17.7836301Z Cache mode: write
+2026-10-06T19:18:17.7838026Z Prepare workflow directory
+2026-10-06T19:18:17.8329020Z Prepare all required actions
+2026-10-06T19:18:17.8401197Z Getting action download info
+2026-10-06T19:18:18.0841063Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-06T19:18:18.2289810Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+2026-10-06T19:18:18.3180691Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+2026-10-06T19:18:18.5183376Z Complete job name: isolated-daemon
+2026-10-06T19:18:18.6002094Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-06T19:18:18.6003239Z with:
+2026-10-06T19:18:18.6003707Z   persist-credentials: false
+2026-10-06T19:18:18.6004263Z   repository: Atharvabagul84/restoreproof
+2026-10-06T19:18:18.6008809Z   token: ***
+2026-10-06T19:18:18.6009249Z   ssh-strict: true
+2026-10-06T19:18:18.6009689Z   ssh-user: git
+2026-10-06T19:18:18.6010102Z   clean: true
+2026-10-06T19:18:18.6010534Z   sparse-checkout-cone-mode: true
+2026-10-06T19:18:18.6011061Z   fetch-depth: 1
+2026-10-06T19:18:18.6011493Z   fetch-tags: false
+2026-10-06T19:18:18.6011933Z   show-progress: true
+2026-10-06T19:18:18.6012384Z   lfs: false
+2026-10-06T19:18:18.6012788Z   submodules: false
+2026-10-06T19:18:18.6013217Z   set-safe-directory: true
+2026-10-06T19:18:18.6013710Z   allow-unsafe-pr-checkout: false
+2026-10-06T19:18:18.6014541Z ##[endgroup]
+2026-10-06T19:18:18.7383006Z Syncing repository: Atharvabagul84/restoreproof
+2026-10-06T19:18:18.7386082Z ##[group]Getting Git version info
+2026-10-06T19:18:18.7387830Z Working directory is '/home/runner/work/restoreproof/restoreproof'
+2026-10-06T19:18:18.7389654Z [command]/usr/bin/git version
+2026-10-06T19:18:18.8629076Z git version 2.55.0
+2026-10-06T19:18:18.8742832Z ##[endgroup]
+2026-10-06T19:18:18.8760488Z Temporarily overriding HOME='/home/runner/work/_temp/82e620f8-8909-4849-b965-0e5cc1784708' before making global git config changes
+2026-10-06T19:18:18.8765759Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-06T19:18:18.8771367Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/restoreproof/restoreproof
+2026-10-06T19:18:18.8938100Z Deleting the contents of '/home/runner/work/restoreproof/restoreproof'
+2026-10-06T19:18:18.8943247Z ##[group]Determining repository object format
+2026-10-06T19:18:18.8945452Z ##[endgroup]
+2026-10-06T19:18:18.8947380Z ##[group]Initializing the repository
+2026-10-06T19:18:18.8948948Z [command]/usr/bin/git init /home/runner/work/restoreproof/restoreproof
+2026-10-06T19:18:18.8950817Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-06T19:18:18.8952738Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-06T19:18:18.8954426Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-06T19:18:18.8956054Z hint: call:
+2026-10-06T19:18:18.8957330Z hint:
+2026-10-06T19:18:18.8958317Z hint: 	git config --global init.defaultBranch <name>
+2026-10-06T19:18:18.8959415Z hint:
+2026-10-06T19:18:18.8960459Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-06T19:18:18.8962087Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-06T19:18:18.8963401Z hint:
+2026-10-06T19:18:18.8964162Z hint: 	git branch -m <name>
+2026-10-06T19:18:18.8965053Z hint:
+2026-10-06T19:18:18.8966155Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-06T19:18:18.8968709Z Initialized empty Git repository in /home/runner/work/restoreproof/restoreproof/.git/
+2026-10-06T19:18:18.8972167Z [command]/usr/bin/git remote add origin https://github.com/Atharvabagul84/restoreproof
+2026-10-06T19:18:18.8975687Z ##[endgroup]
+2026-10-06T19:18:18.8977467Z ##[group]Disabling automatic garbage collection
+2026-10-06T19:18:18.8978714Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-06T19:18:18.8981298Z ##[endgroup]
+2026-10-06T19:18:18.8982913Z ##[group]Setting up auth
+2026-10-06T19:18:18.8984392Z Removing SSH command configuration
+2026-10-06T19:18:18.8986376Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-06T19:18:18.8991034Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-06T19:18:18.9407523Z Removing HTTP extra header
+2026-10-06T19:18:18.9411771Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-06T19:18:18.9417797Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-06T19:18:18.9548220Z Removing includeIf entries pointing to credentials config files
+2026-10-06T19:18:18.9550822Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-06T19:18:18.9610036Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-06T19:18:18.9899421Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-a38b96b5-3531-4c03-8abc-ea438563682b.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-06T19:18:18.9929809Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/restoreproof/restoreproof/.git.path /home/runner/work/_temp/git-credentials-a38b96b5-3531-4c03-8abc-ea438563682b.config
+2026-10-06T19:18:18.9973383Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/restoreproof/restoreproof/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-a38b96b5-3531-4c03-8abc-ea438563682b.config
+2026-10-06T19:18:19.0020865Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-a38b96b5-3531-4c03-8abc-ea438563682b.config
+2026-10-06T19:18:19.0071334Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-a38b96b5-3531-4c03-8abc-ea438563682b.config
+2026-10-06T19:18:19.0120445Z ##[endgroup]
+2026-10-06T19:18:19.0121739Z ##[group]Fetching the repository
+2026-10-06T19:18:19.0124134Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +a87739c19e73c9ca08c78aced535da4a0f8453e8:refs/remotes/origin/main
+2026-10-06T19:18:19.2652455Z From https://github.com/Atharvabagul84/restoreproof
+2026-10-06T19:18:19.2654798Z  * [new ref]         a87739c19e73c9ca08c78aced535da4a0f8453e8 -> origin/main
+2026-10-06T19:18:19.2659175Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-06T19:18:19.2689427Z   origin/main
+2026-10-06T19:18:19.2700533Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-10-06T19:18:19.2732565Z a87739c19e73c9ca08c78aced535da4a0f8453e8
+2026-10-06T19:18:19.2740438Z ##[endgroup]
+2026-10-06T19:18:19.2742132Z ##[group]Determining the checkout info
+2026-10-06T19:18:19.2744010Z ##[endgroup]
+2026-10-06T19:18:19.2746170Z [command]/usr/bin/git sparse-checkout disable
+2026-10-06T19:18:19.2892417Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-06T19:18:19.2958244Z ##[group]Checking out the ref
+2026-10-06T19:18:19.2960454Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-06T19:18:19.3084580Z Switched to a new branch 'main'
+2026-10-06T19:18:19.3110086Z branch 'main' set up to track 'origin/main'.
+2026-10-06T19:18:19.3130336Z ##[endgroup]
+2026-10-06T19:18:19.3199196Z [command]/usr/bin/git log -1 --format=%H
+2026-10-06T19:18:19.3228336Z a87739c19e73c9ca08c78aced535da4a0f8453e8
+2026-10-06T19:18:19.3240661Z ##[group]Removing auth
+2026-10-06T19:18:19.3242059Z Removing SSH command configuration
+2026-10-06T19:18:19.3244209Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-06T19:18:19.3303240Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-06T19:18:19.3561420Z Removing HTTP extra header
+2026-10-06T19:18:19.3565189Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-06T19:18:19.3611074Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-06T19:18:19.3872254Z Removing includeIf entries pointing to credentials config files
+2026-10-06T19:18:19.3876358Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-06T19:18:19.3915306Z includeif.gitdir:/home/runner/work/restoreproof/restoreproof/.git.path
+2026-10-06T19:18:19.3919376Z includeif.gitdir:/home/runner/work/restoreproof/restoreproof/.git/worktrees/*.path
+2026-10-06T19:18:19.3922511Z includeif.gitdir:/github/workspace/.git.path
+2026-10-06T19:18:19.3925081Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-06T19:18:19.3931510Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/restoreproof/restoreproof/.git.path
+2026-10-06T19:18:19.3960183Z /home/runner/work/_temp/git-credentials-a38b96b5-3531-4c03-8abc-ea438563682b.config
+2026-10-06T19:18:19.3989659Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/restoreproof/restoreproof/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-a38b96b5\-3531\-4c03\-8abc\-ea438563682b\.config
+2026-10-06T19:18:19.4023589Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/restoreproof/restoreproof/.git/worktrees/*.path
+2026-10-06T19:18:19.4068547Z /home/runner/work/_temp/git-credentials-a38b96b5-3531-4c03-8abc-ea438563682b.config
+2026-10-06T19:18:19.4080608Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/restoreproof/restoreproof/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-a38b96b5\-3531\-4c03\-8abc\-ea438563682b\.config
+2026-10-06T19:18:19.4136390Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-06T19:18:19.4191243Z /github/runner_temp/git-credentials-a38b96b5-3531-4c03-8abc-ea438563682b.config
+2026-10-06T19:18:19.4200557Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-a38b96b5\-3531\-4c03\-8abc\-ea438563682b\.config
+2026-10-06T19:18:19.4247642Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-06T19:18:19.4282631Z /github/runner_temp/git-credentials-a38b96b5-3531-4c03-8abc-ea438563682b.config
+2026-10-06T19:18:19.4293006Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-a38b96b5\-3531\-4c03\-8abc\-ea438563682b\.config
+2026-10-06T19:18:19.4341983Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-06T19:18:19.4618720Z Removing credentials config '/home/runner/work/_temp/git-credentials-a38b96b5-3531-4c03-8abc-ea438563682b.config'
+2026-10-06T19:18:19.4624921Z ##[endgroup]
+2026-10-06T19:18:19.5044962Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+2026-10-06T19:18:19.5046225Z with:
+2026-10-06T19:18:19.5046920Z   python-version: 3.12
+2026-10-06T19:18:19.5047517Z   check-latest: false
+2026-10-06T19:18:19.5057371Z   token: ***
+2026-10-06T19:18:19.5057936Z   update-environment: true
+2026-10-06T19:18:19.5058618Z   allow-prereleases: false
+2026-10-06T19:18:19.5059263Z   freethreaded: false
+2026-10-06T19:18:19.5059827Z ##[endgroup]
+2026-10-06T19:18:19.6528598Z ##[group]Installed versions
+2026-10-06T19:18:19.6647936Z Successfully set up CPython (3.12.14)
+2026-10-06T19:18:19.6650759Z ##[endgroup]
+2026-10-06T19:18:19.6902728Z ##[group]Run python -m pip install -r requirements-lock.txt .
+2026-10-06T19:18:19.6905543Z [36;1mpython -m pip install -r requirements-lock.txt .[0m
+2026-10-06T19:18:19.7284832Z shell: /usr/bin/bash -e {0}
+2026-10-06T19:18:19.7286052Z env:
+2026-10-06T19:18:19.7287561Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:18:19.7289385Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-10-06T19:18:19.7291155Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:18:19.7292758Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:18:19.7294366Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:18:19.7296003Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-10-06T19:18:19.7297592Z ##[endgroup]
+2026-10-06T19:18:20.7442308Z Processing ./.
+2026-10-06T19:18:20.7459474Z   Installing build dependencies: started
+2026-10-06T19:18:21.6167903Z   Installing build dependencies: finished with status 'done'
+2026-10-06T19:18:21.6187597Z   Getting requirements to build wheel: started
+2026-10-06T19:18:22.1748139Z   Getting requirements to build wheel: finished with status 'done'
+2026-10-06T19:18:22.1755215Z   Preparing metadata (pyproject.toml): started
+2026-10-06T19:18:22.3863472Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-10-06T19:18:22.5858411Z Collecting pydantic==2.13.5 (from -r requirements-lock.txt (line 2))
+2026-10-06T19:18:22.6497055Z   Downloading pydantic-2.13.5-py3-none-any.whl.metadata (110 kB)
+2026-10-06T19:18:23.3941511Z Collecting pydantic-core==2.46.5 (from -r requirements-lock.txt (line 3))
+2026-10-06T19:18:23.4048167Z   Downloading pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+2026-10-06T19:18:23.4228404Z Collecting annotated-types==0.8.0 (from -r requirements-lock.txt (line 4))
+2026-10-06T19:18:23.4315236Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+2026-10-06T19:18:23.4558263Z Collecting typing-extensions==4.16.0 (from -r requirements-lock.txt (line 5))
+2026-10-06T19:18:23.4668531Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-06T19:18:23.4868382Z Collecting typing-inspection==0.4.4 (from -r requirements-lock.txt (line 6))
+2026-10-06T19:18:23.4952400Z   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+2026-10-06T19:18:23.5146465Z Downloading pydantic-2.13.5-py3-none-any.whl (472 kB)
+2026-10-06T19:18:23.5729092Z Downloading pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-10-06T19:18:23.6951988Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 18.0 MB/s  0:00:00
+2026-10-06T19:18:23.7049125Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+2026-10-06T19:18:23.7174613Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-06T19:18:23.7307995Z Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+2026-10-06T19:18:23.7522218Z Building wheels for collected packages: restoreproof
+2026-10-06T19:18:23.7547633Z   Building wheel for restoreproof (pyproject.toml): started
+2026-10-06T19:18:23.9938268Z   Building wheel for restoreproof (pyproject.toml): finished with status 'done'
+2026-10-06T19:18:23.9941142Z   Created wheel for restoreproof: filename=restoreproof-0.2.0-py3-none-any.whl size=33191 sha256=160eb0a3f89d1e8cebf0dff5c456cc23b648ee001d0b79ddbe6277b34fae3d25
+2026-10-06T19:18:23.9943632Z   Stored in directory: /tmp/pip-ephem-wheel-cache-481er8_j/wheels/50/44/10/56e3346f9890aac0710a035a7ce65d24af3da43689cee7ff2f
+2026-10-06T19:18:23.9977555Z Successfully built restoreproof
+2026-10-06T19:18:24.0415793Z Installing collected packages: typing-extensions, annotated-types, typing-inspection, pydantic-core, pydantic, restoreproof
+2026-10-06T19:18:24.4904780Z 
+2026-10-06T19:18:24.4929358Z Successfully installed annotated-types-0.8.0 pydantic-2.13.5 pydantic-core-2.46.5 restoreproof-0.2.0 typing-extensions-4.16.0 typing-inspection-0.4.4
+2026-10-06T19:18:24.5901819Z ##[group]Run docker pull postgres:17.11-bookworm
+2026-10-06T19:18:24.5902239Z [36;1mdocker pull postgres:17.11-bookworm[0m
+2026-10-06T19:18:24.5969760Z shell: /usr/bin/bash -e {0}
+2026-10-06T19:18:24.5970028Z env:
+2026-10-06T19:18:24.5970311Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:18:24.5970779Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-10-06T19:18:24.5971214Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:18:24.5971604Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:18:24.5972015Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:18:24.5972407Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-10-06T19:18:24.5972730Z ##[endgroup]
+2026-10-06T19:18:24.9545939Z 17.11-bookworm: Pulling from library/postgres
+2026-10-06T19:18:25.0762491Z 7fd1ebe418b5: Pulling fs layer
+2026-10-06T19:18:25.0767429Z a74c50568115: Pulling fs layer
+2026-10-06T19:18:25.0768185Z 017b31e4ff27: Pulling fs layer
+2026-10-06T19:18:25.0770849Z 146d06bcb573: Pulling fs layer
+2026-10-06T19:18:25.0771586Z e7e8da52359d: Pulling fs layer
+2026-10-06T19:18:25.0777452Z d01ea4064291: Pulling fs layer
+2026-10-06T19:18:25.0777901Z 6d0eb3c6cdb9: Pulling fs layer
+2026-10-06T19:18:25.0778328Z b1cc6947b8a6: Pulling fs layer
+2026-10-06T19:18:25.0778614Z e96ba86f00e5: Pulling fs layer
+2026-10-06T19:18:25.0778849Z a219b7b9b5d4: Pulling fs layer
+2026-10-06T19:18:25.0779171Z 584b3a82e541: Pulling fs layer
+2026-10-06T19:18:25.0779508Z d254c075f128: Pulling fs layer
+2026-10-06T19:18:25.0779764Z fb616fac62de: Pulling fs layer
+2026-10-06T19:18:25.0780024Z 7f82c3d75427: Pulling fs layer
+2026-10-06T19:18:25.0780259Z 146d06bcb573: Waiting
+2026-10-06T19:18:25.0780479Z e7e8da52359d: Waiting
+2026-10-06T19:18:25.0780689Z d01ea4064291: Waiting
+2026-10-06T19:18:25.0780893Z 6d0eb3c6cdb9: Waiting
+2026-10-06T19:18:25.0781096Z b1cc6947b8a6: Waiting
+2026-10-06T19:18:25.0781308Z e96ba86f00e5: Waiting
+2026-10-06T19:18:25.0781528Z a219b7b9b5d4: Waiting
+2026-10-06T19:18:25.0781724Z 584b3a82e541: Waiting
+2026-10-06T19:18:25.0781922Z d254c075f128: Waiting
+2026-10-06T19:18:25.0782119Z fb616fac62de: Waiting
+2026-10-06T19:18:25.0782313Z 7f82c3d75427: Waiting
+2026-10-06T19:18:25.1313017Z a74c50568115: Verifying Checksum
+2026-10-06T19:18:25.1314137Z a74c50568115: Download complete
+2026-10-06T19:18:25.1647509Z 017b31e4ff27: Verifying Checksum
+2026-10-06T19:18:25.1648383Z 017b31e4ff27: Download complete
+2026-10-06T19:18:25.1837705Z 146d06bcb573: Verifying Checksum
+2026-10-06T19:18:25.1850722Z 146d06bcb573: Download complete
+2026-10-06T19:18:25.2314516Z d01ea4064291: Verifying Checksum
+2026-10-06T19:18:25.2315072Z d01ea4064291: Download complete
+2026-10-06T19:18:25.2647693Z 7fd1ebe418b5: Verifying Checksum
+2026-10-06T19:18:25.2669309Z 7fd1ebe418b5: Download complete
+2026-10-06T19:18:25.2911827Z 6d0eb3c6cdb9: Verifying Checksum
+2026-10-06T19:18:25.2935050Z 6d0eb3c6cdb9: Download complete
+2026-10-06T19:18:25.2950865Z e7e8da52359d: Verifying Checksum
+2026-10-06T19:18:25.2970124Z e7e8da52359d: Download complete
+2026-10-06T19:18:25.3197643Z b1cc6947b8a6: Verifying Checksum
+2026-10-06T19:18:25.3198269Z b1cc6947b8a6: Download complete
+2026-10-06T19:18:25.3287993Z a219b7b9b5d4: Verifying Checksum
+2026-10-06T19:18:25.3293411Z a219b7b9b5d4: Download complete
+2026-10-06T19:18:25.3639090Z 584b3a82e541: Verifying Checksum
+2026-10-06T19:18:25.3640467Z 584b3a82e541: Download complete
+2026-10-06T19:18:25.3651894Z d254c075f128: Verifying Checksum
+2026-10-06T19:18:25.3652587Z d254c075f128: Download complete
+2026-10-06T19:18:25.4223888Z fb616fac62de: Verifying Checksum
+2026-10-06T19:18:25.4224478Z fb616fac62de: Download complete
+2026-10-06T19:18:25.4230726Z 7f82c3d75427: Verifying Checksum
+2026-10-06T19:18:25.4235074Z 7f82c3d75427: Download complete
+2026-10-06T19:18:25.8307074Z e96ba86f00e5: Verifying Checksum
+2026-10-06T19:18:25.8307603Z e96ba86f00e5: Download complete
+2026-10-06T19:18:26.8812062Z 7fd1ebe418b5: Pull complete
+2026-10-06T19:18:29.8213937Z a74c50568115: Pull complete
+2026-10-06T19:18:29.9908508Z 017b31e4ff27: Pull complete
+2026-10-06T19:18:30.0412702Z 146d06bcb573: Pull complete
+2026-10-06T19:18:30.4230071Z e7e8da52359d: Pull complete
+2026-10-06T19:18:30.5142623Z d01ea4064291: Pull complete
+2026-10-06T19:18:30.5215455Z 6d0eb3c6cdb9: Pull complete
+2026-10-06T19:18:30.5307197Z b1cc6947b8a6: Pull complete
+2026-10-06T19:18:35.1173220Z e96ba86f00e5: Pull complete
+2026-10-06T19:18:35.1357816Z a219b7b9b5d4: Pull complete
+2026-10-06T19:18:35.1478873Z 584b3a82e541: Pull complete
+2026-10-06T19:18:35.1664817Z d254c075f128: Pull complete
+2026-10-06T19:18:35.1785086Z fb616fac62de: Pull complete
+2026-10-06T19:18:35.1877531Z 7f82c3d75427: Pull complete
+2026-10-06T19:18:35.1920282Z Digest: sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826
+2026-10-06T19:18:35.1941064Z Status: Downloaded newer image for postgres:17.11-bookworm
+2026-10-06T19:18:35.1952802Z docker.io/library/postgres:17.11-bookworm
+2026-10-06T19:18:35.2045508Z ##[group]Run sudo --preserve-env=RESTOREPROOF_DAEMON_INTEGRATION,RESTOREPROOF_EVIDENCE_DIR,PYTHONPATH \
+2026-10-06T19:18:35.2046351Z [36;1msudo --preserve-env=RESTOREPROOF_DAEMON_INTEGRATION,RESTOREPROOF_EVIDENCE_DIR,PYTHONPATH \[0m
+2026-10-06T19:18:35.2047269Z [36;1m  "$(command -v python)" -m unittest discover -s tests -p test_daemon_drill.py -v[0m
+2026-10-06T19:18:35.2111557Z shell: /usr/bin/bash -e {0}
+2026-10-06T19:18:35.2111827Z env:
+2026-10-06T19:18:35.2112119Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:18:35.2112582Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-10-06T19:18:35.2113041Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:18:35.2113436Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:18:35.2113826Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:18:35.2114214Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-10-06T19:18:35.2114626Z   RESTOREPROOF_DAEMON_INTEGRATION: 1
+2026-10-06T19:18:35.2114905Z   RESTOREPROOF_EVIDENCE_DIR: runs/daemon
+2026-10-06T19:18:35.2115260Z   PYTHONPATH: /home/runner/work/restoreproof/restoreproof/src
+2026-10-06T19:18:35.2115599Z ##[endgroup]
+2026-10-06T19:18:35.6908277Z test_client_environment_cannot_inherit_context_tls_or_other_daemon (test_daemon_drill.DaemonIsolationGuardTests.test_client_environment_cannot_inherit_context_tls_or_other_daemon) ... ok
+2026-10-06T19:18:35.6949050Z test_containerd_state_outside_private_runtime_is_rejected (test_daemon_drill.DaemonIsolationGuardTests.test_containerd_state_outside_private_runtime_is_rejected) ... ok
+2026-10-06T19:18:35.6951867Z test_containerd_uses_explicit_private_config_without_cri_tcp_or_imports (test_daemon_drill.DaemonIsolationGuardTests.test_containerd_uses_explicit_private_config_without_cri_tcp_or_imports) ... ok
+2026-10-06T19:18:35.6955005Z test_existing_runtime_is_not_adopted (test_daemon_drill.DaemonIsolationGuardTests.test_existing_runtime_is_not_adopted) ... ok
+2026-10-06T19:18:35.6964550Z test_explicit_enable_on_non_linux_fails_prerequisites (test_daemon_drill.DaemonIsolationGuardTests.test_explicit_enable_on_non_linux_fails_prerequisites) ... ok
+2026-10-06T19:18:35.6978213Z test_pidfile_mismatch_refuses_to_signal_even_recorded_process (test_daemon_drill.DaemonIsolationGuardTests.test_pidfile_mismatch_refuses_to_signal_even_recorded_process) ... ok
+2026-10-06T19:18:35.6993101Z test_private_configuration_disables_host_network_mutations_and_image_store (test_daemon_drill.DaemonIsolationGuardTests.test_private_configuration_disables_host_network_mutations_and_image_store) ... ok
+2026-10-06T19:18:35.7009438Z test_private_containerd_pidfile_mismatch_refuses_signal (test_daemon_drill.DaemonIsolationGuardTests.test_private_containerd_pidfile_mismatch_refuses_signal) ... ok
+2026-10-06T19:18:35.7014612Z test_runtime_escape_is_rejected_before_filesystem_mutation (test_daemon_drill.DaemonIsolationGuardTests.test_runtime_escape_is_rejected_before_filesystem_mutation) ... ok
+2026-10-06T19:18:35.7032500Z test_same_pid_with_changed_start_time_cannot_be_signaled (test_daemon_drill.DaemonIsolationGuardTests.test_same_pid_with_changed_start_time_cannot_be_signaled) ... ok
+2026-10-06T19:18:35.7046266Z test_stop_without_owned_spawn_is_refused (test_daemon_drill.DaemonIsolationGuardTests.test_stop_without_owned_spawn_is_refused) ... ok
+2026-10-06T19:19:14.9914528Z test_private_daemon_outage_preserves_incomplete_evidence_and_recovers (test_daemon_drill.DaemonLossIntegrationTests.test_private_daemon_outage_preserves_incomplete_evidence_and_recovers) ... ok
+2026-10-06T19:19:14.9915889Z 
+2026-10-06T19:19:14.9916171Z ----------------------------------------------------------------------
+2026-10-06T19:19:14.9917065Z Ran 12 tests in 39.301s
+2026-10-06T19:19:14.9917291Z 
+2026-10-06T19:19:14.9917397Z OK
+2026-10-06T19:19:15.0278776Z ##[group]Run evidence="$(realpath -m "$GITHUB_WORKSPACE/runs/daemon")"
+2026-10-06T19:19:15.0279336Z [36;1mevidence="$(realpath -m "$GITHUB_WORKSPACE/runs/daemon")"[0m
+2026-10-06T19:19:15.0279762Z [36;1mtest "$evidence" = "$GITHUB_WORKSPACE/runs/daemon"[0m
+2026-10-06T19:19:15.0280100Z [36;1mif test -d "$evidence"; then[0m
+2026-10-06T19:19:15.0280469Z [36;1m  sudo chown -R --no-dereference "$(id -u):$(id -g)" -- "$evidence"[0m
+2026-10-06T19:19:15.0280831Z [36;1mfi[0m
+2026-10-06T19:19:15.0411260Z shell: /usr/bin/bash -e {0}
+2026-10-06T19:19:15.0411534Z env:
+2026-10-06T19:19:15.0411829Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:19:15.0412302Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-10-06T19:19:15.0412754Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:19:15.0413154Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:19:15.0413613Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:19:15.0414033Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-10-06T19:19:15.0414362Z ##[endgroup]
+2026-10-06T19:19:15.0721472Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+2026-10-06T19:19:15.0721902Z with:
+2026-10-06T19:19:15.0722127Z   name: restoreproof-daemon-evidence
+2026-10-06T19:19:15.0722495Z   path: runs/daemon/**/*.json
+runs/daemon/**/*.xml
+runs/daemon/**/*.log
+
+2026-10-06T19:19:15.0722866Z   if-no-files-found: warn
+2026-10-06T19:19:15.0723282Z   retention-days: 14
+2026-10-06T19:19:15.0742712Z   compression-level: 6
+2026-10-06T19:19:15.0743135Z   overwrite: false
+2026-10-06T19:19:15.0743498Z   include-hidden-files: false
+2026-10-06T19:19:15.0743891Z   archive: true
+2026-10-06T19:19:15.0744094Z env:
+2026-10-06T19:19:15.0744377Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:19:15.0744819Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-10-06T19:19:15.0745262Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:19:15.0745648Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:19:15.0746073Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-06T19:19:15.0746833Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-10-06T19:19:15.0747225Z ##[endgroup]
+2026-10-06T19:19:15.3017663Z With the provided path, there will be 14 files uploaded
+2026-10-06T19:19:15.3048177Z Artifact name is valid!
+2026-10-06T19:19:15.3068311Z Root directory input is valid!
+2026-10-06T19:19:15.5438683Z Uploading artifact: restoreproof-daemon-evidence.zip
+2026-10-06T19:19:15.5492410Z Beginning upload of artifact content to blob storage
+2026-10-06T19:19:15.6490236Z Uploaded bytes 12183
+2026-10-06T19:19:15.6615344Z Finished uploading artifact content to blob storage!
+2026-10-06T19:19:15.6618382Z SHA256 digest of uploaded artifact is 6b0a33edebdc5121e2719353b54a43788ced01718d049df306139837d500db6d
+2026-10-06T19:19:15.6619500Z Finalizing artifact upload
+2026-10-06T19:19:15.9520535Z Artifact restoreproof-daemon-evidence successfully finalized. Artifact ID 11438261914
+2026-10-06T19:19:15.9522193Z Artifact restoreproof-daemon-evidence has been successfully uploaded! Final size is 12183 bytes. Artifact ID is 11438261914
+2026-10-06T19:19:15.9525986Z Artifact download URL: https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305/artifacts/11438261914
+2026-10-06T19:19:15.9701281Z Post job cleanup.
+2026-10-06T19:19:16.1185954Z Post job cleanup.
+2026-10-06T19:19:16.2697614Z [command]/usr/bin/git version
+2026-10-06T19:19:16.2847682Z git version 2.55.0
+2026-10-06T19:19:16.2998138Z Temporarily overriding HOME='/home/runner/work/_temp/65fef6fa-b685-4198-a339-1fc4df71c2e9' before making global git config changes
+2026-10-06T19:19:16.3009514Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-06T19:19:16.3039158Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/restoreproof/restoreproof
+2026-10-06T19:19:16.3167369Z Removing SSH command configuration
+2026-10-06T19:19:16.3203919Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-06T19:19:16.3288725Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-06T19:19:16.3637133Z Removing HTTP extra header
+2026-10-06T19:19:16.3667671Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-06T19:19:16.3748329Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-06T19:19:16.4057508Z Removing includeIf entries pointing to credentials config files
+2026-10-06T19:19:16.4077388Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-06T19:19:16.4157753Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-06T19:19:16.4625815Z Cleaning up orphan processes

@@ -1,0 +1,99 @@
+{
+  "$defs": {
+    "Backup": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-fA-F]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "title": "Backup",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "application": {
+      "const": "chisel",
+      "title": "Application",
+      "type": "string"
+    },
+    "source_commit": {
+      "const": "fdb206cb24b3319328315eadaaee01eb03fda432",
+      "title": "Source Commit",
+      "type": "string"
+    },
+    "backup": {
+      "$ref": "#/$defs/Backup"
+    },
+    "owner_id": {
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+      "title": "Owner Id",
+      "type": "string"
+    },
+    "workspace_id": {
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+      "title": "Workspace Id",
+      "type": "string"
+    },
+    "outsider_workspace_id": {
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+      "title": "Outsider Workspace Id",
+      "type": "string"
+    },
+    "brief_id": {
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+      "title": "Brief Id",
+      "type": "string"
+    },
+    "brief_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Brief Sha256",
+      "type": "string"
+    },
+    "max_recovery_seconds": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "number"
+        }
+      ],
+      "default": 300,
+      "gt": 0,
+      "le": 3600,
+      "title": "Max Recovery Seconds"
+    }
+  },
+  "required": [
+    "version",
+    "application",
+    "source_commit",
+    "backup",
+    "owner_id",
+    "workspace_id",
+    "outsider_workspace_id",
+    "brief_id",
+    "brief_sha256"
+  ],
+  "title": "AppContract",
+  "type": "object"
+}

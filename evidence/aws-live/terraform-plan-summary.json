@@ -1,0 +1,57 @@
+{
+  "expected_account": "123456789012",
+  "region": "ap-southeast-2",
+  "bucket": "restoreproof-123456789012-ap-southeast-2",
+  "new_resources": [
+    {
+      "address": "aws_s3_bucket.backups",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "aws_s3_bucket_lifecycle_configuration.backups",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "aws_s3_bucket_ownership_controls.backups",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "aws_s3_bucket_policy.backups",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "aws_s3_bucket_public_access_block.backups",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "aws_s3_bucket_server_side_encryption_configuration.backups",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "aws_s3_bucket_versioning.backups",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "terraform_data.cost_guard",
+      "actions": [
+        "create"
+      ]
+    }
+  ],
+  "iam_resources": 0,
+  "existing_resource_changes": 0
+}

@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "scenarios": [
+    {
+      "scenario": "healthy",
+      "expected": "PASS",
+      "actual": "PASS",
+      "cleanup": "PASS",
+      "source_cleanup": "PASS",
+      "matched_expected_cause": true,
+      "report_path": "/home/runner/work/restoreproof/restoreproof/runs/chisel-ci/suite-ca9d0bc1d1b24bb289833f99dd794de5/healthy/079793c7c7284aec8392356d6c133efe/report.json",
+      "source_report_path": "/home/runner/work/restoreproof/restoreproof/runs/chisel-ci/suite-ca9d0bc1d1b24bb289833f99dd794de5/healthy/source-21c86c2c50414e4daeb1fcdb44bcb256/report.json"
+    },
+    {
+      "scenario": "missing-data",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "cleanup": "PASS",
+      "source_cleanup": "PASS",
+      "matched_expected_cause": true,
+      "report_path": "/home/runner/work/restoreproof/restoreproof/runs/chisel-ci/suite-ca9d0bc1d1b24bb289833f99dd794de5/missing-data/5f51511232f54b50a1171b69ab5a96b9/report.json",
+      "source_report_path": "/home/runner/work/restoreproof/restoreproof/runs/chisel-ci/suite-ca9d0bc1d1b24bb289833f99dd794de5/missing-data/source-0c45909349b94b6ba09ddf0b35f3d462/report.json"
+    },
+    {
+      "scenario": "incompatible-schema",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "cleanup": "PASS",
+      "source_cleanup": "PASS",
+      "matched_expected_cause": true,
+      "report_path": "/home/runner/work/restoreproof/restoreproof/runs/chisel-ci/suite-ca9d0bc1d1b24bb289833f99dd794de5/incompatible-schema/7a8ef7467fcd4cbbbb3a6e0d02d2e7b5/report.json",
+      "source_report_path": "/home/runner/work/restoreproof/restoreproof/runs/chisel-ci/suite-ca9d0bc1d1b24bb289833f99dd794de5/incompatible-schema/source-6a6af1b5df9a4c079f88aa8bdc81cb64/report.json"
+    },
+    {
+      "scenario": "auth-unavailable",
+      "expected": "INCOMPLETE",
+      "actual": "INCOMPLETE",
+      "cleanup": "PASS",
+      "source_cleanup": "PASS",
+      "matched_expected_cause": true,
+      "report_path": "/home/runner/work/restoreproof/restoreproof/runs/chisel-ci/suite-ca9d0bc1d1b24bb289833f99dd794de5/auth-unavailable/7f4bc14d62fa43fb82c534d310b749d1/report.json",
+      "source_report_path": "/home/runner/work/restoreproof/restoreproof/runs/chisel-ci/suite-ca9d0bc1d1b24bb289833f99dd794de5/auth-unavailable/source-c172555362cc4812842b3b6748bf419b/report.json"
+    },
+    {
+      "scenario": "missing-config",
+      "expected": "INCOMPLETE",
+      "actual": "INCOMPLETE",
+      "cleanup": "PASS",
+      "source_cleanup": "PASS",
+      "matched_expected_cause": true,
+      "report_path": "/home/runner/work/restoreproof/restoreproof/runs/chisel-ci/suite-ca9d0bc1d1b24bb289833f99dd794de5/missing-config/cfec425ee5ae40ef8eee66cd97c3d5ba/report.json",
+      "source_report_path": "/home/runner/work/restoreproof/restoreproof/runs/chisel-ci/suite-ca9d0bc1d1b24bb289833f99dd794de5/missing-config/source-57b99ff34a8c4090bb3754495e046b7e/report.json"
+    }
+  ],
+  "summary_path": "/home/runner/work/restoreproof/restoreproof/runs/chisel-ci/suite-ca9d0bc1d1b24bb289833f99dd794de5/suite.json"
+}

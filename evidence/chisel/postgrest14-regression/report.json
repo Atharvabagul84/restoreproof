@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "run_id": "3cfb48f1d6d140b8b8c0a41a6303b1e0",
+  "started_at": "2026-10-06T20:09:31.687017+00:00",
+  "status": "INCOMPLETE",
+  "exit_code": 2,
+  "phase": "complete",
+  "report_path": "<workspace>\\outputs\\restoreproof\\runs\\chisel-development\\3cfb48f1d6d140b8b8c0a41a6303b1e0\\report.json",
+  "checks": [
+    {
+      "name": "unauthenticated-denied",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "name": "email-otp-login",
+      "status": "PASS",
+      "transport": "TLS; certificate verified",
+      "session": "HTTP-only secure cookies"
+    },
+    {
+      "name": "restored-identity",
+      "status": "PASS",
+      "http": 200,
+      "owner_id": "cb2e35f9-6f55-4cac-a250-95579365bda2"
+    },
+    {
+      "name": "saved-brief-content",
+      "status": "PASS",
+      "expected_sha256": "45f8b0d1c084ec60af17bde1ffc5b95384a91a0dcaa7dce1c6e783f654433381",
+      "actual_sha256": "45f8b0d1c084ec60af17bde1ffc5b95384a91a0dcaa7dce1c6e783f654433381",
+      "brief_id": "270d590d-2e0b-4dc4-b947-c230732a018f"
+    }
+  ],
+  "errors": [
+    "application-journey did not complete (ProcessError)."
+  ],
+  "cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "target": {
+    "database_id": "f35789b9b0f3fbba868bed06e89f1fb13ffdb1cce141f234a6f91f0555f351ef",
+    "database_image_id": "sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826",
+    "components": {
+      "mail": "6ffa9e81f9a8e1fa5f3e68d9df2337af9f348645814040f17369a21d7f7c4f9b",
+      "gateway": "5f88ff27bdfbf31a1a148d98338b77007d38db80085d581492b6a192f2a9e59f",
+      "auth": "218a5fa81f014fb42d8c174070bf9db2fa77d69034a3d6f92c7b92af5fa210de",
+      "app": "389c40a1bf4b6126efdafb236a05834002127b2c5e5be737d16795b6bc6b7ca2",
+      "rest": "e8638f5df5d35606dfd1c1352584a4ff2f64743f96acc69c35f632e89ce1df88"
+    },
+    "images": {
+      "database": "postgres:17.11-bookworm@sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826",
+      "auth": "sha256:c0c25187a6b835e65a6f6e6c6b39d090e832d40e6de5186f2c038e0411944232",
+      "rest": "sha256:c9dc201e555f5d8e37e7f39cdd4df0229774996e213bfd7de8d10ac609030f2c",
+      "mail": "sha256:b68349e3a014b90c5610bfb26b2ae36f3892d7b8cf25ee140c6c71c98d2fcf48",
+      "gateway": "sha256:d5ac405ad9f96c27db7ad2ba268ce147dae7838073cddc0088762eabf470e121",
+      "app": "sha256:0c74818965b0a071b962cd1714144a22e053ae847fe34257cac6213a9e82199b"
+    },
+    "planned_names": {
+      "app": "restoreproof-3cfb48f1d6d140b8b8c0a41a6303b1e0-app",
+      "auth": "restoreproof-3cfb48f1d6d140b8b8c0a41a6303b1e0-auth",
+      "gateway": "restoreproof-3cfb48f1d6d140b8b8c0a41a6303b1e0-gateway",
+      "mail": "restoreproof-3cfb48f1d6d140b8b8c0a41a6303b1e0-mail",
+      "rest": "restoreproof-3cfb48f1d6d140b8b8c0a41a6303b1e0-rest"
+    },
+    "network": "database=none; services=container:<database_id>",
+    "published_ports": [],
+    "host_mounts": []
+  },
+  "timings": {
+    "create-database_seconds": 3.172,
+    "restore_seconds": 1.141,
+    "start-services_seconds": 7.984,
+    "application-journey_seconds": 16.0,
+    "verification_seconds": 28.36,
+    "cleanup_seconds": 6.937
+  },
+  "measurement_boundary": "Preflight through fresh database restore, service startup and app checks. Image preparation and source capture excluded; cleanup separate.",
+  "application": "chisel",
+  "source_commit": "1845389ac02663f4fb0d67eac7e839fc32354c2a",
+  "fault": null,
+  "backup_sha256": "43851d0b27e0efa7b0a1045928ee5777f5b4f559addc66388a2fe9dd37a98f0b",
+  "source_report_path": "<workspace>\\outputs\\restoreproof\\runs\\chisel-development\\source-a403a0166cec45559170c8ee09a13f3d\\report.json",
+  "source_cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "source_run_id": "a403a0166cec45559170c8ee09a13f3d",
+  "contract_path": "<workspace>\\outputs\\restoreproof\\runs\\chisel-development\\source-a403a0166cec45559170c8ee09a13f3d\\contract.json",
+  "scenario": "healthy"
+}

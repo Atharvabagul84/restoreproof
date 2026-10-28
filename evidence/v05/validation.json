@@ -1,0 +1,93 @@
+{
+  "recorded_at": "2026-10-07T09:02:02.1231812Z",
+  "package_version": "0.5.0",
+  "implementation_commit": "c3899529c14508fc97001252c2b95feb4ad97a08",
+  "source_sha256": "31ef255cfffb21e738716d04cd61445baae1de1ac6d63374538a2e56f3c6d17f",
+  "ci": {
+    "run_id": 37596871490,
+    "url": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37596871490",
+    "event": "workflow_dispatch",
+    "conclusion": "success",
+    "unit_http": {
+      "discovered": 245,
+      "passed": 222,
+      "skipped": 23,
+      "seconds": 6.231
+    },
+    "s3_chisel": {
+      "passed_methods": 1,
+      "scenarios": 6,
+      "seconds": 78.081
+    },
+    "distinct_passed_methods": 223,
+    "other_live_integration_methods_not_rerun": 22,
+    "issuer_identity": "PASS; no AWS role assumed",
+    "aws_job": "SKIPPED"
+  },
+  "local_unit": {
+    "discovered": 245,
+    "passed": 218,
+    "skipped": 27,
+    "seconds": 38.662
+  },
+  "new_report_regressions": 22,
+  "actionlint": {
+    "version": "1.7.12",
+    "workflow_files_passed": 2
+  },
+  "wheel": {
+    "filename": "restoreproof-0.5.0-py3-none-any.whl",
+    "sha256": "9d2d559324f7c75f0cc6f2c81d082185660622a381eb2d595741e20c61f9719f",
+    "size_bytes": 314456,
+    "outside_checkout_smoke": "PASS",
+    "pinned_chisel_files_verified": 101,
+    "rendered_runs": 6,
+    "stylesheet_packaged": true
+  },
+  "healthy_lab": {
+    "run_id": "1738c9642ec54e32956b70820b4b2dcc",
+    "backup_bytes": 139140,
+    "total_seconds": 7.170736,
+    "checks_passed": 9,
+    "version_id": "378b5257-795e-4d70-a6ef-3d7204df10c3",
+    "sha256": "a06c81ac451626d5c8a4e156388863c8f19c1e6e77b3f1fb55b9336f38acbd78",
+    "cleanup": "PASS; source, target, downloaded archive and emulator storage",
+    "timing_boundary": "Small synthetic recovery, images prepared before the attempt; not production RTO"
+  },
+  "browser_review": {
+    "desktop": "PASS; overview and expanded healthy evidence inspected",
+    "mobile_viewport": "390x844",
+    "document_client_width": 375,
+    "document_scroll_width": 375,
+    "scope": "Historical AWS and emulator records; no server needed for final HTML"
+  },
+  "schedule": {
+    "enabled": true,
+    "checked_at": "2026-10-07T09:02:02.1231812Z",
+    "cron": "17 4 * * 1",
+    "utc": "Monday 04:17",
+    "india": "Monday 09:47",
+    "first_due_at": "2026-10-12T04:17:00Z",
+    "actual_scheduled_event_observed": false,
+    "aws_schedule_enabled": false
+  },
+  "cost_check": {
+    "date": "2026-10-07",
+    "github_plan": "Free",
+    "observed_before_run_minutes": 84,
+    "included_minutes": 2000,
+    "artifact_storage_gb": 0,
+    "included_storage_gb": 0.5,
+    "billable_usd": 0,
+    "actions_budget_usd": 0,
+    "stop_usage": true,
+    "billing_settings_changed": false
+  },
+  "boundaries": [
+    "This CI recovery uses local Moto; historical live AWS evidence remains in evidence/aws-live.",
+    "AWS federation remains blocked by the managed-account policy; AWS gates remain unset.",
+    "A passing manual execution and enabled timer do not establish a completed scheduled event.",
+    "HTML histories cover selected journals, not prior weekly artifacts.",
+    "Fingerprints detect changed bytes but do not authenticate the evidence producer."
+  ]
+}

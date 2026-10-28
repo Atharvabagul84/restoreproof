@@ -1,0 +1,94 @@
+{
+  "recorded_at": "2026-10-06T18:27:42.633995+00:00",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "python": "3.12.14",
+  "tests_run": 77,
+  "passed": 77,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "integration_enabled": true,
+  "ci_executed": false,
+  "source_file_sha256": {
+    ".github/workflows/validate.yml": "4553f6c6abb2c95d2475c412aba4a1711519f110034266029ad18b87f88c1e38",
+    "pyproject.toml": "18a2ab05f65d447f7699b5b000d7f9bd7b2ff1994c2cefb74c0195adee667a09",
+    "requirements-lock.txt": "5ff9376db7a17840ba8890b6cd90b59a7e94b0f2174c4524019dc7f62f358a59",
+    "schemas/contract-v1.json": "b795c5245da6cc935b93b274529738acb09acaf4182e56714aeb5b1c447d9d9f",
+    "src/restoreproof/__init__.py": "3fab129e01f0ffa392b5c79433eb046ca89134a42d3efaec16c2b7b3b125e10e",
+    "src/restoreproof/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/restoreproof/cli.py": "626f9c1aa541f127fd6705038224e29f6a2f88256e43af32c9dc0236faf63c65",
+    "src/restoreproof/contract.py": "a073370a003fcee9c06b2d83e6e916a213ecd3f993c8dee885d61cef65610a2b",
+    "src/restoreproof/demo.py": "710bc0116971875d5522d89ff68fe206284399809874637d2cadcaf61c09ff21",
+    "src/restoreproof/docker_postgres.py": "e17a542e1e9194c56538b2ed52fb1a8e5afb8a592663eacb8ba96f61b57c87ff",
+    "src/restoreproof/engine.py": "936efc65fdfbe6b3f07a65a1e4353e93e89ecba671cc03bb27bc587aea2bff80",
+    "src/restoreproof/evaluation.py": "93fd1e96f0041237642fb87cfcfe9a74734c1362d13b2e8695d18c825d3a1cc8",
+    "src/restoreproof/fixtures/seed.sql": "40b5e3acdb198fb2fd262930b17a47b75460777bc6d3e7868502d37b8d31be01",
+    "src/restoreproof/process.py": "68a7818d13536ce99a537f2d32dd733d8f20727e1d784eb622418c01d5ec8e74",
+    "src/restoreproof/reports.py": "69509cc7840d567cb4285e7346260496584a4de1be5dcde7149065c5ceef2eed",
+    "tests/test_cli.py": "47eee854f1c917b2497e8f845d4c182ae098f9cce40b201f05a49bdd543f3f89",
+    "tests/test_contract.py": "f210693adf52607fae9fce2c30953fd54ec4ce829d892e938964112c661cfc3e",
+    "tests/test_docker_postgres.py": "b930dfaa233da227641ab8ea420c8bc6d933250b05ea467950a7ef51ff08ec50",
+    "tests/test_engine.py": "e508e796fd8b0a5a3c55157ace2cdcf43ceedbc7c30e3af9151def0ed9ee2864",
+    "tests/test_evaluation.py": "93116fb2db131828d3718f0d6c6373f55642864ca88f37956190a0ad33817357",
+    "tests/test_integration.py": "93ef28200f4b0d251a3702bb6c1a6a702873c4c65a63afeca9e8031006e0a05c",
+    "tests/test_process.py": "41e8fe61431b12f9eb899c3a6cbd5481aaff323c6584173b8a0f277ea9d220c7",
+    "tests/test_reports.py": "903e0542df45241d58190be251757b131c1655a55fb9c8d534ac76fbb3fcf434"
+  },
+  "docker_server": {
+    "Platform": {
+      "Name": "Docker Desktop 4.90.0 (238679)"
+    },
+    "Version": "29.7.2",
+    "ApiVersion": "1.55",
+    "MinAPIVersion": "1.40",
+    "Os": "linux",
+    "Arch": "amd64",
+    "Components": [
+      {
+        "Name": "Engine",
+        "Version": "29.7.2",
+        "Details": {
+          "ApiVersion": "1.55",
+          "Arch": "amd64",
+          "BuildTime": "Wed Aug  5 18:28:36 2026",
+          "Experimental": "false",
+          "GitCommit": "6a43e3d",
+          "GoVersion": "go1.26.5",
+          "KernelVersion": "6.18.33.2-microsoft-standard-WSL2",
+          "MinAPIVersion": "1.40",
+          "Module": "github.com/moby/moby/v2",
+          "ModuleVersion": "v2.0.0+unknown",
+          "Os": "linux"
+        }
+      },
+      {
+        "Name": "containerd",
+        "Version": "v2.3.3",
+        "Details": {
+          "GitCommit": "aad11006b869517fcd3009450b6f82da282e1a9b"
+        }
+      },
+      {
+        "Name": "runc",
+        "Version": "1.4.3",
+        "Details": {
+          "GitCommit": "v1.4.3-0-gbb14dabe"
+        }
+      },
+      {
+        "Name": "docker-init",
+        "Version": "0.19.0",
+        "Details": {
+          "GitCommit": "de40ad0"
+        }
+      }
+    ],
+    "GitCommit": "6a43e3d",
+    "GoVersion": "go1.26.5",
+    "KernelVersion": "6.18.33.2-microsoft-standard-WSL2",
+    "BuildTime": "2026-08-05T18:28:36.000000000+00:00"
+  },
+  "postgres_image_digests": [
+    "postgres@sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826"
+  ]
+}

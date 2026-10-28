@@ -1,0 +1,12 @@
+{
+  "container_id": "879e3891a9ac70e7bf3c08206a6a28de4432e702c2bfaa89b2da86720beb64f6",
+  "image_id": "sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826",
+  "network": "none",
+  "ports": {},
+  "memory_bytes": 536870912,
+  "nano_cpus": 1000000000,
+  "pids_limit": 128,
+  "tmpfs": {
+    "/var/lib/postgresql/data": "rw,noexec,nosuid,size=268435456"
+  }
+}

@@ -1,0 +1,15 @@
+time="2026-10-06T19:19:13.910583640Z" level=info msg="Starting up"
+time="2026-10-06T19:19:13.913761282Z" level=info msg="OTEL tracing is not configured, using no-op tracer provider"
+time="2026-10-06T19:19:13.913917175Z" level=info msg="detected 127.0.0.53 nameserver, assuming systemd-resolved, so using resolv.conf: /run/systemd/resolve/resolv.conf"
+time="2026-10-06T19:19:13.927851015Z" level=info msg="Creating a containerd client" address=/home/runner/work/restoreproof/restoreproof/.rp-d/17fd7ef8c5a2/containerd.sock timeout=1m0s
+time="2026-10-06T19:19:13.932709268Z" level=info msg="[graphdriver] trying configured driver: vfs"
+time="2026-10-06T19:19:13.935364142Z" level=info msg="Loading containers: start."
+time="2026-10-06T19:19:13.940523146Z" level=info msg="Loading containers: done."
+time="2026-10-06T19:19:13.946594199Z" level=info msg="Docker daemon" commit=6430e49 containerd-snapshotter=false storage-driver=vfs version=28.0.4
+time="2026-10-06T19:19:13.946976986Z" level=info msg="Initializing buildkit"
+time="2026-10-06T19:19:13.953402772Z" level=info msg="Completed buildkit initialization"
+time="2026-10-06T19:19:13.960483208Z" level=info msg="Daemon has completed initialization"
+time="2026-10-06T19:19:13.960547336Z" level=info msg="API listen on /home/runner/work/restoreproof/restoreproof/.rp-d/17fd7ef8c5a2/docker.sock"
+time="2026-10-06T19:19:14.842490254Z" level=info msg="Processing signal 'terminated'"
+time="2026-10-06T19:19:14.843778950Z" level=info msg="stopping event stream following graceful shutdown" error="<nil>" module=libcontainerd namespace=rp-946d4d8fa30442f3ba6dde2bde792ff5
+time="2026-10-06T19:19:14.843950392Z" level=info msg="Daemon shutdown complete"

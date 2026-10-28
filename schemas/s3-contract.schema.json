@@ -1,0 +1,131 @@
+{
+  "$defs": {
+    "S3Backup": {
+      "additionalProperties": false,
+      "properties": {
+        "bucket": {
+          "pattern": "^[a-z0-9][a-z0-9.-]{1,61}[a-z0-9]$",
+          "title": "Bucket",
+          "type": "string"
+        },
+        "key": {
+          "maxLength": 1024,
+          "minLength": 1,
+          "title": "Key",
+          "type": "string"
+        },
+        "version_id": {
+          "maxLength": 1024,
+          "minLength": 1,
+          "title": "Version Id",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "expected_bucket_owner": {
+          "pattern": "^[0-9]{12}$",
+          "title": "Expected Bucket Owner",
+          "type": "string"
+        },
+        "captured_at": {
+          "format": "date-time",
+          "title": "Captured At",
+          "type": "string"
+        },
+        "max_age_seconds": {
+          "default": 86400,
+          "maximum": 2592000,
+          "minimum": 1,
+          "title": "Max Age Seconds",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "bucket",
+        "key",
+        "version_id",
+        "sha256",
+        "expected_bucket_owner",
+        "captured_at"
+      ],
+      "title": "S3Backup",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "application": {
+      "const": "chisel",
+      "title": "Application",
+      "type": "string"
+    },
+    "source_commit": {
+      "const": "fdb206cb24b3319328315eadaaee01eb03fda432",
+      "title": "Source Commit",
+      "type": "string"
+    },
+    "backup": {
+      "$ref": "#/$defs/S3Backup"
+    },
+    "owner_id": {
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+      "title": "Owner Id",
+      "type": "string"
+    },
+    "workspace_id": {
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+      "title": "Workspace Id",
+      "type": "string"
+    },
+    "outsider_workspace_id": {
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+      "title": "Outsider Workspace Id",
+      "type": "string"
+    },
+    "brief_id": {
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+      "title": "Brief Id",
+      "type": "string"
+    },
+    "brief_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Brief Sha256",
+      "type": "string"
+    },
+    "max_recovery_seconds": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "number"
+        }
+      ],
+      "default": 300,
+      "gt": 0,
+      "le": 3600,
+      "title": "Max Recovery Seconds"
+    }
+  },
+  "required": [
+    "version",
+    "application",
+    "source_commit",
+    "backup",
+    "owner_id",
+    "workspace_id",
+    "outsider_workspace_id",
+    "brief_id",
+    "brief_sha256"
+  ],
+  "title": "S3RecoveryContract",
+  "type": "object"
+}

@@ -1,0 +1,613 @@
+{
+  "note": "Selected synthetic evidence only; dumps and private daemon runtime are excluded. Read suite logs and final cleanup alongside journals.",
+  "files": [
+    {
+      "file": "local-restore/4f4d18bd56364b119169184d97f85ab8/copy-before-kill.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "4f4d18bd56364b119169184d97f85ab8/copy-before-kill.json",
+      "sha256": "56b2be94d4fede336c888a683cc87e3cc5a023159cf7a992d7ba3bbb7fb4533d",
+      "bytes": 292
+    },
+    {
+      "file": "local-restore/4f4d18bd56364b119169184d97f85ab8/fixture/contract.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "4f4d18bd56364b119169184d97f85ab8/fixture/contract.json",
+      "sha256": "9444abbaf207f12afe5b11f5fb20c56217b844f9e2d18e418c3278f5ea5ec699",
+      "bytes": 855
+    },
+    {
+      "file": "local-restore/4f4d18bd56364b119169184d97f85ab8/fixture/expected.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "4f4d18bd56364b119169184d97f85ab8/fixture/expected.json",
+      "sha256": "1305f64bfdf6d7df93a718bb98cb7b8b3418f51c5cb942bbd2d73215167d71e2",
+      "bytes": 79
+    },
+    {
+      "file": "local-restore/4f4d18bd56364b119169184d97f85ab8/fixture/source.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "4f4d18bd56364b119169184d97f85ab8/fixture/source.json",
+      "sha256": "5c5e07b744ba8c2fb8f30600a8ad62f989f2da21a3abf003e58f7c45344411f5",
+      "bytes": 592
+    },
+    {
+      "file": "local-restore/4f4d18bd56364b119169184d97f85ab8/interrupted.log",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "4f4d18bd56364b119169184d97f85ab8/interrupted.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "file": "local-restore/4f4d18bd56364b119169184d97f85ab8/restore-write-interruption.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "4f4d18bd56364b119169184d97f85ab8/restore-write-interruption.json",
+      "sha256": "dd7468ddbfae58be6a069eea81baf01db7e26c27b39722cea8f4b586c3f31bef",
+      "bytes": 2102
+    },
+    {
+      "file": "local-restore/4f4d18bd56364b119169184d97f85ab8/retry-cleanup-release.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "4f4d18bd56364b119169184d97f85ab8/retry-cleanup-release.json",
+      "sha256": "7c81008b4930600e031128543f8a4cc1d4627fdc3ca940fd1a788a939e8bde6f",
+      "bytes": 165
+    },
+    {
+      "file": "local-restore/4f4d18bd56364b119169184d97f85ab8/retry-cleanup-waiting.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "4f4d18bd56364b119169184d97f85ab8/retry-cleanup-waiting.json",
+      "sha256": "bf4baa152381bb42d5b9e2e8e55e520916dcd5b517dfe54848280905eb46c018",
+      "bytes": 208
+    },
+    {
+      "file": "local-restore/4f4d18bd56364b119169184d97f85ab8/retry-control-response.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "4f4d18bd56364b119169184d97f85ab8/retry-control-response.json",
+      "sha256": "9882b6d08a6a515f589143bae7678cf03857e5d6d36688dca84a6e79c59cd95e",
+      "bytes": 405
+    },
+    {
+      "file": "local-restore/4f4d18bd56364b119169184d97f85ab8/retry.log",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "4f4d18bd56364b119169184d97f85ab8/retry.log",
+      "sha256": "4dd04777fd5647e82094c592c42d08c5dadeee783fd9f2daa5e870a19135efa9",
+      "bytes": 409
+    },
+    {
+      "file": "local-restore/4f4d18bd56364b119169184d97f85ab8/journals/interrupted/955f509852b24da8bc5e609f5fe131ee/junit.xml",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "4f4d18bd56364b119169184d97f85ab8/runs/interrupted/955f509852b24da8bc5e609f5fe131ee/junit.xml",
+      "sha256": "017a44f9bf034ae66cb3ba8daa38db1e30b6358ddc576f2cadb8c17a91c58adc",
+      "bytes": 273
+    },
+    {
+      "file": "local-restore/4f4d18bd56364b119169184d97f85ab8/journals/interrupted/955f509852b24da8bc5e609f5fe131ee/report.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "4f4d18bd56364b119169184d97f85ab8/runs/interrupted/955f509852b24da8bc5e609f5fe131ee/report.json",
+      "sha256": "676956c7f4bc586ea7f3b2dada7ec4f2059b50264b7053d9c0284faf32e08192",
+      "bytes": 983
+    },
+    {
+      "file": "local-restore/4f4d18bd56364b119169184d97f85ab8/journals/retry/b71bf584be97403abbc12fa4170bc04c/junit.xml",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "4f4d18bd56364b119169184d97f85ab8/runs/retry/b71bf584be97403abbc12fa4170bc04c/junit.xml",
+      "sha256": "f690beb781ba3bf3e29f2edd9e68fe42a68067c03d249c493d4970b65521af97",
+      "bytes": 256
+    },
+    {
+      "file": "local-restore/4f4d18bd56364b119169184d97f85ab8/journals/retry/b71bf584be97403abbc12fa4170bc04c/report.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "4f4d18bd56364b119169184d97f85ab8/runs/retry/b71bf584be97403abbc12fa4170bc04c/report.json",
+      "sha256": "be0adb12951db9c760b1df9ee8633c7477dc495c6f0c806f876c551b1e299357",
+      "bytes": 1933
+    },
+    {
+      "file": "local-restore/4f4d18bd56364b119169184d97f85ab8/test-cleanup.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "4f4d18bd56364b119169184d97f85ab8/test-cleanup.json",
+      "sha256": "7fc544e6d9ef1b3ffbcffde299a7350369a329a5bec342da606e2ff0fa6ce1ea",
+      "bytes": 43
+    },
+    {
+      "file": "local-restore/efb942e4d439415ab27b502f54793769/backend-terminated-cleanup-release.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "efb942e4d439415ab27b502f54793769/backend-terminated-cleanup-release.json",
+      "sha256": "dc2189ddff3272dc5783c3f44c262157d7b599288f035633c9fbd069dd2a1db1",
+      "bytes": 165
+    },
+    {
+      "file": "local-restore/efb942e4d439415ab27b502f54793769/backend-terminated-cleanup-waiting.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "efb942e4d439415ab27b502f54793769/backend-terminated-cleanup-waiting.json",
+      "sha256": "192639748f857a2f7e0f4ddc14fe52f4de30d452e5e0ab804e3b6219f3a43110",
+      "bytes": 208
+    },
+    {
+      "file": "local-restore/efb942e4d439415ab27b502f54793769/backend-terminated-control-response.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "efb942e4d439415ab27b502f54793769/backend-terminated-control-response.json",
+      "sha256": "ae8e587aa1620ccf581b04275906ff21fe083a58cdd03bc70ac48293a3cd6ce2",
+      "bytes": 443
+    },
+    {
+      "file": "local-restore/efb942e4d439415ab27b502f54793769/backend-terminated.log",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "efb942e4d439415ab27b502f54793769/backend-terminated.log",
+      "sha256": "3c8a824ed2c0cad9be5d50427921f8db0d89b7ab55ffa0eba4a2287cfa301296",
+      "bytes": 428
+    },
+    {
+      "file": "local-restore/efb942e4d439415ab27b502f54793769/copy-before-backend-termination.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "efb942e4d439415ab27b502f54793769/copy-before-backend-termination.json",
+      "sha256": "52a3c0d8bd8c86445800cca33f2176017572f39f93f6efe81993571181d19ab9",
+      "bytes": 292
+    },
+    {
+      "file": "local-restore/efb942e4d439415ab27b502f54793769/fixture/contract.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "efb942e4d439415ab27b502f54793769/fixture/contract.json",
+      "sha256": "8f432cfa197c39f73161d4c2eb28d2e79a17a15ccc676873cb842b1fb65f1c1d",
+      "bytes": 855
+    },
+    {
+      "file": "local-restore/efb942e4d439415ab27b502f54793769/fixture/expected.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "efb942e4d439415ab27b502f54793769/fixture/expected.json",
+      "sha256": "1305f64bfdf6d7df93a718bb98cb7b8b3418f51c5cb942bbd2d73215167d71e2",
+      "bytes": 79
+    },
+    {
+      "file": "local-restore/efb942e4d439415ab27b502f54793769/fixture/source.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "efb942e4d439415ab27b502f54793769/fixture/source.json",
+      "sha256": "094337b20c8e1f2f0a9343dcfcf6ccb98fe5995feaba22d5c39710b70330c07d",
+      "bytes": 592
+    },
+    {
+      "file": "local-restore/efb942e4d439415ab27b502f54793769/restore-backend-termination.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "efb942e4d439415ab27b502f54793769/restore-backend-termination.json",
+      "sha256": "00c123af15b47016f13e979f68f5212b332afae02003f28551772b82a423fa60",
+      "bytes": 2546
+    },
+    {
+      "file": "local-restore/efb942e4d439415ab27b502f54793769/retry-cleanup-release.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "efb942e4d439415ab27b502f54793769/retry-cleanup-release.json",
+      "sha256": "823e24ec9bb310319901bd7bbddc949e2f69f5b004eda28efe550e7678c32b11",
+      "bytes": 165
+    },
+    {
+      "file": "local-restore/efb942e4d439415ab27b502f54793769/retry-cleanup-waiting.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "efb942e4d439415ab27b502f54793769/retry-cleanup-waiting.json",
+      "sha256": "d1718216a904ac04d8e77cf745f122d4cf61b9c7a179dc47744cc924d1c87c4f",
+      "bytes": 208
+    },
+    {
+      "file": "local-restore/efb942e4d439415ab27b502f54793769/retry-control-response.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "efb942e4d439415ab27b502f54793769/retry-control-response.json",
+      "sha256": "dc96ec2d12b213b26b03171d78f109f635c5438df9b427f9a57527bea483fe2f",
+      "bytes": 405
+    },
+    {
+      "file": "local-restore/efb942e4d439415ab27b502f54793769/retry.log",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "efb942e4d439415ab27b502f54793769/retry.log",
+      "sha256": "73d6c81948aa84b350616290cbdc2915a30d70ea93e15f1bbc1350fd3874d515",
+      "bytes": 409
+    },
+    {
+      "file": "local-restore/efb942e4d439415ab27b502f54793769/journals/backend-terminated/e127ae20fa6b4d62b61a9902d54c945e/junit.xml",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "efb942e4d439415ab27b502f54793769/runs/backend-terminated/e127ae20fa6b4d62b61a9902d54c945e/junit.xml",
+      "sha256": "f4c30dca0a16047975f33eeefc78377b129ab8bcdadf8230820c0455f3371699",
+      "bytes": 370
+    },
+    {
+      "file": "local-restore/efb942e4d439415ab27b502f54793769/journals/backend-terminated/e127ae20fa6b4d62b61a9902d54c945e/report.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "efb942e4d439415ab27b502f54793769/runs/backend-terminated/e127ae20fa6b4d62b61a9902d54c945e/report.json",
+      "sha256": "e9b82aaad272dd04b42b9d23a2ae39678f4d56c30551a724bcf16a19dd17bd8e",
+      "bytes": 1278
+    },
+    {
+      "file": "local-restore/efb942e4d439415ab27b502f54793769/journals/retry/3e17ebe267e0491c859089900e2867fb/junit.xml",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "efb942e4d439415ab27b502f54793769/runs/retry/3e17ebe267e0491c859089900e2867fb/junit.xml",
+      "sha256": "f690beb781ba3bf3e29f2edd9e68fe42a68067c03d249c493d4970b65521af97",
+      "bytes": 256
+    },
+    {
+      "file": "local-restore/efb942e4d439415ab27b502f54793769/journals/retry/3e17ebe267e0491c859089900e2867fb/report.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "efb942e4d439415ab27b502f54793769/runs/retry/3e17ebe267e0491c859089900e2867fb/report.json",
+      "sha256": "ee0fd8f99cc18570aee8bd3e22a73ba092f40912ecf152852ac590a664367e5d",
+      "bytes": 1933
+    },
+    {
+      "file": "local-restore/efb942e4d439415ab27b502f54793769/test-cleanup.json",
+      "origin": "Windows Docker Desktop live COPY drills with cleanup synchronization",
+      "original_relative_path": "efb942e4d439415ab27b502f54793769/test-cleanup.json",
+      "sha256": "7fc544e6d9ef1b3ffbcffde299a7350369a329a5bec342da606e2ff0fa6ce1ea",
+      "bytes": 43
+    },
+    {
+      "file": "hosted-daemon/17fd7ef8c5a24ef281a6061357e8c547/checkpoint.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "17fd7ef8c5a24ef281a6061357e8c547/checkpoint.json",
+      "sha256": "094f038703ff84ce644f2e1056b3052736fcbbfbfeb561081288f9be4aeec7d9",
+      "bytes": 197
+    },
+    {
+      "file": "hosted-daemon/17fd7ef8c5a24ef281a6061357e8c547/containerd.log",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "17fd7ef8c5a24ef281a6061357e8c547/containerd.log",
+      "sha256": "17c7a7dc2b8768a6bd7fd86d40c7deb9d9090e3cfc7538ff4e476d989939cf86",
+      "bytes": 15000
+    },
+    {
+      "file": "hosted-daemon/17fd7ef8c5a24ef281a6061357e8c547/daemon-1.log",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "17fd7ef8c5a24ef281a6061357e8c547/daemon-1.log",
+      "sha256": "f763338c886bd28d89fdbf9dd0f2d668cc0ee8eb47407d0d0b83b678852bedc6",
+      "bytes": 2418
+    },
+    {
+      "file": "hosted-daemon/17fd7ef8c5a24ef281a6061357e8c547/daemon-2.log",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "17fd7ef8c5a24ef281a6061357e8c547/daemon-2.log",
+      "sha256": "14a6e98ec39db376b5dcc27c974752aed31d3d47d561a97f5d26ee5ca90c0f07",
+      "bytes": 1697
+    },
+    {
+      "file": "hosted-daemon/17fd7ef8c5a24ef281a6061357e8c547/daemon-loss.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "17fd7ef8c5a24ef281a6061357e8c547/daemon-loss.json",
+      "sha256": "5c35dce35dd64af6fa437ba43b4b5b338399b138baeaf26ad6c022210db4763e",
+      "bytes": 1163
+    },
+    {
+      "file": "hosted-daemon/17fd7ef8c5a24ef281a6061357e8c547/fixtures/fixture-c9d1c725291c4293b03ec8bba9022301/contract.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "17fd7ef8c5a24ef281a6061357e8c547/fixtures/fixture-c9d1c725291c4293b03ec8bba9022301/contract.json",
+      "sha256": "81835553df2d82d09dc155347aafbf87de9e99ff39bff4b8def395c0ba6801a8",
+      "bytes": 2312
+    },
+    {
+      "file": "hosted-daemon/17fd7ef8c5a24ef281a6061357e8c547/fixtures/fixture-c9d1c725291c4293b03ec8bba9022301/snapshot-manifest.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "17fd7ef8c5a24ef281a6061357e8c547/fixtures/fixture-c9d1c725291c4293b03ec8bba9022301/snapshot-manifest.json",
+      "sha256": "1c4da547fb58197abc7ca6c9d26890e52fe9db2956dacbb93ea52efa51bede4a",
+      "bytes": 766
+    },
+    {
+      "file": "hosted-daemon/17fd7ef8c5a24ef281a6061357e8c547/fixtures/fixture-c9d1c725291c4293b03ec8bba9022301/source.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "17fd7ef8c5a24ef281a6061357e8c547/fixtures/fixture-c9d1c725291c4293b03ec8bba9022301/source.json",
+      "sha256": "704df083e5c1740a47d733b88842583446381f06c1b68d227c49c675ecae9739",
+      "bytes": 524
+    },
+    {
+      "file": "hosted-daemon/17fd7ef8c5a24ef281a6061357e8c547/isolation.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "17fd7ef8c5a24ef281a6061357e8c547/isolation.json",
+      "sha256": "56e7ab3a8032e4c8652ae7b54b8bdc612d697cbe19ade44d1d164fa74ed76311",
+      "bytes": 3816
+    },
+    {
+      "file": "hosted-daemon/17fd7ef8c5a24ef281a6061357e8c547/journal-before-outage.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "17fd7ef8c5a24ef281a6061357e8c547/journal-before-outage.json",
+      "sha256": "2337a23cf536d27f54df51515dc968c819ad569cb2aebc68d8ca444ea1d495d6",
+      "bytes": 966
+    },
+    {
+      "file": "hosted-daemon/17fd7ef8c5a24ef281a6061357e8c547/journals/af2ecfb28d9248d8bb32e7999fa9e9c0/junit.xml",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "17fd7ef8c5a24ef281a6061357e8c547/runs/af2ecfb28d9248d8bb32e7999fa9e9c0/junit.xml",
+      "sha256": "e4b3d20ed7991d22aff6352a96cd61af1f69fd9f94b481ddaf2349d67e4a43b7",
+      "bytes": 656
+    },
+    {
+      "file": "hosted-daemon/17fd7ef8c5a24ef281a6061357e8c547/journals/af2ecfb28d9248d8bb32e7999fa9e9c0/report.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "17fd7ef8c5a24ef281a6061357e8c547/runs/af2ecfb28d9248d8bb32e7999fa9e9c0/report.json",
+      "sha256": "8f40f2f4b2170053436a9cffb84010cf96967f3bbeb0f7c4265f27d406b74852",
+      "bytes": 1432
+    },
+    {
+      "file": "hosted-daemon/17fd7ef8c5a24ef281a6061357e8c547/test-cleanup.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "17fd7ef8c5a24ef281a6061357e8c547/test-cleanup.json",
+      "sha256": "dec677853dbeca2b2afed642ace56cb39f069d7fbf5d6f3db554075c16cb13c1",
+      "bytes": 157
+    },
+    {
+      "file": "hosted-daemon/17fd7ef8c5a24ef281a6061357e8c547/verifier.log",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "17fd7ef8c5a24ef281a6061357e8c547/verifier.log",
+      "sha256": "20284e5fd07e52a9c6e3ff5982ebc2d4a9f8b65667508a36a639d7e68a51b2ae",
+      "bytes": 71
+    },
+    {
+      "file": "hosted-restore/21e16ff87c3c4fe0a7eecdfda7044c2a/backend-terminated-cleanup-release.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "21e16ff87c3c4fe0a7eecdfda7044c2a/backend-terminated-cleanup-release.json",
+      "sha256": "d692b87fe03663d98c9a9a82b68c40216d646be577d3b1e2d32a078923a3022f",
+      "bytes": 160
+    },
+    {
+      "file": "hosted-restore/21e16ff87c3c4fe0a7eecdfda7044c2a/backend-terminated-cleanup-waiting.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "21e16ff87c3c4fe0a7eecdfda7044c2a/backend-terminated-cleanup-waiting.json",
+      "sha256": "1f590d729b4cf1dc27b5570230ac0c97a5a918daefcc3c14da12c6b35aa4e69f",
+      "bytes": 207
+    },
+    {
+      "file": "hosted-restore/21e16ff87c3c4fe0a7eecdfda7044c2a/backend-terminated-control-response.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "21e16ff87c3c4fe0a7eecdfda7044c2a/backend-terminated-control-response.json",
+      "sha256": "3af629a5fc3c40824f69501d448d4fb768e5f5861030a4dc95610ef18385c9ed",
+      "bytes": 427
+    },
+    {
+      "file": "hosted-restore/21e16ff87c3c4fe0a7eecdfda7044c2a/backend-terminated.log",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "21e16ff87c3c4fe0a7eecdfda7044c2a/backend-terminated.log",
+      "sha256": "40a76dc0ac7f8989e1d5584ecda78c42a406125a6700dd09773aa2582c5a0389",
+      "bytes": 451
+    },
+    {
+      "file": "hosted-restore/21e16ff87c3c4fe0a7eecdfda7044c2a/copy-before-backend-termination.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "21e16ff87c3c4fe0a7eecdfda7044c2a/copy-before-backend-termination.json",
+      "sha256": "609e65440999d328ca9654ca0cbd97bc16e122e52e62828b7d8790f9c4f9c2cb",
+      "bytes": 281
+    },
+    {
+      "file": "hosted-restore/21e16ff87c3c4fe0a7eecdfda7044c2a/fixture/contract.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "21e16ff87c3c4fe0a7eecdfda7044c2a/fixture/contract.json",
+      "sha256": "452fe689c4a55f0db7c92bf35457f37875413c2ec139c9ed4e246a8e62adaa27",
+      "bytes": 829
+    },
+    {
+      "file": "hosted-restore/21e16ff87c3c4fe0a7eecdfda7044c2a/fixture/expected.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "21e16ff87c3c4fe0a7eecdfda7044c2a/fixture/expected.json",
+      "sha256": "df82a324e40875c29f8725419fc69a7d8c5d189efedca56afb030e834c169da3",
+      "bytes": 73
+    },
+    {
+      "file": "hosted-restore/21e16ff87c3c4fe0a7eecdfda7044c2a/fixture/source.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "21e16ff87c3c4fe0a7eecdfda7044c2a/fixture/source.json",
+      "sha256": "5d2117ba93d4340ff4b5b210a52f7fe89afd5e29961e04f2debfbcb8d6becce7",
+      "bytes": 574
+    },
+    {
+      "file": "hosted-restore/21e16ff87c3c4fe0a7eecdfda7044c2a/restore-backend-termination.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "21e16ff87c3c4fe0a7eecdfda7044c2a/restore-backend-termination.json",
+      "sha256": "74e2899aab5f1c209a34f3f8fa60064436fad7b42f4d88117ff123626a189eab",
+      "bytes": 2470
+    },
+    {
+      "file": "hosted-restore/21e16ff87c3c4fe0a7eecdfda7044c2a/retry-cleanup-release.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "21e16ff87c3c4fe0a7eecdfda7044c2a/retry-cleanup-release.json",
+      "sha256": "1214d88a5fa7a71ad091b338144e056a1e619b7f2f34a9039f48b06651f7885c",
+      "bytes": 160
+    },
+    {
+      "file": "hosted-restore/21e16ff87c3c4fe0a7eecdfda7044c2a/retry-cleanup-waiting.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "21e16ff87c3c4fe0a7eecdfda7044c2a/retry-cleanup-waiting.json",
+      "sha256": "2d7a40429beb41e2805eacdcd4c3d9fd39f77074d5a09d3c7d0aa362dbd6cb33",
+      "bytes": 207
+    },
+    {
+      "file": "hosted-restore/21e16ff87c3c4fe0a7eecdfda7044c2a/retry-control-response.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "21e16ff87c3c4fe0a7eecdfda7044c2a/retry-control-response.json",
+      "sha256": "8100e548336a2dfcd954b840edc66c641c04f4fe2dcd2ac2f53146ddf46baee4",
+      "bytes": 391
+    },
+    {
+      "file": "hosted-restore/21e16ff87c3c4fe0a7eecdfda7044c2a/retry.log",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "21e16ff87c3c4fe0a7eecdfda7044c2a/retry.log",
+      "sha256": "e90bfa69dbc68268bccbd73349978ddb8cadbf84dcba046d095c8322b63b321f",
+      "bytes": 432
+    },
+    {
+      "file": "hosted-restore/21e16ff87c3c4fe0a7eecdfda7044c2a/journals/backend-terminated/e5699b54dc0f404a83a76964ca684005/junit.xml",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "21e16ff87c3c4fe0a7eecdfda7044c2a/runs/backend-terminated/e5699b54dc0f404a83a76964ca684005/junit.xml",
+      "sha256": "f4c30dca0a16047975f33eeefc78377b129ab8bcdadf8230820c0455f3371699",
+      "bytes": 370
+    },
+    {
+      "file": "hosted-restore/21e16ff87c3c4fe0a7eecdfda7044c2a/journals/backend-terminated/e5699b54dc0f404a83a76964ca684005/report.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "21e16ff87c3c4fe0a7eecdfda7044c2a/runs/backend-terminated/e5699b54dc0f404a83a76964ca684005/report.json",
+      "sha256": "909e9ae014c86f34c32bf2595968bd2073ac4894c542b38ad2cc38efcb6c8ee1",
+      "bytes": 1300
+    },
+    {
+      "file": "hosted-restore/21e16ff87c3c4fe0a7eecdfda7044c2a/journals/retry/df065459f26d42aa94d7ab01ba4888eb/junit.xml",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "21e16ff87c3c4fe0a7eecdfda7044c2a/runs/retry/df065459f26d42aa94d7ab01ba4888eb/junit.xml",
+      "sha256": "f690beb781ba3bf3e29f2edd9e68fe42a68067c03d249c493d4970b65521af97",
+      "bytes": 256
+    },
+    {
+      "file": "hosted-restore/21e16ff87c3c4fe0a7eecdfda7044c2a/journals/retry/df065459f26d42aa94d7ab01ba4888eb/report.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "21e16ff87c3c4fe0a7eecdfda7044c2a/runs/retry/df065459f26d42aa94d7ab01ba4888eb/report.json",
+      "sha256": "fc2a320ba3f99715d9d0ad16b76a6f6121282202f06e5e814374985d1e65d7d6",
+      "bytes": 1965
+    },
+    {
+      "file": "hosted-restore/21e16ff87c3c4fe0a7eecdfda7044c2a/test-cleanup.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "21e16ff87c3c4fe0a7eecdfda7044c2a/test-cleanup.json",
+      "sha256": "b6ea3bda40f5075e0ba746878a397cc03ed84df2743a5c15f891a63f1c3cb0c8",
+      "bytes": 39
+    },
+    {
+      "file": "hosted-restore/2d66ed04318344759a9667f9dd1a92e6/copy-before-kill.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "2d66ed04318344759a9667f9dd1a92e6/copy-before-kill.json",
+      "sha256": "609e65440999d328ca9654ca0cbd97bc16e122e52e62828b7d8790f9c4f9c2cb",
+      "bytes": 281
+    },
+    {
+      "file": "hosted-restore/2d66ed04318344759a9667f9dd1a92e6/fixture/contract.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "2d66ed04318344759a9667f9dd1a92e6/fixture/contract.json",
+      "sha256": "93cfb418f3b6544d88787f463354157f6facba7a7a94cb3482c4b6544d14306c",
+      "bytes": 829
+    },
+    {
+      "file": "hosted-restore/2d66ed04318344759a9667f9dd1a92e6/fixture/expected.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "2d66ed04318344759a9667f9dd1a92e6/fixture/expected.json",
+      "sha256": "df82a324e40875c29f8725419fc69a7d8c5d189efedca56afb030e834c169da3",
+      "bytes": 73
+    },
+    {
+      "file": "hosted-restore/2d66ed04318344759a9667f9dd1a92e6/fixture/source.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "2d66ed04318344759a9667f9dd1a92e6/fixture/source.json",
+      "sha256": "cf83adb8a34143b4058abb8fd0f41cbf88bacd079701290452094da8b1f9acff",
+      "bytes": 574
+    },
+    {
+      "file": "hosted-restore/2d66ed04318344759a9667f9dd1a92e6/interrupted.log",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "2d66ed04318344759a9667f9dd1a92e6/interrupted.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "file": "hosted-restore/2d66ed04318344759a9667f9dd1a92e6/restore-write-interruption.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "2d66ed04318344759a9667f9dd1a92e6/restore-write-interruption.json",
+      "sha256": "c6bc193bb90450de33756a13e3c4fac7fd1c25d373294c55d859b180c31ee7f9",
+      "bytes": 2041
+    },
+    {
+      "file": "hosted-restore/2d66ed04318344759a9667f9dd1a92e6/retry-cleanup-release.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "2d66ed04318344759a9667f9dd1a92e6/retry-cleanup-release.json",
+      "sha256": "b1465bd5a94475c607b0bef0ecb252b595616b796963029851ec13ad2ef1779e",
+      "bytes": 160
+    },
+    {
+      "file": "hosted-restore/2d66ed04318344759a9667f9dd1a92e6/retry-cleanup-waiting.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "2d66ed04318344759a9667f9dd1a92e6/retry-cleanup-waiting.json",
+      "sha256": "d5ff95b441ad8077add610908a13f7f4cd53f94480b35cbded2a1bcf2651cd57",
+      "bytes": 207
+    },
+    {
+      "file": "hosted-restore/2d66ed04318344759a9667f9dd1a92e6/retry-control-response.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "2d66ed04318344759a9667f9dd1a92e6/retry-control-response.json",
+      "sha256": "61b689e8bc3e858e2680c30dba33fc8603c5f5432911c5640e9936deeb344e25",
+      "bytes": 391
+    },
+    {
+      "file": "hosted-restore/2d66ed04318344759a9667f9dd1a92e6/retry.log",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "2d66ed04318344759a9667f9dd1a92e6/retry.log",
+      "sha256": "33f94d27cc855612d1d80274a4feec3ab24bf15eae658cf47ece6c28904de44b",
+      "bytes": 432
+    },
+    {
+      "file": "hosted-restore/2d66ed04318344759a9667f9dd1a92e6/journals/interrupted/0e91a1545aff4e459f9c5a09fd583d7c/junit.xml",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "2d66ed04318344759a9667f9dd1a92e6/runs/interrupted/0e91a1545aff4e459f9c5a09fd583d7c/junit.xml",
+      "sha256": "017a44f9bf034ae66cb3ba8daa38db1e30b6358ddc576f2cadb8c17a91c58adc",
+      "bytes": 273
+    },
+    {
+      "file": "hosted-restore/2d66ed04318344759a9667f9dd1a92e6/journals/interrupted/0e91a1545aff4e459f9c5a09fd583d7c/report.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "2d66ed04318344759a9667f9dd1a92e6/runs/interrupted/0e91a1545aff4e459f9c5a09fd583d7c/report.json",
+      "sha256": "27d0d509b7ee4bcdcdc627aa61695cc3122b76ea666e32ae02906da88bf44a59",
+      "bytes": 997
+    },
+    {
+      "file": "hosted-restore/2d66ed04318344759a9667f9dd1a92e6/journals/retry/f33be00cef3d4e9b9bc205ea0a29fe7c/junit.xml",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "2d66ed04318344759a9667f9dd1a92e6/runs/retry/f33be00cef3d4e9b9bc205ea0a29fe7c/junit.xml",
+      "sha256": "f690beb781ba3bf3e29f2edd9e68fe42a68067c03d249c493d4970b65521af97",
+      "bytes": 256
+    },
+    {
+      "file": "hosted-restore/2d66ed04318344759a9667f9dd1a92e6/journals/retry/f33be00cef3d4e9b9bc205ea0a29fe7c/report.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "2d66ed04318344759a9667f9dd1a92e6/runs/retry/f33be00cef3d4e9b9bc205ea0a29fe7c/report.json",
+      "sha256": "5c753515ca2218e3f64d29d447713f562a39cb0557b74a08ef176204b05e0520",
+      "bytes": 1965
+    },
+    {
+      "file": "hosted-restore/2d66ed04318344759a9667f9dd1a92e6/test-cleanup.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "original_relative_path": "2d66ed04318344759a9667f9dd1a92e6/test-cleanup.json",
+      "sha256": "b6ea3bda40f5075e0ba746878a397cc03ed84df2743a5c15f891a63f1c3cb0c8",
+      "bytes": 39
+    },
+    {
+      "file": "hosted-environment/docker-version.txt",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "sha256": "58d5180149fd3334dbb3ff73de521946336e4052a1b769cb475f72486c934b1b",
+      "bytes": 769
+    },
+    {
+      "file": "hosted-environment/python-version.txt",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "sha256": "4c3569f5da09975434dd9fd9a91fadbc4367a91d8f3c3fab59e9241ab9ee4bd8",
+      "bytes": 15
+    },
+    {
+      "file": "hosted-environment/image-digests.json",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "sha256": "97b40edfbe9705e56a8de03bff0a6ec27e3588889ba9f3aeac03f6943db87007",
+      "bytes": 85
+    },
+    {
+      "file": "hosted-environment/source-revision.txt",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "sha256": "7597f620d2d01c01174e3e5daafd6bf337167dd730e550ee1b005ae614cf146e",
+      "bytes": 41
+    },
+    {
+      "file": "unit-tests.log",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "sha256": "e6be689cf903e12572057838d7c57321ec30ad16f53a9569e2513644ddab2066",
+      "bytes": 49809
+    },
+    {
+      "file": "postgres-tests.log",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "sha256": "75754bb9c1f96ba72da3c217ea739fd2efe62321fb753d5a3657bc0ce092d10b",
+      "bytes": 34941
+    },
+    {
+      "file": "isolated-daemon-tests.log",
+      "origin": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37517902305",
+      "sha256": "638f572eec9624200df6ca3490bea785eeced2498bfb5b77f766456bf5a9c61f",
+      "bytes": 33008
+    },
+    {
+      "file": "local-unit-tests.log",
+      "origin": "Local Windows default unittest discovery",
+      "sha256": "240f818412bce464a1b7502a7efbadcb5315e642ff16e5f6bffdf657d30efe06",
+      "bytes": 24331
+    }
+  ]
+}

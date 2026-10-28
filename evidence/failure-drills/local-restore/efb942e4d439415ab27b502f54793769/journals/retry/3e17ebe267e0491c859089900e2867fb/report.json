@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "run_id": "3e17ebe267e0491c859089900e2867fb",
+  "started_at": "2026-10-06T19:17:11.530349+00:00",
+  "status": "PASS",
+  "exit_code": 0,
+  "phase": "finished",
+  "report_path": "<workspace>\\work\\restore-write-sync-local\\restore-write\\efb942e4d439415ab27b502f54793769\\runs\\retry\\3e17ebe267e0491c859089900e2867fb\\report.json",
+  "checks": [
+    {
+      "name": "restored-rows",
+      "status": "PASS",
+      "expected": {
+        "rows": 2048,
+        "min_id": 1,
+        "max_id": 2048,
+        "bad_payloads": 0
+      },
+      "actual": {
+        "rows": 2048,
+        "min_id": 1,
+        "max_id": 2048,
+        "bad_payloads": 0
+      }
+    },
+    {
+      "name": "freshness",
+      "status": "PASS",
+      "incident_at": "2026-01-01T00:00:30+00:00",
+      "recovered_at": "2026-01-01T00:00:00+00:00",
+      "age_seconds": 30.0,
+      "max_data_age_seconds": 60,
+      "reason": "within_policy"
+    },
+    {
+      "name": "recovery-duration",
+      "status": "PASS",
+      "actual_seconds": 4.219,
+      "max_seconds": 90
+    }
+  ],
+  "errors": [],
+  "cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "target": {
+    "container_id": "ac521dc7a0dc20d986b0d732df47d412cfeaeba235e1dc47021267ff9824df9b",
+    "image_id": "sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826"
+  },
+  "timings": {
+    "create_seconds": 2.14,
+    "restore_seconds": 1.407,
+    "checks_seconds": 0.609,
+    "verification_attempt_seconds": 4.219,
+    "cleanup_seconds": 0.797,
+    "total_seconds": 5.016
+  },
+  "measurement_boundary": "Before contract preflight through application/checkpoint verification; cleanup recorded separately.",
+  "archive_sha256": "e2de0db621d7af02134aec67ff33777f5ed0d9d41ad7b6621934685a05c235af",
+  "image_reference": "postgres:17.11-bookworm",
+  "finished_at": "2026-10-06T19:17:16.549105+00:00"
+}

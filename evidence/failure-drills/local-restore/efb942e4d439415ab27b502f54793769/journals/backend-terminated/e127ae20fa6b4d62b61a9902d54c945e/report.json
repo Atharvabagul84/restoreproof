@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "run_id": "e127ae20fa6b4d62b61a9902d54c945e",
+  "started_at": "2026-10-06T19:17:05.674155+00:00",
+  "status": "INCOMPLETE",
+  "exit_code": 2,
+  "phase": "finished",
+  "report_path": "<workspace>\\work\\restore-write-sync-local\\restore-write\\efb942e4d439415ab27b502f54793769\\runs\\backend-terminated\\e127ae20fa6b4d62b61a9902d54c945e\\report.json",
+  "checks": [],
+  "errors": [
+    {
+      "phase": "restore",
+      "message": "Operation failed (ProcessError)."
+    }
+  ],
+  "cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "target": {
+    "container_id": "52ee46f43884e83d1671271817163e16c39841fa4c80f559e15d6d7c33eaebd8",
+    "image_id": "sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826"
+  },
+  "timings": {
+    "create_seconds": 2.813,
+    "restore_seconds": 1.579,
+    "cleanup_seconds": 0.875,
+    "total_seconds": 5.313
+  },
+  "measurement_boundary": "Before contract preflight through application/checkpoint verification; cleanup recorded separately.",
+  "archive_sha256": "e2de0db621d7af02134aec67ff33777f5ed0d9d41ad7b6621934685a05c235af",
+  "image_reference": "postgres:17.11-bookworm",
+  "finished_at": "2026-10-06T19:17:10.976909+00:00"
+}

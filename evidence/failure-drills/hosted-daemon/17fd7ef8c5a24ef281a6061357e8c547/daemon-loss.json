@@ -1,0 +1,35 @@
+{
+  "checkpoint": {
+    "run_id": "af2ecfb28d9248d8bb32e7999fa9e9c0",
+    "container_id": "4934636b8d87a51f5a03a596217c6d4236de4b00657cb511ee8d0d08604cc15e",
+    "worker_pid": 3022,
+    "checkpoint": "after-real-restore"
+  },
+  "stopped_daemon_pid": 2420,
+  "stopped_daemon_start_time": "5246",
+  "stop_returncode": 0,
+  "restarted_daemon_pid": 3474,
+  "restarted_daemon_start_time": "8797",
+  "journal_status": "INCOMPLETE",
+  "cleanup_during_outage": {
+    "status": "INCOMPLETE",
+    "remaining": [
+      "4934636b8d87a51f5a03a596217c6d4236de4b00657cb511ee8d0d08604cc15e"
+    ],
+    "message": "Cleanup could not verify ownership, removal or daemon availability; inspect the recorded target."
+  },
+  "target_state_after_restart": "exited",
+  "recovered": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "repeated": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Container absence verified."
+  },
+  "outer_daemon_unchanged": true,
+  "sentinel_unchanged": true,
+  "boundary": "Real restored target at a test checkpoint; unavailable daemon API, not in-flight restore or power loss."
+}

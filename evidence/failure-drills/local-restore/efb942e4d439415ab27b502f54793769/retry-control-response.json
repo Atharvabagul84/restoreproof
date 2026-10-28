@@ -1,0 +1,14 @@
+{
+  "identity": {
+    "run_id": "3e17ebe267e0491c859089900e2867fb",
+    "container_id": "ac521dc7a0dc20d986b0d732df47d412cfeaeba235e1dc47021267ff9824df9b",
+    "worker_pid": 22836
+  },
+  "response": {
+    "operation": "release-copy-gate",
+    "advisory_unlock_confirmed": true
+  },
+  "control_command_exit_code": 0,
+  "cleanup_wait_observed": true,
+  "target_running_before_release": true
+}

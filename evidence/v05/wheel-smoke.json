@@ -1,0 +1,9 @@
+{
+  "package_version": "0.5.0",
+  "chisel_source_files": 101,
+  "rendered_runs": 6,
+  "implementation": {
+    "package_version": "0.5.0",
+    "source_sha256": "31ef255cfffb21e738716d04cd61445baae1de1ac6d63374538a2e56f3c6d17f"
+  }
+}

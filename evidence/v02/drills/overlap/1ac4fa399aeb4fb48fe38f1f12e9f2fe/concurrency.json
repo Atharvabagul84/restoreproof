@@ -1,0 +1,28 @@
+{
+  "run_ids": [
+    "14f5533319154d8db451d56ab94b346e",
+    "fb221f89129742ffb892875f8933c23e"
+  ],
+  "container_ids": [
+    "7de8efdc05c912dcf71575a2cb0864dc9315f2304e799ee207f4360176e954f0",
+    "d4e70a91af31efb5613c3af7c1ab190ca5c18514afff0a0a16bb123741e57317"
+  ],
+  "both_targets_live_before_release": true,
+  "second_survived_first_cleanup": true,
+  "statuses": [
+    "PASS",
+    "PASS"
+  ],
+  "cleanup": [
+    {
+      "status": "PASS",
+      "remaining": [],
+      "message": "Owned container removed; absence verified."
+    },
+    {
+      "status": "PASS",
+      "remaining": [],
+      "message": "Owned container removed; absence verified."
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "run_id": "7a8ef7467fcd4cbbbb3a6e0d02d2e7b5",
+  "started_at": "2026-10-06T20:32:42.765351+00:00",
+  "status": "FAIL",
+  "exit_code": 1,
+  "phase": "complete",
+  "report_path": "/home/runner/work/restoreproof/restoreproof/runs/chisel-ci/suite-ca9d0bc1d1b24bb289833f99dd794de5/incompatible-schema/7a8ef7467fcd4cbbbb3a6e0d02d2e7b5/report.json",
+  "checks": [
+    {
+      "name": "unauthenticated-denied",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "name": "email-otp-login",
+      "status": "PASS",
+      "transport": "TLS; certificate verified",
+      "session": "HTTP-only secure cookies"
+    },
+    {
+      "name": "restored-identity",
+      "status": "PASS",
+      "http": 200,
+      "owner_id": "dea0332a-06e3-4342-8d04-63e8dbfbb363"
+    },
+    {
+      "name": "saved-brief-content",
+      "status": "PASS",
+      "expected_sha256": "7cdfe27b805b703e47ef54c1a11eb41907127737e819921cdc8694d10c1a0273",
+      "actual_sha256": "7cdfe27b805b703e47ef54c1a11eb41907127737e819921cdc8694d10c1a0273",
+      "brief_id": "f0f055c8-9b0c-4e63-9f2d-716a6dbdf9ef"
+    },
+    {
+      "name": "recovered-write-cycle",
+      "status": "FAIL",
+      "create_http": 502,
+      "failed_stage": "create"
+    },
+    {
+      "name": "tenant-isolation",
+      "status": "PASS",
+      "http": 404
+    },
+    {
+      "name": "signout",
+      "status": "PASS",
+      "signout_http": 200,
+      "afterwards_http": 401
+    },
+    {
+      "name": "recovery-duration",
+      "status": "PASS",
+      "observed_seconds": 4.255429,
+      "maximum_seconds": 300
+    }
+  ],
+  "errors": [],
+  "cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "target": {
+    "database_id": "624369fdb344146849a0a7a71f4bba15d65451e0f8d9ccea8f6605907c2a70b6",
+    "database_image_id": "sha256:589f742565e4f6d22149176b032974f55f8201a8a37b71ed587ec5c6902e689f",
+    "components": {
+      "mail": "312b364be45fc16c8be0ec7abef8bda95a89d35a5e8d9cfe338cd175dbd47c9b",
+      "gateway": "86ddca0617fa4a9c966e715b73f91f8ed2656404cc8ecd4a5e4cce1288cc53e0",
+      "auth": "958b974e2a98691341cc7ca2b1f3536d68bea6b5599fa520882e88f376b06f93",
+      "app": "3337006ce132933c491c7a5109de3b8b13bdf15de94f8b0ad765cefc14b99816",
+      "rest": "bdec6dc5e361a3559aa668645a45cdbfe19c1c509f42333c864d15781cd73c1c"
+    },
+    "images": {
+      "database": "postgres:17.11-bookworm@sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826",
+      "auth": "sha256:688edbb786f6d736edaa478438f23c7044a22a6a5f19502a7138d38caca6c2f6",
+      "rest": "sha256:1ad5f2ea5501150ec9c7953ae9bf04111ced39a53ca01fc0f08af6d0b7ba67be",
+      "mail": "sha256:994d4a5e14891cd6b1eed69441b1b45a730bf3354fc37b9a61853c417bcadf87",
+      "gateway": "sha256:384ec52ec92f66d83d31d0987f13423a9911961a53464a8ad525a76bcd51d747",
+      "app": "sha256:2b05357c64489add78b5aadb25ec9c3429e04d9255e299532d03c1c2b8ed8a0d"
+    },
+    "planned_names": {
+      "app": "restoreproof-7a8ef7467fcd4cbbbb3a6e0d02d2e7b5-app",
+      "auth": "restoreproof-7a8ef7467fcd4cbbbb3a6e0d02d2e7b5-auth",
+      "gateway": "restoreproof-7a8ef7467fcd4cbbbb3a6e0d02d2e7b5-gateway",
+      "mail": "restoreproof-7a8ef7467fcd4cbbbb3a6e0d02d2e7b5-mail",
+      "rest": "restoreproof-7a8ef7467fcd4cbbbb3a6e0d02d2e7b5-rest"
+    },
+    "observed_isolation": {
+      "database": {
+        "network_mode": "none",
+        "memory_bytes": 536870912,
+        "nano_cpus": 1000000000,
+        "pids_limit": 128,
+        "read_only_root": false,
+        "cap_drop": [],
+        "security_options": [],
+        "tmpfs": {
+          "/var/lib/postgresql/data": "rw,noexec,nosuid,size=268435456"
+        },
+        "host_mounts": [],
+        "published_ports": []
+      },
+      "mail": {
+        "network_mode": "container:624369fdb344146849a0a7a71f4bba15d65451e0f8d9ccea8f6605907c2a70b6",
+        "memory_bytes": 268435456,
+        "nano_cpus": 1000000000,
+        "pids_limit": 128,
+        "read_only_root": true,
+        "cap_drop": [
+          "ALL"
+        ],
+        "security_options": [
+          "no-new-privileges"
+        ],
+        "tmpfs": {
+          "/tmp": "rw,nosuid,size=67108864"
+        },
+        "host_mounts": [],
+        "published_ports": []
+      },
+      "gateway": {
+        "network_mode": "container:624369fdb344146849a0a7a71f4bba15d65451e0f8d9ccea8f6605907c2a70b6",
+        "memory_bytes": 268435456,
+        "nano_cpus": 1000000000,
+        "pids_limit": 128,
+        "read_only_root": true,
+        "cap_drop": [
+          "ALL"
+        ],
+        "security_options": [
+          "no-new-privileges"
+        ],
+        "tmpfs": {
+          "/tmp": "rw,nosuid,size=67108864"
+        },
+        "host_mounts": [],
+        "published_ports": []
+      },
+      "auth": {
+        "network_mode": "container:624369fdb344146849a0a7a71f4bba15d65451e0f8d9ccea8f6605907c2a70b6",
+        "memory_bytes": 268435456,
+        "nano_cpus": 1000000000,
+        "pids_limit": 128,
+        "read_only_root": true,
+        "cap_drop": [
+          "ALL"
+        ],
+        "security_options": [
+          "no-new-privileges"
+        ],
+        "tmpfs": {
+          "/tmp": "rw,nosuid,size=67108864"
+        },
+        "host_mounts": [],
+        "published_ports": []
+      },
+      "app": {
+        "network_mode": "container:624369fdb344146849a0a7a71f4bba15d65451e0f8d9ccea8f6605907c2a70b6",
+        "memory_bytes": 805306368,
+        "nano_cpus": 1000000000,
+        "pids_limit": 128,
+        "read_only_root": true,
+        "cap_drop": [
+          "ALL"
+        ],
+        "security_options": [
+          "no-new-privileges"
+        ],
+        "tmpfs": {
+          "/tmp": "rw,nosuid,size=67108864"
+        },
+        "host_mounts": [],
+        "published_ports": []
+      },
+      "rest": {
+        "network_mode": "container:624369fdb344146849a0a7a71f4bba15d65451e0f8d9ccea8f6605907c2a70b6",
+        "memory_bytes": 268435456,
+        "nano_cpus": 1000000000,
+        "pids_limit": 128,
+        "read_only_root": true,
+        "cap_drop": [
+          "ALL"
+        ],
+        "security_options": [
+          "no-new-privileges"
+        ],
+        "tmpfs": {
+          "/tmp": "rw,nosuid,size=67108864"
+        },
+        "host_mounts": [],
+        "published_ports": []
+      }
+    },
+    "network": "database=none; services=container:<database_id>",
+    "published_ports": [],
+    "host_mounts": []
+  },
+  "timings": {
+    "create-database_seconds": 1.186665,
+    "restore_seconds": 0.243294,
+    "start-services_seconds": 1.465421,
+    "application-journey_seconds": 1.353892,
+    "verification_seconds": 4.256715,
+    "cleanup_seconds": 0.832725
+  },
+  "measurement_boundary": "Preflight through fresh database restore, service startup and app checks. Image preparation and source capture excluded; cleanup separate.",
+  "application": "chisel",
+  "source_commit": "1845389ac02663f4fb0d67eac7e839fc32354c2a",
+  "fault": null,
+  "backup_sha256": "41be3869abec4745af48b98f119a486124b2632bbdb42c1b5bd389bf15476466",
+  "source_report_path": "/home/runner/work/restoreproof/restoreproof/runs/chisel-ci/suite-ca9d0bc1d1b24bb289833f99dd794de5/incompatible-schema/source-6a6af1b5df9a4c079f88aa8bdc81cb64/report.json",
+  "source_cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "source_run_id": "6a6af1b5df9a4c079f88aa8bdc81cb64",
+  "contract_path": "/home/runner/work/restoreproof/restoreproof/runs/chisel-ci/suite-ca9d0bc1d1b24bb289833f99dd794de5/incompatible-schema/source-6a6af1b5df9a4c079f88aa8bdc81cb64/contract.json",
+  "scenario": "incompatible-schema"
+}

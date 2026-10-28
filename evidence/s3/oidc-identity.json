@@ -1,0 +1,9 @@
+{
+  "iss": "https://token.actions.githubusercontent.com",
+  "aud": "sts.amazonaws.com",
+  "sub": "repo:Atharvabagul84@64049571/restoreproof@1407771955:ref:refs/heads/main",
+  "repository_id": "1407771955",
+  "repository_owner_id": "64049571",
+  "ref": "refs/heads/main",
+  "repository_visibility": "private"
+}

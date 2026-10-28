@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="RestoreProof" tests="9" failures="1" errors="0">
+  <testcase name="unauthenticated-denied" />
+  <testcase name="email-otp-login" />
+  <testcase name="restored-identity" />
+  <testcase name="saved-brief-content">
+    <failure type="FAIL">{"name": "saved-brief-content", "status": "FAIL", "expected_sha256": "0c9b7273c6de2e5e0a8affc72488a76361cf4db58886a568e9955c5f669760b2", "actual_sha256": null, "brief_id": "accc0c95-7f86-43c5-8341-e498d84403ec"}</failure>
+  </testcase>
+  <testcase name="recovered-write-cycle" />
+  <testcase name="tenant-isolation" />
+  <testcase name="signout" />
+  <testcase name="recovery-duration" />
+  <testcase name="cleanup" />
+</testsuite>

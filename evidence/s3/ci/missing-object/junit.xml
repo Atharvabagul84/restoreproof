@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="RestoreProof" tests="3" failures="0" errors="2">
+  <testcase name="backup-retrieval">
+    <error type="INCOMPLETE">{"name": "backup-retrieval", "status": "INCOMPLETE", "reason": "missing-object"}</error>
+  </testcase>
+  <testcase name="cleanup" />
+  <testcase name="verification-run">
+    <error type="INCOMPLETE">{"name": "verification-run", "status": "INCOMPLETE", "reason": ["missing-object"]}</error>
+  </testcase>
+</testsuite>

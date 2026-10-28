@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "run_id": "af2ecfb28d9248d8bb32e7999fa9e9c0",
+  "started_at": "2026-10-06T19:19:09.536899+00:00",
+  "status": "INCOMPLETE",
+  "exit_code": 2,
+  "phase": "finished",
+  "report_path": "/home/runner/work/restoreproof/restoreproof/runs/daemon/17fd7ef8c5a24ef281a6061357e8c547/runs/af2ecfb28d9248d8bb32e7999fa9e9c0/report.json",
+  "checks": [],
+  "errors": [
+    {
+      "phase": "checks",
+      "message": "Operation failed (ProcessError)."
+    }
+  ],
+  "cleanup": {
+    "status": "INCOMPLETE",
+    "remaining": [
+      "4934636b8d87a51f5a03a596217c6d4236de4b00657cb511ee8d0d08604cc15e"
+    ],
+    "message": "Cleanup could not verify ownership, removal or daemon availability; inspect the recorded target."
+  },
+  "target": {
+    "container_id": "4934636b8d87a51f5a03a596217c6d4236de4b00657cb511ee8d0d08604cc15e",
+    "image_id": "sha256:589f742565e4f6d22149176b032974f55f8201a8a37b71ed587ec5c6902e689f"
+  },
+  "timings": {
+    "create_seconds": 3.653872,
+    "restore_seconds": 0.546276,
+    "checks_seconds": 0.016239,
+    "cleanup_seconds": 0.016409,
+    "total_seconds": 4.250963
+  },
+  "measurement_boundary": "Before contract preflight through application/checkpoint verification; cleanup recorded separately.",
+  "archive_sha256": "63e43b8840c79922eb1bd135ed6b288df9bfc311c6b81f28f16163890eb3b2cf",
+  "image_reference": "postgres:17.11-bookworm",
+  "finished_at": "2026-10-06T19:19:13.787906+00:00"
+}

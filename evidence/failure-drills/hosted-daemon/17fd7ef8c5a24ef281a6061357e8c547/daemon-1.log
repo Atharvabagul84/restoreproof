@@ -1,0 +1,18 @@
+time="2026-10-06T19:18:38.400489061Z" level=info msg="Starting up"
+time="2026-10-06T19:18:38.402143165Z" level=info msg="OTEL tracing is not configured, using no-op tracer provider"
+time="2026-10-06T19:18:38.402328411Z" level=info msg="detected 127.0.0.53 nameserver, assuming systemd-resolved, so using resolv.conf: /run/systemd/resolve/resolv.conf"
+time="2026-10-06T19:18:38.419417555Z" level=info msg="Creating a containerd client" address=/home/runner/work/restoreproof/restoreproof/.rp-d/17fd7ef8c5a2/containerd.sock timeout=1m0s
+time="2026-10-06T19:18:38.425538434Z" level=info msg="[graphdriver] trying configured driver: vfs"
+time="2026-10-06T19:18:38.426530300Z" level=info msg="Loading containers: start."
+time="2026-10-06T19:18:38.443078446Z" level=info msg="Loading containers: done."
+time="2026-10-06T19:18:38.450752400Z" level=info msg="Docker daemon" commit=6430e49 containerd-snapshotter=false storage-driver=vfs version=28.0.4
+time="2026-10-06T19:18:38.450938558Z" level=info msg="Initializing buildkit"
+time="2026-10-06T19:18:38.462759139Z" level=info msg="Completed buildkit initialization"
+time="2026-10-06T19:18:38.466888994Z" level=info msg="Daemon has completed initialization"
+time="2026-10-06T19:18:38.466960838Z" level=info msg="API listen on /home/runner/work/restoreproof/restoreproof/.rp-d/17fd7ef8c5a2/docker.sock"
+time="2026-10-06T19:19:07.145235891Z" level=info msg="ignoring event" container=3d03aa895d67f83e4d9ecb636fa5b9133fe7a95481c0d4a4e6074414e868aa30 module=libcontainerd namespace=rp-946d4d8fa30442f3ba6dde2bde792ff5 topic=/tasks/delete type="*events.TaskDelete"
+time="2026-10-06T19:19:13.481755412Z" level=info msg="Processing signal 'terminated'"
+time="2026-10-06T19:19:13.522961244Z" level=info msg="ignoring event" container=4934636b8d87a51f5a03a596217c6d4236de4b00657cb511ee8d0d08604cc15e module=libcontainerd namespace=rp-946d4d8fa30442f3ba6dde2bde792ff5 topic=/tasks/delete type="*events.TaskDelete"
+time="2026-10-06T19:19:13.542409687Z" level=info msg="stopping event stream following graceful shutdown" error="<nil>" module=libcontainerd namespace=rp-946d4d8fa30442f3ba6dde2bde792ff5
+time="2026-10-06T19:19:13.542772018Z" level=info msg="Daemon shutdown complete"
+time="2026-10-06T19:19:13.542850914Z" level=info msg="stopping event stream following graceful shutdown" error="context canceled" module=libcontainerd namespace=rp-plugins-946d4d8fa30442f3ba6dde2bde792ff5

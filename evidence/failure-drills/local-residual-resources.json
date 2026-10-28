@@ -1,0 +1,9 @@
+{
+  "containers_by_label": {
+    "io.restoreproof.restore_write_fixture": [],
+    "io.restoreproof.run_id": [],
+    "io.restoreproof.resilience_fixture": []
+  },
+  "boundary": "Read-only local Docker Desktop inspection after corrected active-COPY drills; no global cleanup executed.",
+  "recorded_at": "2026-10-06T19:18:19.8055290Z"
+}

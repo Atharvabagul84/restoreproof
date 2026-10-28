@@ -1,0 +1,125 @@
+{
+  "recorded_at": "2026-10-06T20:37:53.948261+00:00",
+  "implementation_revision": "38abf3835c318911ce9bf3a6729a092810f12abe",
+  "ci_run_id": 37526987497,
+  "ci_url": "https://github.com/Atharvabagul84/restoreproof/actions/runs/37526987497",
+  "ci_conclusion": "success",
+  "ci_jobs": [
+    {
+      "name": "unit",
+      "conclusion": "success"
+    },
+    {
+      "name": "chisel",
+      "conclusion": "success"
+    },
+    {
+      "name": "postgres",
+      "conclusion": "success"
+    },
+    {
+      "name": "isolated-daemon",
+      "conclusion": "success"
+    }
+  ],
+  "distinct_passing_test_methods": 181,
+  "unexercised_test_methods": [],
+  "unit_methods": 159,
+  "live_postgres_methods": 20,
+  "live_private_daemon_methods": 1,
+  "live_chisel_methods": 1,
+  "chisel_scenarios_in_live_method": 5,
+  "local": {
+    "outcomes": [
+      {
+        "scenario": "healthy",
+        "status": "PASS",
+        "verification_seconds": 26.218,
+        "cleanup": "PASS",
+        "source_cleanup": "PASS",
+        "target_run_id": "f53aac3e98e944c087dd4e3672fccde2"
+      },
+      {
+        "scenario": "missing-data",
+        "status": "FAIL",
+        "verification_seconds": 21.359,
+        "cleanup": "PASS",
+        "source_cleanup": "PASS",
+        "target_run_id": "f8e2c95a01664cc69a3e3ad3da781317"
+      },
+      {
+        "scenario": "incompatible-schema",
+        "status": "FAIL",
+        "verification_seconds": 24.063,
+        "cleanup": "PASS",
+        "source_cleanup": "PASS",
+        "target_run_id": "ab0892f533c5439790c0c781556fda1c"
+      },
+      {
+        "scenario": "auth-unavailable",
+        "status": "INCOMPLETE",
+        "verification_seconds": 15.125,
+        "cleanup": "PASS",
+        "source_cleanup": "PASS",
+        "target_run_id": "60ca7c35c4934712a98b713a8fdc6e5c"
+      },
+      {
+        "scenario": "missing-config",
+        "status": "INCOMPLETE",
+        "verification_seconds": 21.984,
+        "cleanup": "PASS",
+        "source_cleanup": "PASS",
+        "target_run_id": "de394d8ecfea4604a21f9d174d23ca39"
+      }
+    ],
+    "distinct_owned_containers_removed": 60
+  },
+  "ci": {
+    "outcomes": [
+      {
+        "scenario": "healthy",
+        "status": "PASS",
+        "verification_seconds": 4.81142,
+        "cleanup": "PASS",
+        "source_cleanup": "PASS",
+        "target_run_id": "079793c7c7284aec8392356d6c133efe"
+      },
+      {
+        "scenario": "missing-data",
+        "status": "FAIL",
+        "verification_seconds": 4.562482,
+        "cleanup": "PASS",
+        "source_cleanup": "PASS",
+        "target_run_id": "5f51511232f54b50a1171b69ab5a96b9"
+      },
+      {
+        "scenario": "incompatible-schema",
+        "status": "FAIL",
+        "verification_seconds": 4.256715,
+        "cleanup": "PASS",
+        "source_cleanup": "PASS",
+        "target_run_id": "7a8ef7467fcd4cbbbb3a6e0d02d2e7b5"
+      },
+      {
+        "scenario": "auth-unavailable",
+        "status": "INCOMPLETE",
+        "verification_seconds": 3.37857,
+        "cleanup": "PASS",
+        "source_cleanup": "PASS",
+        "target_run_id": "7f4bc14d62fa43fb82c534d310b749d1"
+      },
+      {
+        "scenario": "missing-config",
+        "status": "INCOMPLETE",
+        "verification_seconds": 3.280336,
+        "cleanup": "PASS",
+        "source_cleanup": "PASS",
+        "target_run_id": "cfec425ee5ae40ef8eee66cd97c3d5ba"
+      }
+    ],
+    "distinct_owned_containers_removed": 60
+  },
+  "local_scope": "Five real application scenarios recorded before the final suite-verdict guard, successfully re-evaluated with that guard; 159 unit/guard tests passed on the final source. Linux daemon/legacy live regressions reproduced by CI.",
+  "regression_scope": "Historical local development attempt with PostgREST 14.17; report is original, database log is a selected three-line excerpt.",
+  "scope": "Synthetic quiescent Chisel API recovery; no hosted production restoration, browser rendering, external mail delivery or production RTO/RPO claim."
+}

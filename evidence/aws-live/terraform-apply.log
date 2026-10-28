@@ -1,0 +1,33 @@
+terraform_data.cost_guard: Creating...
+terraform_data.cost_guard: Creation complete after 0s [id=33cf3611-2e2d-4ebd-4214-3fae9301852e]
+aws_s3_bucket.backups: Creating...
+aws_s3_bucket.backups: Still creating... [00m10s elapsed]
+aws_s3_bucket.backups: Creation complete after 12s [id=restoreproof-123456789012-ap-southeast-2]
+aws_s3_bucket_public_access_block.backups: Creating...
+aws_s3_bucket_versioning.backups: Creating...
+aws_s3_bucket_ownership_controls.backups: Creating...
+aws_s3_bucket_server_side_encryption_configuration.backups: Creating...
+aws_s3_bucket_public_access_block.backups: Creation complete after 2s [id=restoreproof-123456789012-ap-southeast-2]
+aws_s3_bucket_policy.backups: Creating...
+aws_s3_bucket_ownership_controls.backups: Creation complete after 2s [id=restoreproof-123456789012-ap-southeast-2]
+aws_s3_bucket_server_side_encryption_configuration.backups: Creation complete after 2s [id=restoreproof-123456789012-ap-southeast-2]
+aws_s3_bucket_versioning.backups: Creation complete after 3s [id=restoreproof-123456789012-ap-southeast-2]
+aws_s3_bucket_lifecycle_configuration.backups: Creating...
+aws_s3_bucket_policy.backups: Creation complete after 2s [id=restoreproof-123456789012-ap-southeast-2]
+aws_s3_bucket_lifecycle_configuration.backups: Still creating... [00m10s elapsed]
+aws_s3_bucket_lifecycle_configuration.backups: Still creating... [00m20s elapsed]
+aws_s3_bucket_lifecycle_configuration.backups: Still creating... [00m30s elapsed]
+aws_s3_bucket_lifecycle_configuration.backups: Still creating... [00m40s elapsed]
+aws_s3_bucket_lifecycle_configuration.backups: Still creating... [00m50s elapsed]
+aws_s3_bucket_lifecycle_configuration.backups: Still creating... [01m00s elapsed]
+aws_s3_bucket_lifecycle_configuration.backups: Creation complete after 1m1s [id=restoreproof-123456789012-ap-southeast-2]
+
+Apply complete! Resources: 8 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+aws_region = "ap-southeast-2"
+backup_prefix = "backups/chisel/"
+bucket_name = "restoreproof-123456789012-ap-southeast-2"
+evidence_prefix = "evidence/chisel/"
+oidc_subject = "repo:Atharvabagul84@64049571/restoreproof@1407771955:ref:refs/heads/main"

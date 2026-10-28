@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "run_id": "af6c4607d2d149f68a9806aefe193e49",
+  "started_at": "2026-10-06T18:27:03.381552+00:00",
+  "status": "PASS",
+  "exit_code": 0,
+  "phase": "finished",
+  "report_path": "evidence/scenarios/healthy.json",
+  "checks": [
+    {
+      "name": "snapshot-data",
+      "status": "PASS",
+      "expected": {
+        "teams": [
+          {
+            "id": 1,
+            "name": "Flight systems"
+          },
+          {
+            "id": 2,
+            "name": "Ground operations"
+          }
+        ],
+        "features": [
+          {
+            "id": 101,
+            "team_id": 1,
+            "title": "Telemetry replay",
+            "revision": 2
+          },
+          {
+            "id": 102,
+            "team_id": 2,
+            "title": "Release checklist",
+            "revision": 1
+          }
+        ],
+        "snapshots": [
+          {
+            "feature_id": 101,
+            "revision": 1,
+            "body": "First revision"
+          },
+          {
+            "feature_id": 101,
+            "revision": 2,
+            "body": "Durable replay"
+          },
+          {
+            "feature_id": 102,
+            "revision": 1,
+            "body": "Verified release"
+          }
+        ],
+        "checkpoints": [
+          {
+            "id": 1,
+            "committed_at": "2026-01-01T00:00:00+00:00"
+          }
+        ]
+      },
+      "actual": {
+        "teams": [
+          {
+            "id": 1,
+            "name": "Flight systems"
+          },
+          {
+            "id": 2,
+            "name": "Ground operations"
+          }
+        ],
+        "features": [
+          {
+            "id": 101,
+            "team_id": 1,
+            "title": "Telemetry replay",
+            "revision": 2
+          },
+          {
+            "id": 102,
+            "team_id": 2,
+            "title": "Release checklist",
+            "revision": 1
+          }
+        ],
+        "snapshots": [
+          {
+            "feature_id": 101,
+            "revision": 1,
+            "body": "First revision"
+          },
+          {
+            "feature_id": 101,
+            "revision": 2,
+            "body": "Durable replay"
+          },
+          {
+            "feature_id": 102,
+            "revision": 1,
+            "body": "Verified release"
+          }
+        ],
+        "checkpoints": [
+          {
+            "id": 1,
+            "committed_at": "2026-01-01T00:00:00+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "name": "revision-snapshots",
+      "status": "PASS",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "freshness",
+      "status": "PASS",
+      "incident_at": "2026-01-01T00:00:30+00:00",
+      "recovered_at": "2026-01-01T00:00:00+00:00",
+      "age_seconds": 30.0,
+      "max_data_age_seconds": 60,
+      "reason": "within_policy"
+    },
+    {
+      "name": "recovery-duration",
+      "status": "PASS",
+      "actual_seconds": 4.015,
+      "max_seconds": 300
+    }
+  ],
+  "errors": [],
+  "cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "target": {
+    "container_id": "017a4cc94fbc7579fa8ff1b314e5e72f54506f6e4922906c362d7c0d036db00f",
+    "image_id": "sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826"
+  },
+  "timings": {
+    "create_seconds": 2.188,
+    "restore_seconds": 0.859,
+    "checks_seconds": 0.921,
+    "verification_attempt_seconds": 4.015,
+    "cleanup_seconds": 0.719,
+    "total_seconds": 4.734
+  },
+  "measurement_boundary": "Before contract preflight through application/checkpoint verification; cleanup recorded separately.",
+  "archive_sha256": "9c215def607e1a4a5cfe0e2abe36dcd7bf7fca308c50e93387dd93f12f0301be",
+  "image_reference": "postgres:17.11-bookworm",
+  "finished_at": "2026-10-06T18:27:08.125849+00:00"
+}

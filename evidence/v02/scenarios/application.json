@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "run_id": "7c741a612ee2443181c936cfb952dd31",
+  "started_at": "2026-10-06T18:47:05.099714+00:00",
+  "status": "PASS",
+  "exit_code": 0,
+  "phase": "finished",
+  "report_path": "evidence/v02/scenarios/application.json",
+  "checks": [
+    {
+      "name": "snapshot-data",
+      "status": "PASS",
+      "expected": {
+        "teams": [
+          {
+            "id": 1,
+            "name": "Flight systems"
+          },
+          {
+            "id": 2,
+            "name": "Ground operations"
+          }
+        ],
+        "features": [
+          {
+            "id": 101,
+            "team_id": 1,
+            "title": "Telemetry replay",
+            "revision": 2
+          },
+          {
+            "id": 102,
+            "team_id": 2,
+            "title": "Release checklist",
+            "revision": 1
+          }
+        ],
+        "snapshots": [
+          {
+            "feature_id": 101,
+            "revision": 1,
+            "body": "First revision"
+          },
+          {
+            "feature_id": 101,
+            "revision": 2,
+            "body": "Durable replay"
+          },
+          {
+            "feature_id": 102,
+            "revision": 1,
+            "body": "Verified release"
+          }
+        ],
+        "checkpoints": [
+          {
+            "id": 1,
+            "committed_at": "2026-01-01T00:00:00+00:00"
+          }
+        ]
+      },
+      "actual": {
+        "teams": [
+          {
+            "id": 1,
+            "name": "Flight systems"
+          },
+          {
+            "id": 2,
+            "name": "Ground operations"
+          }
+        ],
+        "features": [
+          {
+            "id": 101,
+            "team_id": 1,
+            "title": "Telemetry replay",
+            "revision": 2
+          },
+          {
+            "id": 102,
+            "team_id": 2,
+            "title": "Release checklist",
+            "revision": 1
+          }
+        ],
+        "snapshots": [
+          {
+            "feature_id": 101,
+            "revision": 1,
+            "body": "First revision"
+          },
+          {
+            "feature_id": 101,
+            "revision": 2,
+            "body": "Durable replay"
+          },
+          {
+            "feature_id": 102,
+            "revision": 1,
+            "body": "Verified release"
+          }
+        ],
+        "checkpoints": [
+          {
+            "id": 1,
+            "committed_at": "2026-01-01T00:00:00+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "name": "revision-snapshots",
+      "status": "PASS",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "freshness",
+      "status": "PASS",
+      "incident_at": "2026-01-01T00:00:30+00:00",
+      "recovered_at": "2026-01-01T00:00:00+00:00",
+      "age_seconds": 30.0,
+      "max_data_age_seconds": 60,
+      "reason": "within_policy"
+    },
+    {
+      "name": "application-database-role",
+      "status": "PASS",
+      "expected": {
+        "role": "restoreproof_orders_app",
+        "session_user": "restoreproof_orders_app",
+        "superuser": false,
+        "bypass_rls": false,
+        "create_role": false,
+        "create_database": false,
+        "rls_active": true,
+        "schema_create": false,
+        "database_create": false,
+        "temporary_create": false,
+        "truncate": false
+      },
+      "actual": {
+        "role": "restoreproof_orders_app",
+        "session_user": "restoreproof_orders_app",
+        "superuser": false,
+        "bypass_rls": false,
+        "create_role": false,
+        "create_database": false,
+        "rls_active": true,
+        "schema_create": false,
+        "database_create": false,
+        "temporary_create": false,
+        "truncate": false
+      }
+    },
+    {
+      "name": "application-read-existing-order",
+      "status": "PASS",
+      "expected_http_status": 200,
+      "actual_http_status": 200,
+      "response_matches": true
+    },
+    {
+      "name": "application-read-second-tenant-order",
+      "status": "PASS",
+      "expected_http_status": 200,
+      "actual_http_status": 200,
+      "response_matches": true
+    },
+    {
+      "name": "application-create-order",
+      "status": "PASS",
+      "expected_http_status": 201,
+      "actual_http_status": 201,
+      "response_matches": true
+    },
+    {
+      "name": "application-read-persisted-order",
+      "status": "PASS",
+      "expected_http_status": 200,
+      "actual_http_status": 200,
+      "response_matches": true
+    },
+    {
+      "name": "application-cross-tenant-denied",
+      "status": "PASS",
+      "expected_http_status": 404,
+      "actual_http_status": 404,
+      "response_matches": true
+    },
+    {
+      "name": "application-missing-order",
+      "status": "PASS",
+      "expected_http_status": 404,
+      "actual_http_status": 404,
+      "response_matches": true
+    },
+    {
+      "name": "application-unauthenticated-denied",
+      "status": "PASS",
+      "expected_http_status": 401,
+      "actual_http_status": 401,
+      "response_matches": true
+    },
+    {
+      "name": "recovery-duration",
+      "status": "PASS",
+      "actual_seconds": 7.046,
+      "max_seconds": 300
+    }
+  ],
+  "errors": [],
+  "cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "target": {
+    "container_id": "5daa2f70069b5b6c4dfb3463f7ee3f8872aa52c008706c6645dc0fff062afb89",
+    "image_id": "sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826"
+  },
+  "timings": {
+    "create_seconds": 2.235,
+    "restore_seconds": 0.875,
+    "checks_seconds": 0.953,
+    "application_seconds": 2.921,
+    "verification_attempt_seconds": 7.046,
+    "cleanup_seconds": 0.625,
+    "total_seconds": 7.671
+  },
+  "measurement_boundary": "Before contract preflight through application/checkpoint verification; cleanup recorded separately.",
+  "archive_sha256": "e06b318081af11bca8cd6d9dfcdea7bcf86a1496a172304d204eaa267a1f4f21",
+  "image_reference": "postgres:17.11-bookworm",
+  "finished_at": "2026-10-06T18:47:12.776102+00:00"
+}

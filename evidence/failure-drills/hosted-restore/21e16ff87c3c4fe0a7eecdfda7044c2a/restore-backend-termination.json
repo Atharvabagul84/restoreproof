@@ -1,0 +1,76 @@
+{
+  "failed_run_id": "e5699b54dc0f404a83a76964ca684005",
+  "copy_at_termination": {
+    "pid": 117,
+    "command": "COPY FROM",
+    "type": "PIPE",
+    "tuples_processed": 1000,
+    "bytes_processed": 94020,
+    "state": "active",
+    "query": "COPY drill.restore_rows (id, payload, committed_at) FROM stdin;\n",
+    "wait_event": "PgSleep",
+    "application_name": "pg_restore"
+  },
+  "pg_terminate_backend_result": true,
+  "cli_exit_code": 2,
+  "termination_control_response": {
+    "identity": {
+      "run_id": "e5699b54dc0f404a83a76964ca684005",
+      "container_id": "5cf9f5c27cc806dd9a940aadb4c59007aefc9da0244ecb67169c33f9661af7e6",
+      "worker_pid": 24883
+    },
+    "response": {
+      "operation": "pg_terminate_backend",
+      "backend_pid": 117,
+      "timeout_ms": 5000,
+      "terminated": true
+    },
+    "control_command_exit_code": 0,
+    "cleanup_wait_observed": true,
+    "target_running_before_release": true
+  },
+  "final_status": "INCOMPLETE",
+  "errors": [
+    {
+      "phase": "restore",
+      "message": "Operation failed (ProcessError)."
+    }
+  ],
+  "downstream_checks": [],
+  "automatic_cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "retry_run_id": "df065459f26d42aa94d7ab01ba4888eb",
+  "retry_status": "PASS",
+  "retry_copy_progress": {
+    "pid": 121,
+    "command": "COPY FROM",
+    "type": "PIPE",
+    "tuples_processed": 1000,
+    "bytes_processed": 94020,
+    "state": "active",
+    "query": "COPY drill.restore_rows (id, payload, committed_at) FROM stdin;\n",
+    "wait_event": "PgSleep",
+    "application_name": "pg_restore"
+  },
+  "archive_sha256": "9637b0a2c6841038b36acade0fc07f54f7104fb592ded3620618276616d2ffa0",
+  "retry_control_response": {
+    "identity": {
+      "run_id": "df065459f26d42aa94d7ab01ba4888eb",
+      "container_id": "c15ae1554986e5fda9d5cc47fd71c1da7bebf113f39ec93bb4069747a0296bd5",
+      "worker_pid": 25435
+    },
+    "response": {
+      "operation": "release-copy-gate",
+      "advisory_unlock_confirmed": true
+    },
+    "control_command_exit_code": 0,
+    "cleanup_wait_observed": true,
+    "target_running_before_release": true
+  },
+  "foreign_container_id": "338f49b896fad77d30d44762293cb56745d232d81e55725e0861a246d132cdeb",
+  "foreign_retained_after_failure_and_retry": true,
+  "boundary": "Observed pg_restore COPY backend terminated while real verifier remained alive; uncommitted work, not a data-loss measurement."
+}

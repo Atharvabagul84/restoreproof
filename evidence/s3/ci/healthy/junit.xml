@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="RestoreProof" tests="10" failures="0" errors="0">
+  <testcase name="backup-retrieval" />
+  <testcase name="unauthenticated-denied" />
+  <testcase name="email-otp-login" />
+  <testcase name="restored-identity" />
+  <testcase name="saved-brief-content" />
+  <testcase name="recovered-write-cycle" />
+  <testcase name="tenant-isolation" />
+  <testcase name="signout" />
+  <testcase name="recovery-duration" />
+  <testcase name="cleanup" />
+</testsuite>

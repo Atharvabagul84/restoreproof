@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="RestoreProof" tests="1" failures="0" errors="1">
+  <testcase name="verification-run">
+    <error type="INCOMPLETE">{"name": "verification-run", "status": "INCOMPLETE", "reason": []}</error>
+  </testcase>
+</testsuite>

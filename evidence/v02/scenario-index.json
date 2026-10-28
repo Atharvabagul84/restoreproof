@@ -1,0 +1,136 @@
+[
+  {
+    "scenario": "ledger-healthy",
+    "source": "runs/v02/test_complete_ledger_passes/52d369695d0742ff85be3a7f921577b6/report.json",
+    "source_sha256": "bd9a92b13723bf5e7717af1d5017d99ff12c271dbf2feeaeb9245685524668d9",
+    "copy": "evidence/v02/scenarios/ledger-healthy.json",
+    "copy_sha256": "17d734d17065cd1d633aaa1438edf658d0f18ac4c45517ef5a931f84af0e4525",
+    "transformation": "Only report_path replaced."
+  },
+  {
+    "scenario": "application-broken",
+    "source": "runs/v02/test_database_checks_pass_but_missing_required_order_fails_journey/f8b9a09886264bcaa6a22ec8c788593f/report.json",
+    "source_sha256": "6d7365ff0663736996b2a572372919f75bc229082a2280589c4228b9f67c8d33",
+    "copy": "evidence/v02/scenarios/application-broken.json",
+    "copy_sha256": "f036d9193c3f080f845d47d098eb8ce76246c276e506454aac93ddf35a6cd4cd",
+    "transformation": "Only report_path replaced."
+  },
+  {
+    "scenario": "healthy",
+    "source": "runs/v02/test_healthy_real_database_restore_passes/healthy/2bee1e067e8a423e9e7dcae61e86c2bb/report.json",
+    "source_sha256": "43a3d07a19b178661608c3e13b5874ae46c88493f2c759901ac44cdefec379f5",
+    "copy": "evidence/v02/scenarios/healthy.json",
+    "copy_sha256": "32a21feafb23437747e1c4acf688ac4ac7757297738b3348733334cd0aab2c61",
+    "transformation": "Only report_path replaced."
+  },
+  {
+    "scenario": "ledger-gap",
+    "source": "runs/v02/test_interior_write_loss_fails_while_latest_checkpoint_passes/13d5b9581e1b4cca92875e1a726c5e8d/report.json",
+    "source_sha256": "39176a1a7ef5c859af93559cffe9383ab787a9db54b4044fd4cf76da03e41ad4",
+    "copy": "evidence/v02/scenarios/ledger-gap.json",
+    "copy_sha256": "89a9b133a6dc94badfb2db93afd08dc881019c6fd2b69611b10af333ede90ece",
+    "transformation": "Only report_path replaced."
+  },
+  {
+    "scenario": "corrupt",
+    "source": "runs/v02/test_matching_checksum_does_not_make_truncated_archive_restorable/corrupt/473f18de35ca40d395e38e7e548abda9/report.json",
+    "source_sha256": "0524ca5c2b1bf14885f9009dba2bb551ae2c0bf6e9b57f56468f6eb097cea1e3",
+    "copy": "evidence/v02/scenarios/corrupt.json",
+    "copy_sha256": "647374393b4aa5a15156d2233a9efd46532a32817037fc9952896215965a1042",
+    "transformation": "Only report_path replaced."
+  },
+  {
+    "scenario": "application",
+    "source": "runs/v02/test_restored_application_supports_authorized_read_and_write/7c741a612ee2443181c936cfb952dd31/report.json",
+    "source_sha256": "44767ffdb6a2c054741c2bfee08a195b7a8daf5ada195e1dbef0c478378608d6",
+    "copy": "evidence/v02/scenarios/application.json",
+    "copy_sha256": "942b3f75834d1821d508270394fd396bb1d8eac322f7741601db7ec0b9f0062c",
+    "transformation": "Only report_path replaced."
+  },
+  {
+    "scenario": "inconsistent",
+    "source": "runs/v02/test_semantically_invalid_database_starts_but_fails_application_check/inconsistent/b710c9cd27834d56b29f6bc15fcdb9cd/report.json",
+    "source_sha256": "3167fd0f9f62615b1811f66e3ad35209e36e9290c5da38b0bf2a11f6d40aa4f3",
+    "copy": "evidence/v02/scenarios/inconsistent.json",
+    "copy_sha256": "f9b41d9a78eb0fb6ae661de9b884dff70bc51d1c12bdd6f4d893c5659a381e37",
+    "transformation": "Only report_path replaced."
+  },
+  {
+    "scenario": "stale",
+    "source": "runs/v02/test_stale_real_backup_fails_recovery_policy/stale/5163da6379144e748895f937f72d4591/report.json",
+    "source_sha256": "a94ebf30e7f2ecd8c721d5410606981b31ddd6abdc70f9f64112c1b5965b88a9",
+    "copy": "evidence/v02/scenarios/stale.json",
+    "copy_sha256": "1801f09aa6ed7de04117d055f9e06e601a06e4330c9d0aa5ea0e061cca1153fe",
+    "transformation": "Only report_path replaced."
+  },
+  {
+    "source": "runs/v02/active-query/1d6778517c584cb0a5fd49e8eff4f2ec/interruption.json",
+    "source_sha256": "5c4e6a1f297e6d99f6647d8b334667e2c57b16c7033329eb6abd07f97f10f24c",
+    "copy": "evidence/v02/drills/active-query/1d6778517c584cb0a5fd49e8eff4f2ec/interruption.json",
+    "copy_sha256": "5c4e6a1f297e6d99f6647d8b334667e2c57b16c7033329eb6abd07f97f10f24c",
+    "transformation": "None."
+  },
+  {
+    "source": "runs/v02/checks-kill/2f5cedcb06344acd8ee32c54ccc4d567/interruption.json",
+    "source_sha256": "a97b3b638ef7aaaa5950eef9535eefd52241903167508c870044b7473e06fd20",
+    "copy": "evidence/v02/drills/checks-kill/2f5cedcb06344acd8ee32c54ccc4d567/interruption.json",
+    "copy_sha256": "a97b3b638ef7aaaa5950eef9535eefd52241903167508c870044b7473e06fd20",
+    "transformation": "None."
+  },
+  {
+    "source": "runs/v02/restore-kill/83f04be263eb4926b86615d18ecf8787/interruption.json",
+    "source_sha256": "bbaf4f3e1e96eb1d06943a64b254e5e0e6e3f1613a02339faf951a0eb3d6ad15",
+    "copy": "evidence/v02/drills/restore-kill/83f04be263eb4926b86615d18ecf8787/interruption.json",
+    "copy_sha256": "bbaf4f3e1e96eb1d06943a64b254e5e0e6e3f1613a02339faf951a0eb3d6ad15",
+    "transformation": "None."
+  },
+  {
+    "source": "runs/v02/overlap/1ac4fa399aeb4fb48fe38f1f12e9f2fe/concurrency.json",
+    "source_sha256": "2687acdf8b9490c6475fa85cdac08b699501470a1a96296a7bb476eb677687c5",
+    "copy": "evidence/v02/drills/overlap/1ac4fa399aeb4fb48fe38f1f12e9f2fe/concurrency.json",
+    "copy_sha256": "2687acdf8b9490c6475fa85cdac08b699501470a1a96296a7bb476eb677687c5",
+    "transformation": "None."
+  },
+  {
+    "source": "runs/v02/active-query/1d6778517c584cb0a5fd49e8eff4f2ec/test-cleanup.json",
+    "source_sha256": "7fc544e6d9ef1b3ffbcffde299a7350369a329a5bec342da606e2ff0fa6ce1ea",
+    "copy": "evidence/v02/drills/active-query/1d6778517c584cb0a5fd49e8eff4f2ec/test-cleanup.json",
+    "copy_sha256": "7fc544e6d9ef1b3ffbcffde299a7350369a329a5bec342da606e2ff0fa6ce1ea",
+    "transformation": "None."
+  },
+  {
+    "source": "runs/v02/checks-kill/2f5cedcb06344acd8ee32c54ccc4d567/test-cleanup.json",
+    "source_sha256": "7fc544e6d9ef1b3ffbcffde299a7350369a329a5bec342da606e2ff0fa6ce1ea",
+    "copy": "evidence/v02/drills/checks-kill/2f5cedcb06344acd8ee32c54ccc4d567/test-cleanup.json",
+    "copy_sha256": "7fc544e6d9ef1b3ffbcffde299a7350369a329a5bec342da606e2ff0fa6ce1ea",
+    "transformation": "None."
+  },
+  {
+    "source": "runs/v02/overlap/1ac4fa399aeb4fb48fe38f1f12e9f2fe/test-cleanup.json",
+    "source_sha256": "7fc544e6d9ef1b3ffbcffde299a7350369a329a5bec342da606e2ff0fa6ce1ea",
+    "copy": "evidence/v02/drills/overlap/1ac4fa399aeb4fb48fe38f1f12e9f2fe/test-cleanup.json",
+    "copy_sha256": "7fc544e6d9ef1b3ffbcffde299a7350369a329a5bec342da606e2ff0fa6ce1ea",
+    "transformation": "None."
+  },
+  {
+    "source": "runs/v02/restore-kill/83f04be263eb4926b86615d18ecf8787/test-cleanup.json",
+    "source_sha256": "7fc544e6d9ef1b3ffbcffde299a7350369a329a5bec342da606e2ff0fa6ce1ea",
+    "copy": "evidence/v02/drills/restore-kill/83f04be263eb4926b86615d18ecf8787/test-cleanup.json",
+    "copy_sha256": "7fc544e6d9ef1b3ffbcffde299a7350369a329a5bec342da606e2ff0fa6ce1ea",
+    "transformation": "None."
+  },
+  {
+    "source": "runs/v02/test_live_target_has_declared_isolation_and_resource_limits/isolation.json",
+    "source_sha256": "433daa1bfd9bdd712a7222f5fa09ba26043dafa9f0374c4e6b5d3bf931b6878a",
+    "copy": "evidence/v02/drills/test_live_target_has_declared_isolation_and_resource_limits/isolation.json",
+    "copy_sha256": "433daa1bfd9bdd712a7222f5fa09ba26043dafa9f0374c4e6b5d3bf931b6878a",
+    "transformation": "None."
+  },
+  {
+    "source": "runs/v02/test_crash_recovery_cleanup_is_repeatable_on_a_real_container/cleanup-recovery.json",
+    "source_sha256": "acad1be71d3f2670167face2db9be16886d3dabbd248bbff4c783b30af1f10d8",
+    "copy": "evidence/v02/drills/test_crash_recovery_cleanup_is_repeatable_on_a_real_container/cleanup-recovery.json",
+    "copy_sha256": "acad1be71d3f2670167face2db9be16886d3dabbd248bbff4c783b30af1f10d8",
+    "transformation": "None."
+  }
+]

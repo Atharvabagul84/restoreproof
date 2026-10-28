@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-10-07T09:02:02.1231812Z",
+  "repository": "Atharvabagul84/restoreproof",
+  "visibility": "PRIVATE",
+  "workflow_state": "active",
+  "variables": [
+    {
+      "name": "RESTOREPROOF_FREE_CI_VERIFIED",
+      "value": "true"
+    },
+    {
+      "name": "RESTOREPROOF_LAB_SCHEDULE_ENABLED",
+      "value": "true"
+    }
+  ],
+  "cron": "17 4 * * 1",
+  "timezone": "UTC",
+  "first_due_at": "2026-10-12T04:17:00Z",
+  "scheduled_execution_observed": false,
+  "preceding_manual_run": 37596871490
+}

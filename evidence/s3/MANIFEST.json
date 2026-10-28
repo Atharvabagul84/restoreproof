@@ -1,0 +1,27 @@
+{
+  "algorithm": "SHA-256",
+  "files": {
+    "ci/access-denied/junit.xml": "e159ab2f170479e3d04e3730d2957139c69b1efb27c6290a20034bdf8ea213eb",
+    "ci/access-denied/report.json": "e63b4e5bb6f1e809ffd2ca6fc38fccc75cad138662a01cc221ba52ca7025e1e7",
+    "ci/checksum-mismatch/junit.xml": "edbab82709a11bf574e6c5bf3c248d0105087bd929b058a7767b24808ab01641",
+    "ci/checksum-mismatch/report.json": "15772421086c1c1e612336a25570ffc96395fc326e36cdb33d080c8032aef45a",
+    "ci/download-interrupted/junit.xml": "acb17daa7d84700955f766fd3437a2c946433f265783bc25c8bfa8730bc2b3e2",
+    "ci/download-interrupted/report.json": "5e456abf539e579df44afd4f36be7a9d2d8447d4ff4333faacd322d6a171a7a8",
+    "ci/healthy/application/junit.xml": "8b32709bcc74d509c35f487de1db472b36f3bc561317ecf83f0e49bdae7939bc",
+    "ci/healthy/application/report.json": "10917f9c1a44e834802c9b53d39b93fc574fbdf1351816d819b3713a7ba68243",
+    "ci/healthy/junit.xml": "a0dd2927cc94b15d504f94ed87291840bfd5d4b15cdf64c7da266d9443059e8f",
+    "ci/healthy/report.json": "1a71cc8e5acaa0c05589a4917f48022aa1c0e9e8a829fbc01cfadbdcd1e1d1f1",
+    "ci/missing-object/junit.xml": "a4b4955877b3ff1740a1eb8acf9830fe712639ce2141e656d80726249761f9d2",
+    "ci/missing-object/report.json": "3f4e3d6868afc3c3ac7e1bb7ad8e697155f29d2a85a29a7c3ec6437dbbd06cb3",
+    "ci/source/junit.xml": "18e4763c8fc3ce02089922ac8df39a61475ffa77de96cabd2b4d0eeffa440ba0",
+    "ci/source/report.json": "7ed6b66bb671cf40b93215c31d33874f76f59bf795335d58a4cc5f91414f10f6",
+    "ci/stale-backup/junit.xml": "ecdd36e7ed720d8b68ec7a77a4631c7fb0de3d0253543dec0c11c93b3fda971a",
+    "ci/stale-backup/report.json": "c2e16a000c705ec5203477cb4f5ffdba1405c984867a6ffa78f7c487eb5ed132",
+    "ci/suite.json": "1ce35450c80e4952b4cfb2d93cbeeb38f2d21ae8400a35229b63cf9b8d15e710",
+    "ci-tests.log": "568323889e46dbdc100592185665b7ed4bc4aa653a023fbc95ed4bc320aa0a37",
+    "local-unit-http.log": "42f98207edfcbf9dcdc58ed128596cce917ce1f1f717d659996eb7f1a11f2071",
+    "oidc-identity.json": "ff9887fe4f868c979ed84d7dbaf847386c41fcf41e886e4d4f5075b533aad3e4",
+    "terraform-tests.log": "7d3daf837971f55ca9674a5212612ec33c8354850d7cda9e43144d195567f84b",
+    "validation.json": "ef3fb567d49e1501530f63ee0e7dd73bf960e4f9b9b136f915f2d22b7969846d"
+  }
+}

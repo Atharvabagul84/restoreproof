@@ -1,0 +1,62 @@
+{
+  "interrupted_run_id": "0e91a1545aff4e459f9c5a09fd583d7c",
+  "retry_run_id": "f33be00cef3d4e9b9bc205ea0a29fe7c",
+  "archive_sha256": "2522dee10bd3ebaa6cc38e31e7bd6f9be79454656b4974714ece5c888bebbef2",
+  "copy_at_kill": {
+    "pid": 117,
+    "command": "COPY FROM",
+    "type": "PIPE",
+    "tuples_processed": 1000,
+    "bytes_processed": 94020,
+    "state": "active",
+    "query": "COPY drill.restore_rows (id, payload, committed_at) FROM stdin;\n",
+    "wait_event": "PgSleep",
+    "application_name": "pg_restore"
+  },
+  "child_returncode": -9,
+  "journal_status_after_kill": "INCOMPLETE",
+  "recovery": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "repeated": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Container absence verified."
+  },
+  "retry_copy_progress": {
+    "pid": 120,
+    "command": "COPY FROM",
+    "type": "PIPE",
+    "tuples_processed": 1000,
+    "bytes_processed": 94020,
+    "state": "active",
+    "query": "COPY drill.restore_rows (id, payload, committed_at) FROM stdin;\n",
+    "wait_event": "PgSleep",
+    "application_name": "pg_restore"
+  },
+  "retry_status": "PASS",
+  "retry_control_response": {
+    "identity": {
+      "run_id": "f33be00cef3d4e9b9bc205ea0a29fe7c",
+      "container_id": "c74805aecb852e829cbc8ca71b147db07518a7ecfe4a08a0049d872e1881cf70",
+      "worker_pid": 23604
+    },
+    "response": {
+      "operation": "release-copy-gate",
+      "advisory_unlock_confirmed": true
+    },
+    "control_command_exit_code": 0,
+    "cleanup_wait_observed": true,
+    "target_running_before_release": true
+  },
+  "retry_cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  },
+  "foreign_container_id": "683b783bf987168f62b6fd7a5eb20abc2f1911abc6402a15623223bf9c383f80",
+  "foreign_retained_after_recovery_and_retry": true,
+  "boundary": "Uncommitted COPY FROM processed rows observed before real CLI process-tree kill; not a committed-data-loss measurement."
+}

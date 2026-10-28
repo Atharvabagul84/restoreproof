@@ -1,0 +1,18 @@
+{
+  "source_run_id": "e50b54f8b89d4bbfb990fd997080c9d1",
+  "status": "PASS",
+  "lock_key": 2020651097,
+  "rows": 2048,
+  "gate_row": 1536,
+  "target": {
+    "container_id": "352b11e4daede8c9f81071d3d723a069e050cdf8973e5cc19f22feac1a7c4d1f",
+    "image_id": "sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826"
+  },
+  "archive_bytes": 50059,
+  "archive_sha256": "e2de0db621d7af02134aec67ff33777f5ed0d9d41ad7b6621934685a05c235af",
+  "cleanup": {
+    "status": "PASS",
+    "remaining": [],
+    "message": "Owned container removed; absence verified."
+  }
+}

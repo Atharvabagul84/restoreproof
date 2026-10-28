@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="RestoreProof" tests="5" failures="1" errors="0">
+  <testcase name="snapshot-data" />
+  <testcase name="revision-snapshots" />
+  <testcase name="freshness">
+    <failure type="FAIL">{"name": "freshness", "status": "FAIL", "incident_at": "2026-01-01T00:02:00+00:00", "recovered_at": "2026-01-01T00:00:00+00:00", "age_seconds": 120.0, "max_data_age_seconds": 60, "reason": "watermark_too_old"}</failure>
+  </testcase>
+  <testcase name="recovery-duration" />
+  <testcase name="cleanup" />
+</testsuite>

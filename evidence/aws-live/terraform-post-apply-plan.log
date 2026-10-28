@@ -1,0 +1,13 @@
+terraform_data.cost_guard: Refreshing state... [id=33cf3611-2e2d-4ebd-4214-3fae9301852e]
+aws_s3_bucket.backups: Refreshing state... [id=restoreproof-123456789012-ap-southeast-2]
+aws_s3_bucket_versioning.backups: Refreshing state... [id=restoreproof-123456789012-ap-southeast-2]
+aws_s3_bucket_public_access_block.backups: Refreshing state... [id=restoreproof-123456789012-ap-southeast-2]
+aws_s3_bucket_ownership_controls.backups: Refreshing state... [id=restoreproof-123456789012-ap-southeast-2]
+aws_s3_bucket_server_side_encryption_configuration.backups: Refreshing state... [id=restoreproof-123456789012-ap-southeast-2]
+aws_s3_bucket_policy.backups: Refreshing state... [id=restoreproof-123456789012-ap-southeast-2]
+aws_s3_bucket_lifecycle_configuration.backups: Refreshing state... [id=restoreproof-123456789012-ap-southeast-2]
+
+No changes. Your infrastructure matches the configuration.
+
+Terraform has compared your real infrastructure against your configuration
+and found no differences, so no changes are needed.

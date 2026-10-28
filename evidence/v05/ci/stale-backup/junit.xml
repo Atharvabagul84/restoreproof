@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="RestoreProof" tests="2" failures="1" errors="0">
+  <testcase name="backup-retrieval">
+    <failure type="FAIL">{"name": "backup-retrieval", "status": "FAIL", "reason": "stale-backup"}</failure>
+  </testcase>
+  <testcase name="cleanup" />
+</testsuite>

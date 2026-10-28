@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "image": "postgres:17.11-bookworm",
+  "backup": {
+    "path": "backup.dump",
+    "sha256": "63e43b8840c79922eb1bd135ed6b288df9bfc311c6b81f28f16163890eb3b2cf"
+  },
+  "checks": [
+    {
+      "name": "snapshot-data",
+      "sql": "SELECT json_build_object(\n    'teams', (SELECT json_agg(row_to_json(t)) FROM (SELECT * FROM app.teams ORDER BY id) t),\n    'features', (SELECT json_agg(row_to_json(t)) FROM (SELECT * FROM app.features ORDER BY id) t),\n    'snapshots', (SELECT json_agg(row_to_json(t)) FROM (SELECT * FROM app.snapshots ORDER BY feature_id, revision) t),\n    'checkpoints', (SELECT json_agg(row_to_json(t)) FROM (SELECT * FROM app.checkpoints ORDER BY id) t)\n)",
+      "expected": {
+        "teams": [
+          {
+            "id": 1,
+            "name": "Flight systems"
+          },
+          {
+            "id": 2,
+            "name": "Ground operations"
+          }
+        ],
+        "features": [
+          {
+            "id": 101,
+            "team_id": 1,
+            "title": "Telemetry replay",
+            "revision": 2
+          },
+          {
+            "id": 102,
+            "team_id": 2,
+            "title": "Release checklist",
+            "revision": 1
+          }
+        ],
+        "snapshots": [
+          {
+            "feature_id": 101,
+            "revision": 1,
+            "body": "First revision"
+          },
+          {
+            "feature_id": 101,
+            "revision": 2,
+            "body": "Durable replay"
+          },
+          {
+            "feature_id": 102,
+            "revision": 1,
+            "body": "Verified release"
+          }
+        ],
+        "checkpoints": [
+          {
+            "id": 1,
+            "committed_at": "2026-01-01T00:00:00+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "name": "revision-snapshots",
+      "sql": "SELECT to_json(NOT EXISTS (\n    SELECT 1 FROM app.features f LEFT JOIN app.snapshots s\n    ON s.feature_id = f.id AND s.revision = f.revision\n    WHERE s.feature_id IS NULL\n))",
+      "expected": true
+    }
+  ],
+  "freshness": {
+    "sql": "SELECT to_json(to_char(max(committed_at) AT TIME ZONE 'UTC',\n    'YYYY-MM-DD\"T\"HH24:MI:SS\"Z\"')) FROM app.checkpoints",
+    "incident_at": "2026-01-01T00:00:30Z",
+    "max_data_age_seconds": 60
+  },
+  "max_restore_seconds": 300
+}
