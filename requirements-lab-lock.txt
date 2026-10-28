@@ -20,7 +20,7 @@ itsdangerous==2.2.0
 Jinja2==3.1.6
 jmespath==1.1.0
 joserfc==1.7.5
-jsonpatch==1.33
+jsonpatch==1.37
 jsonpath-ng==1.9.1
 jsonpointer==3.1.1
 jsonschema==4.26.0
