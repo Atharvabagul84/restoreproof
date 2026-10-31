@@ -7,7 +7,7 @@ Apply only under verified account-specific no-charge controls. This project keep
 - One private bucket: four public-access blocks, BucketOwnerEnforced ownership, versioning, SSE-S3 AES256 encryption and a deny for insecure transport.
 - Current object expiration after 30 days; noncurrent versions after 7 days; incomplete multipart uploads aborted after one day. Values are bounded and configurable. Lifecycle is asynchronous, can leave delete markers, and does not delete the bucket itself.
 - `force_destroy=false` and `prevent_destroy=true` protect backup storage from casual teardown. Do not remove those safeguards without a reviewed data-retention decision.
-- Optional GitHub OIDC provider and one role. Trust requires `aud=sts.amazonaws.com` and the exact repository/main subject, with immutable numeric owner/repository IDs for this newly created repository.
+- Optional GitHub OIDC provider and one role. Trust requires `aud=sts.amazonaws.com` and the exact repository/main subject, with immutable numeric owner/repository IDs. `github_repository_id` has no default: set it to the ID of the repository that runs the workflow (`gh api repos/OWNER/REPO --jq .id`).
 - Recovery permissions: `GetObjectVersion` on `backups/chisel/*`, `PutObject` on `evidence/chisel/*`, and `GetObject` on the single history index. No backup writes, deletes, broad bucket listing, KMS keys or static GitHub AWS secrets.
 - Account ID is constrained in the AWS provider. No compute, NAT gateway, database, paid monitoring, remote Terraform backend or other recurring service is provisioned by this configuration.
 
@@ -22,13 +22,13 @@ terraform -chdir=infra/aws validate
 terraform -chdir=infra/aws test
 ```
 
-The five mocked-provider tests check the free-use opt-in, private/versioned/encrypted storage, scoped OIDC/IAM configuration and storage-only isolation. They do not contact AWS or establish live permissions.
+The seven mocked-provider tests check the free-use opt-in, private/versioned/encrypted storage, scoped OIDC/IAM configuration, the required numeric repository ID and storage-only isolation. They do not contact AWS or establish live permissions.
 
 ## Prepare a deployment
 
-1. Verify the actual AWS plan, expiry and prevention of charges, and GitHub's included minutes/storage plus enforced $0 overage cap. Keep repository visibility PRIVATE.
+1. Verify the actual AWS plan, expiry and prevention of charges, and GitHub's included minutes/storage plus enforced $0 overage cap (standard runners are free for public repositories; private repositories draw on the included minutes).
 2. Authenticate the authorized deployer through its normal temporary session. Never paste keys into chat or commit state/credentials. The deployer has broader infrastructure permissions than the recovery role; the workflow cannot create its own role.
-3. Copy `terraform.tfvars.example` to a gitignored tfvars file. Set the exact account, region and a new globally unique bucket name. Set `allow_aws_resources=true` only after step 1.
+3. Copy `terraform.tfvars.example` to a gitignored tfvars file. Set the exact account, region, a new globally unique bucket name and the numeric `github_repository_id`. Set `allow_aws_resources=true` only after step 1.
 4. Determine whether the account already has the GitHub OIDC provider; if so, set its exact ARN instead of creating a duplicate. Verify the actual issuer subject using the `oidc-identity` job in the manual local-lab workflow. Existing repositories may have a different subject format; do not widen trust to wildcards.
 5. Run `terraform plan -var-file=<your-file> -out=<reviewed-plan>`. Inspect every resource and permission. Apply only that reviewed plan. Preserve the local state securely and outside Git.
 
@@ -40,7 +40,7 @@ For the account inspected on 2026-10-07, the denial was traced to AWS's managed-
 
 Use the existing Chisel source capture to obtain a synthetic custom-format dump and independent expectations. With a separately authorized producer session, upload under `backups/chisel/` with AES256 encryption and ExpectedBucketOwner. Record the upload's **VersionId**, archive SHA-256 and original source capture time in a reviewed full [S3 recovery contract](../../docs/guides/s3-recovery.md). Do not use a guessed version ID or the object's upload time as a capture timestamp.
 
-The checked-in `contracts/s3-chisel.json` records the actual successful synthetic upload from 2026-10-07. It is a historical, expiring contract: its 24-hour freshness window ends on 2026-10-08 at 05:32:56 UTC. Re-running it later must fail freshness. The adapter now pins Chisel v1.0.0 (`fdb206c`), so this contract (which names a pre-release commit) is now rejected as INVALID before freshness is checked; a new upload must record the current commit. Create a new capture/upload and review a new contract before a future live drill; do not edit the timestamp to disguise an old backup. The repository is private; do not commit real customer data, secrets or backup bytes.
+The checked-in `contracts/s3-chisel.json` records the actual successful synthetic upload from 2026-10-07. It is a historical, expiring contract: its 24-hour freshness window ends on 2026-10-08 at 05:32:56 UTC. Re-running it later must fail freshness. The adapter now pins Chisel v1.0.0 (`fdb206c`), so this contract (which names a pre-release commit) is now rejected as INVALID before freshness is checked; a new upload must record the current commit. Create a new capture/upload and review a new contract before a future live drill; do not edit the timestamp to disguise an old backup. The repository is public; do not commit real customer data, secrets, account IDs or backup bytes.
 
 ## Enable manual GitHub AWS verification
 
@@ -48,6 +48,7 @@ Set repository variables only after their prerequisites are true:
 
 | Variable | Required value / prerequisite |
 |---|---|
+| `RESTOREPROOF_REPOSITORY_ID` | Numeric ID of this repository, equal to Terraform's `github_repository_id`. Every S3 job is skipped when it is unset or differs, so forks and copies never run them |
 | `RESTOREPROOF_FREE_CI_VERIFIED` | `true`; actual free allowance and enforced spending stop verified |
 | `RESTOREPROOF_AWS_FREE_VERIFIED` | `true`; current no-charge AWS plan verified |
 | `RESTOREPROOF_AWS_ACCOUNT_ID` | Exact account ID used by Terraform |
@@ -63,7 +64,7 @@ Only after that benchmark passes, set `RESTOREPROOF_SCHEDULE_ENABLED=true` to op
 
 ## Pause, retention and recovery
 
-Unset the schedule variable to pause AWS drills, and disable either free-use gate if plan eligibility or spending controls change. This does not delete existing backups. Keep reviewed small evidence in the private repository if it must outlive the one-day Actions artifact retention. S3 object lifecycle and index windows are retention policies, not a spending cap.
+Unset the schedule variable to pause AWS drills, and disable either free-use gate if plan eligibility or spending controls change. This does not delete existing backups. Keep reviewed, redacted small evidence in the repository if it must outlive the one-day Actions artifact retention. S3 object lifecycle and index windows are retention policies, not a spending cap.
 
 Use the [owned cleanup procedure](../../docs/guides/s3-recovery.md#scheduling-and-interruption) after an interrupted drill. Archive Terraform state before ending a temporary deployment environment. Bucket destruction and deleting backup versions are separate, consequential data-management operations; they are not part of a recovery drill.
 

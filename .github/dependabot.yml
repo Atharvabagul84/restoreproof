@@ -4,6 +4,10 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    groups:
+      # pydantic pins an exact pydantic-core, so they must move together.
+      pydantic:
+        patterns: [pydantic, pydantic-core]
   - package-ecosystem: github-actions
     directory: /
     schedule:
@@ -12,3 +16,13 @@ updates:
     directory: /infra/aws
     schedule:
       interval: monthly
+  # The bundled Chisel app is a hash-pinned test fixture. It is refreshed as a
+  # whole snapshot from upstream Chisel, never bumped in place, so ignore every
+  # dependency there (ignore conditions also apply to security updates).
+  - package-ecosystem: npm
+    directory: /src/restoreproof/chisel/assets/app
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 0
+    ignore:
+      - dependency-name: "*"

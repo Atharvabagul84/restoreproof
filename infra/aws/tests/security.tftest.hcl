@@ -6,7 +6,7 @@ variables {
   github_owner         = "Atharvabagul84"
   github_repository    = "restoreproof"
   github_owner_id      = "64049571"
-  github_repository_id = "1407771955"
+  github_repository_id = "1436708557"
 }
 
 run "cloud_disabled_by_default" {
@@ -35,7 +35,7 @@ run "private_versioned_encrypted_and_scoped" {
     error_message = "Object ACLs must be disabled."
   }
   assert {
-    condition     = jsondecode(aws_iam_role.recovery[0].assume_role_policy).Statement[0].Condition.StringEquals["token.actions.githubusercontent.com:sub"] == "repo:Atharvabagul84@64049571/restoreproof@1407771955:ref:refs/heads/main"
+    condition     = jsondecode(aws_iam_role.recovery[0].assume_role_policy).Statement[0].Condition.StringEquals["token.actions.githubusercontent.com:sub"] == "repo:Atharvabagul84@64049571/restoreproof@1436708557:ref:refs/heads/main"
     error_message = "Only the exact immutable repository and main branch may assume the role."
   }
   assert {
@@ -76,4 +76,22 @@ run "reject_unbounded_retention" {
     retention_days      = 365
   }
   expect_failures = [var.retention_days]
+}
+
+run "require_repository_id_for_oidc" {
+  command = plan
+  variables {
+    allow_aws_resources  = true
+    github_repository_id = null
+  }
+  expect_failures = [var.github_repository_id]
+}
+
+run "reject_non_numeric_repository_id" {
+  command = plan
+  variables {
+    allow_aws_resources  = true
+    github_repository_id = "restoreproof"
+  }
+  expect_failures = [var.github_repository_id]
 }

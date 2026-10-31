@@ -11,6 +11,31 @@ RestoreProof restores a backup into a disposable, network-isolated container, th
 
 It builds on PostgreSQL's own `pg_restore`. It is not a backup engine.
 
+*Development history: built in a private repository from 2026-10-06 (33 commits, v0.1–v0.5); the public history starts at v1.0.0. See the [pre-release history](docs/history/release-history.md) and [changelog](CHANGELOG.md).*
+
+<!--
+Screenshot placeholder: what a failing run looks like.
+1. Start Docker, then run: python -m restoreproof demo --scenario ledger-gap --output runs/ledger-gap
+2. Capture the terminal (the FAIL / exit 1 line) and the ledger result in runs/ledger-gap/**/report.json
+   that names the lost write-002. Keep it under ~1 MB, crop out local paths and usernames.
+3. Save it as docs/assets/ledger-gap.png (or .gif) and replace this comment with:
+   ![ledger-gap demo: the checkpoint passes, but the external ledger shows write-002 was lost](docs/assets/ledger-gap.png)
+-->
+
+## Quickstart
+
+Requires Python 3.11+ and Docker with a local Linux container engine. No cloud account or API key is needed.
+
+```sh
+python -m venv .venv && source .venv/bin/activate   # Windows: .\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements-lock.txt .
+docker pull postgres:17.11-bookworm
+python -m restoreproof demo --scenario healthy --output runs/healthy
+python -m restoreproof app-demo --scenario all --output runs/chisel   # full application recovery
+```
+
+On Windows, enable long paths before cloning: `git config --global core.longpaths true`.
+
 ## How it compares
 
 | Check | `pg_restore` exit code | Databasus / pg-backup-verify | BackupDrill | AWS Backup restore testing | **RestoreProof** |
@@ -41,21 +66,13 @@ flowchart LR
   F --> G[JSON journal + JUnit]
 ```
 
-The PostgreSQL target runs with `--network none`, all capabilities dropped except the four its entrypoint needs (`CHOWN`, `FOWNER`, `SETGID`, `SETUID`), `no-new-privileges`, CPU/memory/process limits, tmpfs data storage and no published ports. Its root filesystem stays writable because the archive is copied in with `docker cp`. Application containers in the Chisel journey also run read-only with every capability dropped. Cleanup only removes containers RestoreProof can prove it owns, and a cleanup failure overrides an otherwise green result.
+Isolation and cleanup:
 
-## Quickstart
-
-Requires Python 3.11+ and Docker with a local Linux container engine. No cloud account or API key is needed.
-
-```sh
-python -m venv .venv && source .venv/bin/activate   # Windows: .\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements-lock.txt .
-docker pull postgres:17.11-bookworm
-python -m restoreproof demo --scenario healthy --output runs/healthy
-python -m restoreproof app-demo --scenario all --output runs/chisel   # full application recovery
-```
-
-On Windows, enable long paths before cloning: `git config --global core.longpaths true`.
+- **Network:** the PostgreSQL target runs with `--network none` and no published ports.
+- **Privileges:** every Linux capability is dropped except the four its entrypoint needs (`CHOWN`, `FOWNER`, `SETGID`, `SETUID`), with `no-new-privileges`.
+- **Resources:** CPU, memory and process limits; data on tmpfs. The root filesystem stays writable only because the archive is copied in with `docker cp`.
+- **Application journey:** the Chisel containers (the bundled Next.js app and its auth/API services) run read-only with every capability dropped.
+- **Cleanup:** only containers RestoreProof can prove it owns are removed, and a cleanup failure overrides an otherwise green result.
 
 ## What the scenarios show
 
@@ -96,6 +113,11 @@ Start at the [documentation index](docs/README.md): [usage](docs/guides/usage.md
 ## Contributing and security
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for setup, checks and the pull-request flow, and [SECURITY.md](SECURITY.md) for the threat model and how to report a vulnerability. Changes are listed in the [changelog](CHANGELOG.md).
+
+## Roadmap
+
+- **RestoreProof K8s (in progress):** scheduled restore drills for CloudNativePG on Kubernetes, with RTO/RPO published as Prometheus SLIs and a fault matrix replayed in CI. It reuses this project's checks and reports.
+- An arbitrary-application HTTP journey plugin, and pgBackRest backup sources.
 
 ## Limitations
 
