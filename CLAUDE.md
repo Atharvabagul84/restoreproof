@@ -1,5 +1,4 @@
 @AGENTS.md
-@docs/HANDOFF.md
 @docs/README.md
 @docs/ARCHITECTURE.md
 @docs/reference/limitations.md
@@ -26,4 +25,4 @@ python -m restoreproof demo --scenario healthy --output runs/healthy
 
 Delete a stale local `build/` folder before reinstalling, or setuptools may package old snapshot files.
 
-Never commit `docs/HANDOFF.md`, `runs/`, real account IDs, bucket suffixes or local paths (see CONTRIBUTING.md).
+`docs/HANDOFF.md` is a local, gitignored session handoff: read it if present. Never commit it, `runs/`, real account IDs, bucket suffixes or local paths (see CONTRIBUTING.md).

@@ -7,6 +7,9 @@ All notable changes to this project are documented here. The format follows [Kee
 ### Changed
 - The S3 recovery workflow no longer hard-codes the pre-release repository. Its jobs run only when the repository variable `RESTOREPROOF_REPOSITORY_ID` equals `github.repository_id`, and the OIDC identity check builds the expected subject from it. The synthetic lab no longer requires a private repository.
 - Terraform `github_repository_id` has no default and is required when `enable_github_oidc` is true; two new tests cover a missing and a non-numeric ID.
+- Package version is now 1.0.0, matching the v1.0.0 release (it still read 0.5.0).
+- Dependabot ignores the bundled Chisel snapshot and updates pydantic with pydantic-core.
+- README: Quickstart first, hardening as bullets, development-history note, roadmap.
 
 ## [1.0.0] - 2026-10-28
 

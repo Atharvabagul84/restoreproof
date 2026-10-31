@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "restoreproof"
-version = "0.5.0"
+version = "1.0.0"
 description = "Verify application recovery using isolated PostgreSQL restores and explicit evidence."
 readme = "README.md"
 license = "MIT"
