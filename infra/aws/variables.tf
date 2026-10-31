@@ -81,11 +81,12 @@ variable "github_owner_id" {
 }
 
 variable "github_repository_id" {
-  type    = string
-  default = "1407771955"
+  type        = string
+  default     = null
+  description = "Immutable numeric ID of the one repository allowed to assume the recovery role (gh api repos/OWNER/REPO --jq .id). Required with enable_github_oidc."
   validation {
-    condition     = can(regex("^[0-9]+$", var.github_repository_id))
-    error_message = "Use the immutable numeric GitHub repository ID."
+    condition     = var.github_repository_id == null ? !var.enable_github_oidc : can(regex("^[0-9]+$", var.github_repository_id))
+    error_message = "Set the immutable numeric GitHub repository ID; it is required when enable_github_oidc is true."
   }
 }
 

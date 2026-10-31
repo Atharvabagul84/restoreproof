@@ -4,5 +4,9 @@ allow_aws_resources = false
 aws_account_id      = "123456789012"
 aws_region          = "us-east-1"
 bucket_name         = "replace-with-your-unique-restoreproof-backups"
+# Immutable numeric ID of the repository that may assume the recovery role:
+#   gh api repos/OWNER/restoreproof --jq .id
+# Set the same value as the RESTOREPROOF_REPOSITORY_ID repository variable.
+github_repository_id = "replace-with-numeric-repository-id"
 # Reuse a pre-existing GitHub OIDC provider instead of attempting to recreate it:
 # github_oidc_provider_arn = "arn:aws:iam::123456789012:oidc-provider/token.actions.githubusercontent.com"

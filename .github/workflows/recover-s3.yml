@@ -23,7 +23,8 @@ jobs:
     # Validate GitHub's actual subject without granting or using any AWS access.
     if: >-
       ${{ github.event_name == 'workflow_dispatch' && inputs.mode == 'local-lab' &&
-          github.repository_id == '1407771955' && github.ref == 'refs/heads/main' &&
+          vars.RESTOREPROOF_REPOSITORY_ID != '' && github.repository_id == vars.RESTOREPROOF_REPOSITORY_ID &&
+          github.ref == 'refs/heads/main' &&
           vars.RESTOREPROOF_FREE_CI_VERIFIED == 'true' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 3
@@ -31,6 +32,11 @@ jobs:
       id-token: write
     steps:
       - name: Verify issuer claims and retain only non-secret identity fields
+        env:
+          # The repository ID comes from the variable that must equal Terraform's github_repository_id.
+          EXPECTED_SUBJECT: repo:${{ github.repository_owner }}@${{ github.repository_owner_id }}/${{ github.event.repository.name }}@${{ vars.RESTOREPROOF_REPOSITORY_ID }}:ref:refs/heads/main
+          EXPECTED_REPOSITORY_ID: ${{ vars.RESTOREPROOF_REPOSITORY_ID }}
+          EXPECTED_OWNER_ID: ${{ github.repository_owner_id }}
         run: |
           python3 - <<'PY'
           import base64, json, os, urllib.request
@@ -45,11 +51,13 @@ jobs:
           expected = {
               'iss': 'https://token.actions.githubusercontent.com',
               'aud': 'sts.amazonaws.com',
-              'sub': 'repo:Atharvabagul84@64049571/restoreproof@1407771955:ref:refs/heads/main',
-              'repository_id': '1407771955', 'repository_owner_id': '64049571',
-              'ref': 'refs/heads/main', 'repository_visibility': 'private'}
+              'sub': os.environ['EXPECTED_SUBJECT'],
+              'repository_id': os.environ['EXPECTED_REPOSITORY_ID'],
+              'repository_owner_id': os.environ['EXPECTED_OWNER_ID'],
+              'ref': 'refs/heads/main'}
           selected = {key: claims.get(key) for key in expected}
-          Path('oidc-identity.json').write_text(json.dumps(selected, indent=2) + '\n')
+          retained = {**selected, 'repository_visibility': claims.get('repository_visibility')}
+          Path('oidc-identity.json').write_text(json.dumps(retained, indent=2) + '\n')
           if selected != expected:
               raise SystemExit('OIDC identity differs from the Terraform trust policy; review retained identity fields.')
           print('GitHub issuer identity matches the exact Terraform subject. No AWS role assumed.')
@@ -64,8 +72,9 @@ jobs:
   local-lab:
     # Scheduled synthetic drills use only loopback Moto and ephemeral runner containers.
     if: >-
-      ${{ github.repository_id == '1407771955' && github.ref == 'refs/heads/main' &&
-          github.event.repository.private == true && vars.RESTOREPROOF_FREE_CI_VERIFIED == 'true' &&
+      ${{ vars.RESTOREPROOF_REPOSITORY_ID != '' && github.repository_id == vars.RESTOREPROOF_REPOSITORY_ID &&
+          github.ref == 'refs/heads/main' &&
+          vars.RESTOREPROOF_FREE_CI_VERIFIED == 'true' &&
           ((github.event_name == 'workflow_dispatch' && inputs.mode == 'local-lab') ||
            (github.event_name == 'schedule' && vars.RESTOREPROOF_LAB_SCHEDULE_ENABLED == 'true')) }}
     runs-on: ubuntu-24.04
@@ -135,7 +144,8 @@ jobs:
   aws:
     # Schedule definitions are inert until all account-specific gates are enabled.
     if: >-
-      ${{ github.repository_id == '1407771955' && github.ref == 'refs/heads/main' &&
+      ${{ vars.RESTOREPROOF_REPOSITORY_ID != '' && github.repository_id == vars.RESTOREPROOF_REPOSITORY_ID &&
+          github.ref == 'refs/heads/main' &&
           vars.RESTOREPROOF_FREE_CI_VERIFIED == 'true' && vars.RESTOREPROOF_AWS_FREE_VERIFIED == 'true' &&
           vars.RESTOREPROOF_ROLE_ARN != '' &&
           ((github.event_name == 'workflow_dispatch' && inputs.mode == 'aws') ||
