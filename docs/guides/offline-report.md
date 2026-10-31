@@ -32,7 +32,7 @@ Only selected fields are rendered and all text is escaped. Raw error messages, c
 
 ## Weekly synthetic recovery lab
 
-The existing `Recover Chisel from S3` workflow supports both manual `local-lab` runs and an independent, opt-in weekly lab schedule. Both require this exact repository (checked by repository ID) on `main` and `RESTOREPROOF_FREE_CI_VERIFIED=true`. The timer additionally requires `RESTOREPROOF_LAB_SCHEDULE_ENABLED=true`.
+The existing `Recover Chisel from S3` workflow supports both manual `local-lab` runs and an independent, opt-in weekly lab schedule. Both require this exact repository (`RESTOREPROOF_REPOSITORY_ID` must equal `github.repository_id`) on `main` and `RESTOREPROOF_FREE_CI_VERIFIED=true`. The timer additionally requires `RESTOREPROOF_LAB_SCHEDULE_ENABLED=true`.
 
 The scheduled job captures fresh synthetic Chisel data, uploads versions to loopback Moto, executes the six recovery/failure scenarios, renders the current job's evidence and uploads JSON/JUnit/HTML. The job uses a standard Ubuntu runner, a 25-minute timeout and a non-cancelling concurrency group. It needs only repository read access; the issuer-identity job runs only on manual lab dispatches. AWS role and AWS schedule gates stay independent.
 
